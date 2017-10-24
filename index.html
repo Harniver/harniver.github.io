@@ -1,1 +1,61 @@
-Hello World
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giorgio Audrito</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="homeApp">
+<!-- home page -->
+<a href="research">research</a>
+<a href="about">about</a>
+<a href="home">home</a>
+<!-- home page -->
+
+<div ng-view></div>
+
+<!-- ANGULAR -->
+<script>
+var app = angular.module("homeApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+               $routeProvider
+               .when("/home", {
+                     templateUrl : "pages/home.html"
+                     })
+               .when("/research", {
+                     templateUrl : "pages/research/research.html"
+                     })
+               .when("/about", {
+                     templateUrl : "pages/research/about.html"
+                     })
+               });
+</script>
+<!-- ANGULAR -->
+
+<!-- JS FILES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/jquery.fancybox.pack.js"></script>
+<script src="lib/jquery.waypoints.min.js"></script>
+<script src="lib/retina.min.js"></script>
+<script src="lib/modernizr.js"></script>
+<script src="lib/minifolio.js"></script>
+</body>
+</html>
+
