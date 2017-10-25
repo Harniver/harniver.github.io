@@ -23,9 +23,9 @@
 
 <body ng-app="homeApp">
 <!-- home page -->
-<a href="research">research</a>
-<a href="about">about</a>
-<a href="home">home</a>
+<a href="#!/research">research</a>
+<a href="#!/about">about</a>
+<a href="#!/home">home</a>
 <!-- home page -->
 
 <div ng-view></div>
@@ -34,17 +34,20 @@
 <script>
 var app = angular.module("homeApp", ["ngRoute"]);
     app.config(function($routeProvider) {
-               $routeProvider
-               .when("/home", {
-                     templateUrl : "pages/home.html"
-                     })
-               .when("/research", {
-                     templateUrl : "pages/research/research.html"
-                     })
-               .when("/about", {
-                     templateUrl : "pages/research/about.html"
-                     })
-               });
+        $routeProvider
+           .when("/home", {
+                 templateUrl : "pages/home.html"
+            })
+           .when("/research", {
+                 templateUrl : "pages/research/research.html"
+            })
+           .when("/about", {
+                 templateUrl : "pages/research/about.html"
+            })
+           .otherwise({
+                 redirectTo: "/home"
+            })
+    });
 </script>
 <!-- ANGULAR -->
 
@@ -58,4 +61,3 @@ var app = angular.module("homeApp", ["ngRoute"]);
 <script src="lib/minifolio.js"></script>
 </body>
 </html>
-
