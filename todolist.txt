@@ -1,0 +1,3 @@
+* Nav boxato che si fixa in alto
+* Content boxati
+* Wallpaper per ogni sezione principale

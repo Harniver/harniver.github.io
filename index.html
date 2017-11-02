@@ -9,46 +9,55 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Giorgio Audrito</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giorgio Audrito</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="static/favicon.ico">
 </head>
 
 <body ng-app="homeApp">
-<!-- home page -->
-<a href="#!/research">research</a>
-<a href="#!/about">about</a>
-<a href="#!/home">home</a>
-<!-- home page -->
-
 <div ng-view></div>
 
 <!-- ANGULAR -->
 <script>
 var app = angular.module("homeApp", ["ngRoute"]);
-    app.config(function($routeProvider) {
-        $routeProvider
-           .when("/home", {
-                 templateUrl : "pages/home.html"
-            })
-           .when("/research", {
-                 templateUrl : "pages/research/research.html"
-            })
-           .when("/about", {
-                 templateUrl : "pages/research/about.html"
-            })
-           .otherwise({
-                 redirectTo: "/home"
-            })
-    });
+app.config(function($routeProvider) {
+  $routeProvider
+   .when("/home", {
+     templateUrl : "pages/home.html"
+    })
+   .when("/research", {
+     templateUrl : "pages/research/home.html",
+     controller : "researchCtrl"
+    })
+   .when("/games", {
+     templateUrl : "pages/games/home.html",
+     controller : "gamesCtrl"
+    })
+   .when("/society", {
+     templateUrl : "pages/society/home.html",
+     controller : "societyCtrl"
+    })
+   .when("/music", {
+     templateUrl : "pages/music/home.html",
+     controller : "musicCtrl"
+    })
+   .otherwise({
+     redirectTo: "/home"
+    })
+});
 </script>
+<script src="pages/research/researchCtrl.js"></script>
+<script src="pages/games/gamesCtrl.js"></script>
+<script src="pages/society/societyCtrl.js"></script>
+<script src="pages/music/musicCtrl.js"></script>
 <!-- ANGULAR -->
 
 <!-- JS FILES -->

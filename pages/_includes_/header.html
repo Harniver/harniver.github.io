@@ -1,0 +1,25 @@
+<!-- header section -->
+<section class="innerbanner" role="banner" ng-style="background">
+  <header id="header"> 
+    <!-- navigation section  -->
+    <div class="header-content clearfix"> <a class="logo" href="#!/home"><img ng-src="static/name.{{header.font}}.png" alt="Giorgio Audrito"></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav" ng-repeat="p in header.pages">
+          <li><a ng-href="#!/{{p.link}}">{{ p.title }}</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+    <!-- navigation section  --> 
+  </header>
+  
+  <!-- banner text -->
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="innerbanner-text text-center">
+        <p>{{ header.title }}</p>
+        <!-- banner text --> 
+      </div>
+    </div>
+  </div>
+</section>
+<!-- header section -->
