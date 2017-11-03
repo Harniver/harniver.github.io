@@ -9,7 +9,7 @@
           <li ng-repeat="p in header.pages"><a ng-href="#!/{{p.link}}">{{ p.title }}</a></li>
         </ul>
       </nav>
-      <button type="button" class="nav-toggle" ng-init="isCollapsed = true" ng-click="isNavCollapsed = !isNavCollapsed">Menu<span></span></button>
+      <div type="button" class="nav-toggle" ng-init="isNavCollapsed = true" ng-click="isNavCollapsed = !isNavCollapsed">Menu<span></span></div>
     </div>
   </header>
   <!-- navigation section  -->

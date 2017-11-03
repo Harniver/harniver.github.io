@@ -1,5 +1,6 @@
 app.controller('researchCtrl', function($scope) {
   pageSet($scope, "Research", "#2b8441", "space", [
-    { link: "home",  title: "Work in Progress" },
+    { link: "research/publications",  title: "Publications" },
+    { link: "research/teaching",  title: "Teaching" },
   ]);
 });
