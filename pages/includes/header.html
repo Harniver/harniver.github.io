@@ -1,25 +1,27 @@
 <!-- header section -->
 <section class="innerbanner" role="banner" ng-style="background">
-  <header id="header"> 
-    <!-- navigation section  -->
-    <div class="header-content clearfix"> <a class="logo" href="#!/home"><img ng-src="static/name.{{header.font}}.png" alt="Giorgio Audrito"></a>
-      <nav class="navigation" role="navigation">
-        <ul class="primary-nav" ng-repeat="p in header.pages">
-          <li><a ng-href="#!/{{p.link}}">{{ p.title }}</a></li>
+  <!-- navigation section  -->
+  <header id="header">
+    <div class="header-content clearfix">
+      <a class="logo" href="#!/home"><img ng-src="static/name.{{header.font}}.png" alt="Giorgio Audrito"></a>
+      <nav class="navbar-collapse" role="navigation" ng-class="{collapse: isNavCollapsed}">
+        <ul class="primary-nav">
+          <li ng-repeat="p in header.pages"><a ng-href="#!/{{p.link}}">{{ p.title }}</a></li>
         </ul>
       </nav>
-      <a ng-href="#!/{{header.link}}" class="nav-toggle">Menu<span></span></a> </div>
-    <!-- navigation section  --> 
+      <button type="button" class="nav-toggle" ng-init="isCollapsed = true" ng-click="isNavCollapsed = !isNavCollapsed">Menu<span></span></button>
+    </div>
   </header>
-  
+  <!-- navigation section  -->
+
   <!-- banner text -->
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="innerbanner-text text-center">
         <p>{{ header.title }}</p>
-        <!-- banner text --> 
       </div>
     </div>
   </div>
+  <!-- banner text -->
 </section>
 <!-- header section -->

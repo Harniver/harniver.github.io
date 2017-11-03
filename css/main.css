@@ -133,7 +133,7 @@ ul li {
 #header.fixed .nav-toggle {
 	top: 18px;
 }
-.navigation.open {
+.navbar-collapse.open {
 	opacity: 0.9;
 	visibility: visible;
 	-moz-transition: opacity 0.5s;
@@ -141,15 +141,15 @@ ul li {
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
-.navigation {
+.navbar-collapse {
   height: 32px;
   line-height: 32px;
 	float: right;
 }
-.navigation li {
+.navbar-collapse li {
 	display: inline-block;
 }
-.navigation a {
+.navbar-collapse a {
 	color: rgba(255, 255, 255, 0.75);
 	font-size: 15px;
 	font-weight: 400;
@@ -157,8 +157,13 @@ ul li {
 	letter-spacing: 3px;
 	text-transform: uppercase;
 }
-.navigation a:hover, .navigation a.active {
+.navbar-collapse a:hover, .navbar-collapse a.active {
 	color: #fff;
+}
+@media (max-width: 767px) {
+  .primary-nav {
+    background-color: rgba(0, 0, 0, 0.70);
+  }
 }
 .nav-toggle {
 	display: none;
