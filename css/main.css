@@ -102,12 +102,6 @@ ul li {
 	margin-top:60px;	
 }
 /* ------------------------------------------------------------------------------
- Sidebar
- -------------------------------------------------------------------------------*/
-.sidebar-inside {
-  padding: 20px;
-}
-/* ------------------------------------------------------------------------------
 	Header
 -------------------------------------------------------------------------------*/
 #header {
@@ -162,6 +156,7 @@ ul li {
 	margin-left: 40px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+  cursor: pointer;
 }
 .navbar-collapse a:hover, .navbar-collapse a.active {
 	color: #fff;
@@ -308,6 +303,101 @@ ul li {
 	transform: translateY(0) rotate(-45deg);
 }
 /* ------------------------------------------------------------------------------
+	Sidebar
+-------------------------------------------------------------------------------*/
+.sidebar-inside {
+  font-size: 15px;
+  color: #eee;
+  text-align: center;
+}
+
+.textbox {
+  padding: 20px;
+}
+
+.sidebar-inside a {
+  color: #eee;
+}
+
+.sidebar-inside a:hover {
+  color: #aaa;
+}
+
+input{
+  padding: 5px;
+  color: #333;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.affix {
+  top: 60px;
+  width: 213px;
+}
+
+@media (min-width: 1200px) {
+  .affix {
+    width: 263px;
+  }
+}
+
+.affix-bottom {
+  position: absolute;
+  width: 213px;
+}
+
+@media (min-width: 1200px) {
+  .affix-bottom {
+    width: 263px;
+  }
+}
+
+.nav a {
+  color: #eee;
+}
+
+.nav > li > a:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav .active {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.nav .nav {
+  display: none;
+}
+
+.nav .active .nav {
+  display: block;
+}
+
+.nav .nav a {
+  font-weight: normal;
+  font-size: .85em;
+}
+
+.nav .nav span {
+  margin: 0 5px 0 2px;
+}
+
+.nav .nav .active a,
+.nav .nav .active:hover a,
+.nav .nav .active:focus a {
+  font-weight: bold;
+  padding-left: 30px;
+  border-left: 5px solid black;
+}
+
+.nav .nav .active span,
+.nav .nav .active:hover span,
+.nav .nav .active:focus span {
+  display: none;
+}
+/* ------------------------------------------------------------------------------
 	Banner
 -------------------------------------------------------------------------------*/
 
@@ -334,9 +424,8 @@ ul li {
 	margin-bottom: 80px;
 }
 /* ------------------------------------------------------------------------------
-	Description Text
--------------------------------------------------------------------------------*/
-
+ Description Text
+ -------------------------------------------------------------------------------*/
 .descripton p {
 	color: #3d3d3d;
 	font-size: 18px;
@@ -480,8 +569,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 .footer {
   background-color: rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  height: 60px;
+  padding: 6px;
 	text-align: center;
 }
 .footer p {
@@ -490,6 +578,7 @@ ul li {
 	color: #7f7f7f;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+  margin: 0 0 0px;
 }
 .footer a {
 	color: #7f7f7f;
@@ -559,11 +648,13 @@ ul li {
 	line-height: 33px;
 	font-weight: 400;
 }
-.inner-description img
-{
-width:150px;
-height:150px;
-border-radius:50%;	
+.inner-description img {
+  width:100%;
+  border-radius:0%;
+}
+img.mail {
+  width: 75%;
+  margin: 5px;
 }
 
 
