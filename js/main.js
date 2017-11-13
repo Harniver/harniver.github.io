@@ -1,3 +1,7 @@
+/* ------------------------------------------------------------------------------
+	Helpers
+-------------------------------------------------------------------------------*/
+
 function normalize(s) {
   return s.toLowerCase().replace(/\s/g, '-');
 }
@@ -35,6 +39,10 @@ function addKeys(items) {
   return k;
 }
 
+/* ------------------------------------------------------------------------------
+	Controllers
+-------------------------------------------------------------------------------*/
+
 function pageSet($scope, pagetitle, color, nphoto, links, contents) {
   var lowtitle = normalize(pagetitle);
   links.unshift({ link: lowtitle, title: pagetitle })
@@ -59,3 +67,34 @@ function pageSet($scope, pagetitle, color, nphoto, links, contents) {
   };
   addKeys($scope.contents);
 }
+
+/* ------------------------------------------------------------------------------
+	Router
+-------------------------------------------------------------------------------*/
+
+var app = angular.module("homeApp", ['ngRoute', 'duScroll']).value('duScrollOffset', 60);
+app.config(function($routeProvider) {
+  $routeProvider
+   .when("/home", {
+     templateUrl : "pages/home.html"
+    })
+   .when("/research", {
+     templateUrl : "pages/main.html",
+     controller : "researchCtrl"
+    })
+   .when("/games", {
+     templateUrl : "pages/main.html",
+     controller : "gamesCtrl"
+    })
+   .when("/society", {
+     templateUrl : "pages/main.html",
+     controller : "societyCtrl"
+    })
+   .when("/music", {
+     templateUrl : "pages/main.html",
+     controller : "musicCtrl"
+    })
+   .otherwise({
+     redirectTo: "/home"
+    })
+});
