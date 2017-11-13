@@ -1,6 +1,6 @@
-app.controller('musicCtrl', function($scope) {
+app.controller('musicCtrl', function($scope, $routeParams) {
   pageSet($scope, "Music", "#992121", 3, [
-    { link: "home",  title: "Work in Progress" },
+    { link: "music/wip",  title: "Work in Progress" },
   ], [
     {title: "Web Design", text: "Here it is the web design.", template: "section", items: [
       {title: "Nice achievement", text: "So so nice."},

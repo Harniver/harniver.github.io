@@ -1,6 +1,6 @@
-app.controller('gamesCtrl', function($scope) {
+app.controller('gamesCtrl', function($scope, $routeParams) {
   pageSet($scope, "Games", "#ccbc14", 2, [
-    { link: "home",  title: "Work in Progress" },
+    { link: "games/wip",  title: "Work in Progress" },
   ], [
     {title: "Web Design", text: "Here it is the web design.", template: "section", items: [
       {title: "Nice achievement", text: "So so nice."},

@@ -6,12 +6,6 @@ function normalize(s) {
   return s.toLowerCase().replace(/\s/g, '-');
 }
 
-function log(msg) {
-    setTimeout(function() {
-        throw new Error(msg);
-    }, 0);
-}
-
 function addAlpha(hex, alpha, value) {
   if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
     var c = hex.substring(1).split('');
@@ -82,7 +76,23 @@ app.config(function($routeProvider) {
      templateUrl : "pages/main.html",
      controller : "researchCtrl"
     })
+   .when("/research/:page", {
+     templateUrl : "pages/main.html",
+     controller : "researchCtrl"
+    })
+   .when("/music", {
+     templateUrl : "pages/main.html",
+     controller : "musicCtrl"
+    })
+   .when("/music/:page", {
+     templateUrl : "pages/main.html",
+     controller : "musicCtrl"
+    })
    .when("/games", {
+     templateUrl : "pages/main.html",
+     controller : "gamesCtrl"
+    })
+   .when("/games/:page", {
      templateUrl : "pages/main.html",
      controller : "gamesCtrl"
     })
@@ -90,9 +100,9 @@ app.config(function($routeProvider) {
      templateUrl : "pages/main.html",
      controller : "societyCtrl"
     })
-   .when("/music", {
+   .when("/society/:page", {
      templateUrl : "pages/main.html",
-     controller : "musicCtrl"
+     controller : "societyCtrl"
     })
    .otherwise({
      redirectTo: "/home"
