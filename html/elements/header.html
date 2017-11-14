@@ -1,12 +1,12 @@
 <!-- header section -->
-<section class="innerbanner" role="banner" ng-style="background">
+<section class="innerbanner" role="banner" ng-style="data.background">
   <!-- navigation section  -->
   <header id="header">
     <div class="header-content clearfix">
-      <a class="logo" href="#!/home"><img ng-src="static/name.{{theme}}.png" alt="Giorgio Audrito"></a>
+      <a class="logo" href="#!/home"><img ng-src="static/name.{{data.theme}}.png" alt="Giorgio Audrito"></a>
       <nav class="navbar-collapse" role="navigation" ng-class="{collapse: isNavCollapsed}">
         <ul class="primary-nav">
-          <li ng-repeat="p in pages"><a ng-href="#!/{{p.link}}">{{ p.title }}</a></li>
+          <li ng-repeat="p in data.pages"><a ng-href="#!/{{p.link}}">{{ p.title }}</a></li>
         </ul>
       </nav>
       <div type="button" class="nav-toggle" ng-init="isNavCollapsed = true" ng-click="isNavCollapsed = !isNavCollapsed">Menu<span></span></div>
@@ -18,7 +18,7 @@
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="innerbanner-text text-center">
-        <p>{{title}}</p>
+        <p>{{data.title}}</p>
       </div>
     </div>
   </div>

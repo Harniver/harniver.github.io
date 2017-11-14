@@ -1,16 +1,10 @@
-* includes/sidebar con:
-  - far cercare la search bar
-  - lettura parametrica delle sezioni e contenuto
+* element/section funzionante
+* element/box con contents boxati, di colori diversi, foldable
+* fare sottomenu (!) e gestione sottopagine
 
-* ng-include è parametrico?
-  se si, unica pagina main.html con diversi controller
-  e menu che attiva funzioni del controller
-* includes/content? con contents boxati, di colori diversi, foldable
-
-* Spostare tutti gli include su CDN
+* Controllare mobile in modalità desktop
 * Sidebar in caso mobile (foldable e folded di default in sottopagine, hidden)
 * Evidenziare pagina corrente nel menu
-* Eliminare cose non utilizzate
 * Immagine home
 * Wallpaper per ogni sezione principale
 

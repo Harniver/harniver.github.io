@@ -1,0 +1,22 @@
+<div class="sidebar-inside" ng-style="data.bgalpha">
+  <img src="static/photo.{{data.theme}}.{{data.pi}}.jpg" alt="" ng-click="data.pi = (data.pi+1)%data.nphoto" ng-mouseover="data.pi = (data.pi+1)%data.nphoto"></img><br>
+  <div class="textbox">
+    Postdoc @ Ufficio 21,<br>
+    <a href="http://di.unito.it">Dipartimento di Informatica</a>,<br>
+    <a href="https://www.unito.it">Università di Torino</a>,<br>
+    Corso Svizzera 185,<br>
+    10149 Torino, Italy<br>
+    <img ng-src="static/mail.{{data.theme}}.png" alt="" class="mail"></img><br>
+    <u><a href="static/audrito_cv.pdf">curriculum vitae</a></u>
+  </div>
+</div>
+<div id="scroller" ng-style="data.bgalpha" data-spy="affix" class="hidden-xs hidden-sm">
+  <div class="sidebar-inside">
+    <input type="text" placeholder="search" ng-model="data.searchKey"></input>
+    <ul id="nav" class="nav">
+      <li ng-repeat="x in contents | filter : {'key': data.searchKey}">
+        <a du-smooth-scroll="{{x.ref}}" du-scrollspy>{{x.title}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

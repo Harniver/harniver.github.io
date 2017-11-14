@@ -1,6 +1,6 @@
 <div>
   <!-- header section -->
-  <div ng-include="'pages/elements/header.html'"></div>
+  <div ng-include="'html/elements/header.html'"></div>
   <!-- header section -->
   
   <!-- description text section -->
@@ -8,11 +8,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <div ng-include="'pages/elements/sidebar.html'" onload="affix()"></div>
+          <div ng-include="'html/elements/sidebar.html'" onload="data.affix()"></div>
         </div>
         <div class="col-sm-8">
-          <div ng-repeat="i in contents | filter : {'key': searchKey}">
-            <div ng-include="'pages/elements/'+i.template+'.html'"></div>
+          <div ng-repeat="i in contents | filter : {'key': data.searchKey}">
+            <div ng-include="'html/elements/'+i.template+'.html'"></div>
           </div>
         </div>
       </div>
@@ -21,6 +21,6 @@
   <!-- description text section -->
 
   <!-- footer -->
-  <div ng-include="'pages/elements/footer.html'"></div>
+  <div ng-include="'html/elements/footer.html'"></div>
   <!-- footer -->
 </div>

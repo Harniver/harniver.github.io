@@ -1,12 +1,29 @@
-app.controller('musicCtrl', function($scope, $routeParams) {
-  pageSet($scope, "Music", "#992121", 3, [
+app.controller('musicCtrl', function($scope, $rootScope, $routeParams, $location, $http) {
+  $rootScope.music = $rootScope.pageSet($scope, $routeParams.page, $rootScope.music, "Music", "#992121", 3, [
     { link: "music/wip",  title: "Work in Progress" },
-  ], [
-    {title: "Web Design", text: "Here it is the web design.", template: "section", items: [
-      {title: "Nice achievement", text: "So so nice."},
-    ]},
-    {title: "Web Development", text: "And now beware the web development.", template: "section", items: [
-      {title: "Cool stuff.", text: "Supermega cool."},
-    ]},
   ]);
+  if ($scope.contents.length > 0) return;
+  var getContents;
+  switch ($routeParams.page) {
+    /*------------------------------
+      music
+    ------------------------------*/
+    case undefined:
+      getContents = function(db) {
+        return db;
+      };
+      break;
+    /*------------------------------
+      wip
+    ------------------------------*/
+    case "wip":
+      getContents = function(db) {
+        return db;
+      };
+      break;
+    default:
+      $location.url("music");
+      return;
+  }
+  $rootScope.contentsSet($scope, $http, $routeParams.page, $rootScope.music, 'json/music.json', getContents);
 });

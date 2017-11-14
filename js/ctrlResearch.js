@@ -1,13 +1,38 @@
-app.controller('researchCtrl', function($scope) {
-  pageSet($scope, "Research", "#2b8441", 2, [
+app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $location, $http) {
+  $rootScope.research = $rootScope.pageSet($scope, $routeParams.page, $rootScope.research, "Research", "#2b8441", 2, [
     { link: "research/publications",  title: "Publications" },
     { link: "research/teaching",  title: "Teaching" },
-  ], [
-    {title: "Web Design", text: "Here it is the web design.", template: "section", items: [
-      {title: "Nice achievement", text: "So so nice."},
-    ]},
-    {title: "Web Development", text: "And now beware the web development.", template: "section", items: [
-      {title: "Cool stuff.", text: "Supermega cool."},
-    ]},
   ]);
+  if ($scope.contents.length > 0) return;
+  var getContents;
+  switch ($routeParams.page) {
+    /*------------------------------
+      research
+    ------------------------------*/
+    case undefined:
+      getContents = function(db) {
+        return db;
+      };
+      break;
+    /*------------------------------
+      research/publications
+    ------------------------------*/
+    case "publications":
+      getContents = function(db) {
+        return db;
+      };
+      break;
+    /*------------------------------
+      research/teaching
+    ------------------------------*/
+    case "teaching":
+      getContents = function(db) {
+        return db;
+      };
+      break;
+    default:
+      $location.url("research");
+      return;
+  }
+  $rootScope.contentsSet($scope, $http, $routeParams.page, $rootScope.research, 'json/research.json', getContents);
 });
