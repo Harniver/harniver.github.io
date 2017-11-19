@@ -60,13 +60,23 @@ app.run(function($rootScope) {
   };
 
   function addKeys(items) {
-    k = ""
-    for (i of items) {
+    let k = ""
+    for (const i of items) {
       i.ref = normalize(i.title);
-      i.key = i.title;
-      if (i.text != undefined) i.key += " " + i.text;
-      if (i.items != undefined) i.key += addKeys(i.items);
-      k += " " + i.key;
+      if ("key" in i) {
+        k += " " + i.key;
+        continue;
+      }
+      i.key = "";
+      for (const p in i) {
+        if (p == "key" || p == "ref" || p == "template") continue;
+        if (p.slice(-1) != "_") {
+          i.key += " " + i[p];
+          continue;
+        }
+        if (p[0] != "_") i.key += addKeys(i[p]);
+      }
+      k += i.key;
     }
     return k;
   };
