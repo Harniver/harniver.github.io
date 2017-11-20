@@ -62,21 +62,18 @@ app.run(function($rootScope) {
   function addKeys(items) {
     let k = ""
     for (const i of items) {
-      i.ref = normalize(i.title);
-      if ("key" in i) {
-        k += " " + i.key;
+      i._ref = normalize(i.title);
+      if ("_key" in i) {
+        k += " " + i._key;
         continue;
       }
-      i.key = "";
+      i._key = "";
       for (const p in i) {
-        if (p == "key" || p == "ref" || p == "template") continue;
-        if (p.slice(-1) != "_") {
-          i.key += " " + i[p];
-          continue;
-        }
-        if (p[0] != "_") i.key += addKeys(i[p]);
+        if (p[0] == "_") continue;
+        if (i[p] instanceof Array) i._key += addKeys(i[p]);
+        else i._key += " " + i[p];
       }
-      k += i.key;
+      k += i._key;
     }
     return k;
   };

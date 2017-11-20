@@ -14,8 +14,8 @@
   <div class="sidebar-inside">
     <input type="text" placeholder="search" ng-model="data.searchKey"></input>
     <ul id="nav" class="nav">
-      <li ng-repeat="x in contents | filter : {'key': data.searchKey}">
-        <a du-smooth-scroll="{{x.ref}}" du-scrollspy>{{x.title}}</a>
+      <li ng-repeat="x in contents | filter : {'_key': data.searchKey}">
+        <a du-smooth-scroll="{{x._ref}}" du-scrollspy>{{x.title}}</a>
       </li>
     </ul>
   </div>

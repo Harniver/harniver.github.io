@@ -2,7 +2,7 @@
   {
     "title": "Work in Progress",
     "text": "...",
-    "template": "section",
-    "items_": []
+    "_template": "section",
+    "items": []
   }
 ]

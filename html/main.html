@@ -11,8 +11,8 @@
           <div ng-include="'html/elements/sidebar.html'" onload="data.affix()"></div>
         </div>
         <div class="col-sm-8">
-          <div ng-repeat="i in contents | filter : {'key': data.searchKey}">
-            <div ng-include="'html/elements/'+i.template+'.html'"></div>
+          <div ng-repeat="i in contents | filter : {'_key': data.searchKey}">
+            <div ng-include="'html/elements/'+i._template+'.html'"></div>
           </div>
         </div>
       </div>
