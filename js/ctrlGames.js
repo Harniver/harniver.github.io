@@ -1,4 +1,4 @@
-app.controller('gamesCtrl', function($scope, $rootScope, $routeParams, $location, $http) {
+app.controller('gamesCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
   $rootScope.games = $rootScope.pageSet($scope, $routeParams.page, $rootScope.games, "Games", "#ccbc14", 2, [
     { link: "games/wip",  title: "Work in Progress" },
   ]);
@@ -10,7 +10,7 @@ app.controller('gamesCtrl', function($scope, $rootScope, $routeParams, $location
     ------------------------------*/
     case undefined:
       getContents = function(db) {
-        return db;
+        return db.contents;
       };
       break;
     /*------------------------------
@@ -18,12 +18,12 @@ app.controller('gamesCtrl', function($scope, $rootScope, $routeParams, $location
     ------------------------------*/
     case "wip":
       getContents = function(db) {
-        return db;
+        return db.contents;
       };
       break;
     default:
       $location.url("games");
       return;
   }
-  $rootScope.contentsSet($scope, $http, $routeParams.page, $rootScope.games, 'json/games.json', getContents);
+  $rootScope.contentsSet($scope, $http, $sce, $routeParams.page, $rootScope.games, 'json/games.json', getContents);
 });

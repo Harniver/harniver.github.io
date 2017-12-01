@@ -1,4 +1,4 @@
-app.controller('societyCtrl', function($scope, $rootScope, $routeParams, $location, $http) {
+app.controller('societyCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
   $rootScope.society = $rootScope.pageSet($scope, $routeParams.page, $rootScope.society, "Society", "#a0a0a0", 3, [
     { link: "society/wip",  title: "Work in Progress" },
   ]);
@@ -10,7 +10,7 @@ app.controller('societyCtrl', function($scope, $rootScope, $routeParams, $locati
     ------------------------------*/
     case undefined:
       getContents = function(db) {
-        return db;
+        return db.contents;
       };
       break;
     /*------------------------------
@@ -18,12 +18,12 @@ app.controller('societyCtrl', function($scope, $rootScope, $routeParams, $locati
     ------------------------------*/
     case "wip":
       getContents = function(db) {
-        return db;
+        return db.contents;
       };
       break;
     default:
       $location.url("society");
       return;
   }
-  $rootScope.contentsSet($scope, $http, $routeParams.page, $rootScope.society, 'json/society.json', getContents);
+  $rootScope.contentsSet($scope, $http, $sce, $routeParams.page, $rootScope.society, 'json/society.json', getContents);
 });

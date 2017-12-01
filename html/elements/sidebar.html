@@ -1,11 +1,10 @@
 <div class="sidebar-inside" ng-style="data.bgalpha">
   <img src="static/photo.{{data.theme}}.{{data.pi}}.jpg" alt="" ng-click="data.pi = (data.pi+1)%data.nphoto" ng-mouseover="data.pi = (data.pi+1)%data.nphoto"></img><br>
   <div class="textbox">
-    Postdoc @ Ufficio 21,<br>
-    <a href="http://di.unito.it">Dipartimento di Informatica</a>,<br>
-    <a href="https://www.unito.it">Università di Torino</a>,<br>
-    Corso Svizzera 185,<br>
-    10149 Torino, Italy<br>
+    <div ng-repeat="x in data.address">
+      <ng-bind-html ng-bind-html="x"></ng-bind-html>
+      <br>
+    </div>
     <img ng-src="static/mail.{{data.theme}}.png" alt="" class="mail"></img><br>
     <u><a href="static/audrito_cv.pdf">curriculum vitae</a></u>
   </div>

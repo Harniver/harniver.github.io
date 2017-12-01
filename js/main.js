@@ -117,7 +117,7 @@ app.run(function($rootScope) {
     return $scope.data;
   };
 
-  $rootScope.contentsSet = function($scope, $http, page, cache, file, extractor) {
+  $rootScope.contentsSet = function($scope, $http, $sce, page, cache, file, extractor) {
     if (cache.db != undefined) {
       console.log(file + ": extracting " + page);
       $scope.contents = extractor(cache.db);
@@ -129,6 +129,7 @@ app.run(function($rootScope) {
     $http.get(file).then(function (success) {
       cache.db = success.data;
       console.log(file + ": extracting " + page);
+      $scope.data.address = cache.db.address.map($sce.trustAsHtml);
       $scope.contents = extractor(cache.db);
       addKeys($scope.contents);
       cache.contents.set(page, $scope.contents);

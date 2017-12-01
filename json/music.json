@@ -1,8 +1,17 @@
-[
-  {
-    "title": "Work in Progress",
-    "text": "...",
-    "_template": "section",
-    "items": []
-  }
-]
+{
+  "address": [
+    "Tenor @ Vox Viva,",
+    "<a href=\"http://di.unito.it\">Dipartimento di Informatica</a>,",
+    "<a href=\"https://www.unito.it\">Università di Torino</a>,",
+    "Corso Svizzera 185,",
+    "10149 Torino, Italy"
+  ],
+  "contents": [
+    {
+      "title": "Work in Progress",
+      "text": "...",
+      "_template": "section",
+      "items": []
+    }
+  ]
+}
