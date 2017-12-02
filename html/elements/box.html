@@ -1,0 +1,19 @@
+<div class="box-main">
+  <div class="box-header" ng-style="{'background-color': i._color}">
+    <table style="width:100%">
+      <tr>
+        <td>{{i.pretitle}}<b>{{i.title}}</b></td>
+        <td class="flushleft">
+          <i ng-class="{'fa fa-chevron-up': i._show == true, 'fa fa-chevron-down': i._show == false}" ng-click="i._show = !i._show"></i>
+        </td>
+      </tr>
+      <tr>
+        <td><i>{{i.subtitle}}</i></td>
+        <td class="flushleft">{{i.subsubtitle}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="box-content" ng-show="i._show" ng-init="i._show = data.expand">
+      {{i.text}}
+  </div>
+</div>

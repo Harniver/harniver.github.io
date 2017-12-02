@@ -30,6 +30,7 @@ h3 {
 	font-size: 28px;
 	color: #2d3033;
 	font-weight: 300;
+  text-align: center;
 }
 h4 {
 	font-size: 22px;
@@ -388,6 +389,40 @@ input{
 }
 
 /* ------------------------------------------------------------------------------
+	Box
+-------------------------------------------------------------------------------*/
+
+.flushleft {
+  text-align: right;
+}
+.box-main {
+  box-shadow: 0px 5px 7px -1px #eaeaea;
+  font-size: 16px;
+  color: #3d3d3d;
+}
+.box-header {
+  box-shadow: 0px 0px 6px 2px #ddd;
+  border-radius: 10px;
+  padding: 8px;
+}
+.box-content.ng-hide {
+  max-height: 0px;
+}
+.box-content.ng-hide-add {
+  -webkit-transition: max-height linear 0.25s;
+  transition: max-height linear 0.25s;
+}
+.box-content.ng-hide-remove {
+  -webkit-transition: max-height linear 0.4s;
+  transition: max-height linear 0.4s;
+}
+.box-content {
+  max-height: 400px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------------------------
 	Banner
 -------------------------------------------------------------------------------*/
 
@@ -637,7 +672,7 @@ input{
 }
 .inner-description p {
 	color: #3d3d3d;
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 33px;
 	font-weight: 400;
 }

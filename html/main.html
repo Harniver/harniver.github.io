@@ -10,7 +10,7 @@
         <div class="col-sm-3">
           <div ng-include="'html/elements/sidebar.html'" onload="data.affix()"></div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9">
           <div ng-repeat="i in contents | filter : {'_key': data.searchKey}">
             <div ng-include="'html/elements/'+i._template+'.html'"></div>
           </div>

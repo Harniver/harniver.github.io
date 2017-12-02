@@ -1,4 +1,4 @@
-var app = angular.module("siteApp", ['ngRoute', 'duScroll']);
+var app = angular.module("siteApp", ['ngRoute', 'duScroll', 'ngAnimate']);
 app.value('duScrollOffset', 60);
 
 /* ------------------------------------------------------------------------------
@@ -39,6 +39,10 @@ app.run(function($rootScope) {
   /* ------------------------------------------------------------------------------
     Helpers
   -------------------------------------------------------------------------------*/
+  
+  function deepCopy(o) {
+    return JSON.parse(JSON.stringify(o));
+  };
 
   function normalize(s) {
     return s.toLowerCase().replace(/\s/g, '-');
@@ -118,9 +122,10 @@ app.run(function($rootScope) {
   };
 
   $rootScope.contentsSet = function($scope, $http, $sce, page, cache, file, extractor) {
+    if ($scope.contents.length > 0) return;
     if (cache.db != undefined) {
       console.log(file + ": extracting " + page);
-      $scope.contents = extractor(cache.db);
+      $scope.contents = extractor(deepCopy(cache.db));
       addKeys($scope.contents);
       cache.contents.set(page, $scope.contents);
       return;
@@ -130,7 +135,7 @@ app.run(function($rootScope) {
       cache.db = success.data;
       console.log(file + ": extracting " + page);
       $scope.data.address = cache.db.address.map($sce.trustAsHtml);
-      $scope.contents = extractor(cache.db);
+      $scope.contents = extractor(deepCopy(cache.db));
       addKeys($scope.contents);
       cache.contents.set(page, $scope.contents);
     }, function (error) {

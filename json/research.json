@@ -6,12 +6,19 @@
     "Corso Svizzera 185,",
     "10149 Torino, Italy"
   ],
-  "contents": [
+  "teaching": [
     {
       "title": "Work in Progress",
-      "text": "...",
+      "text": "This is some dummy text.",
       "_template": "section",
-      "items": []
+      "items": [
+        {
+          "title": "Work in Progress",
+          "text": "This is some dummy text.",
+          "_color": "#eee",
+          "_template": "box"
+        }
+      ]
     }
   ]
 }
