@@ -74,7 +74,7 @@ app.run(function($rootScope) {
       i._key = "";
       for (const p in i) {
         if (p[0] == "_") continue;
-        if (i[p] instanceof Array) i._key += addKeys(i[p]);
+        if (i[p] instanceof Array && i[p][0] instanceof Object) i._key += addKeys(i[p]);
         else i._key += " " + i[p];
       }
       k += i._key;

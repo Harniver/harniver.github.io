@@ -392,18 +392,32 @@ input{
 	Box
 -------------------------------------------------------------------------------*/
 
+.fa-chevron-up, .fa-chevron-down {
+  cursor: pointer;
+}
+.fa-chevron-up:hover, .fa-chevron-down:hover {
+  color: #888;
+}
 .flushleft {
   text-align: right;
+  vertical-align: top;
 }
 .box-main {
   box-shadow: 0px 5px 7px -1px #eaeaea;
   font-size: 16px;
   color: #3d3d3d;
+  margin-bottom: 20px;
 }
 .box-header {
   box-shadow: 0px 0px 6px 2px #ddd;
   border-radius: 10px;
-  padding: 8px;
+  padding: 10px;
+}
+.box-header a {
+  color: #3d3d3d;
+}
+.box-header a:hover {
+  color: #888;
 }
 .box-content.ng-hide {
   max-height: 0px;
@@ -417,9 +431,10 @@ input{
   transition: max-height linear 0.4s;
 }
 .box-content {
-  max-height: 400px;
-  padding: 5px;
+  max-height: 500px;
+  padding: 10px;
   overflow: hidden;
+  font-size: 15px;
 }
 
 /* ------------------------------------------------------------------------------
@@ -447,17 +462,6 @@ input{
 	line-height: 24px;
 	margin-top: 30px;
 	margin-bottom: 80px;
-}
-
-/* ------------------------------------------------------------------------------
- Description Text
- -------------------------------------------------------------------------------*/
-
-.descripton p {
-	color: #3d3d3d;
-	font-size: 18px;
-	line-height: 33px;
-	font-weight: 400;
 }
 
 /* ------------------------------------------------------------------------------
