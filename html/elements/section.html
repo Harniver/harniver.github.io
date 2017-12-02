@@ -1,7 +1,7 @@
 <section id="{{i._ref}}">
   <h3>{{i.title}}</h3>
   <p>{{i.text}}</p>
-  <div ng-repeat="i in i.items | filter : {'_key': data.searchKey} | orderBy : '_date' : false">
+  <div ng-repeat="i in i.items | filter : {'_key': data.searchKey}">
     <div ng-include="'html/elements/'+i._template+'.html'"></div>
   </div>
 </section>

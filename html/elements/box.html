@@ -4,7 +4,9 @@
       <tr>
         <td>{{i.pretitle}}<br ng-if="(i.pretitle+i.title).length > 110"><b>{{i.title}}</b></td>
         <td class="flushleft">
-          <i ng-class="{'fa fa-chevron-up': i._show == true, 'fa fa-chevron-down': i._show == false}" ng-click="i._show = !i._show"></i>
+          <div ng-if="i.text">
+            <i ng-class="{'fa fa-chevron-up': i._show == true, 'fa fa-chevron-down': i._show == false}" ng-click="i._show = !i._show"></i>
+          </div>
         </td>
       </tr>
     </table>

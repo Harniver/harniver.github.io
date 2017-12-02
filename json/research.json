@@ -30,7 +30,7 @@
       "title":    "Engineering Resilient Collective Adaptive Systems by Self-Stabilisation",
       "authors":  "M. Viroli, G. Audrito, J. Beal, F. Damiani, D. Pianini",
       "journal":  "ACM Transactions on Modeling and Computer Simulation",
-      "year":     2018,
+      "year":     2017,
       "link":     "arXiv:1711.08297",
       "topic":    "Aggregate Computing",
       "type":     "Journal Papers",
@@ -305,9 +305,107 @@
   ],
   "news": [
     {
-      "title":    "",
-      "abstract": "",
-      "type":     "prize|role|publication"
+      "title":    "Research grant on “Formal methods for the Internet of Things”",
+      "subtitle": "Università degli Studi di Torino, 01/12/2017-31/03/2018",
+      "type":     "Role",
+      "_date":    "17.12.01"
+    },
+    {
+      "title":    "Research assistant on “Formal methods for the Internet of Things”",
+      "subtitle": "Università degli Studi di Torino, 01/01/2016-30/11/2017",
+      "type":     "Role",
+      "_date":    "16.01.01"
+    },
+    {
+      "title":    "Research assistant on “Design and development of algorithms and data structures for compressed data, with applications”",
+      "subtitle": "Università degli Studi di Pisa, 01/01/2015-31/12/2015",
+      "type":     "Role",
+      "_date":    "15.01.01"
+    },
+    {
+      "title":    "Ph.D. in Mathematics",
+      "subtitle": "Università degli Studi di Torino, 02/03/2016",
+      "text":     "The thesis develops on two connected topics. Firstly, the definability of generic large cardinal axioms: the novel notion of C-system of filters is introduced, generalizing the standard definitions of extenders and towers and simplifying the classical treatment of the subject. Secondly, how to obtain strong forms of generic absoluteness from forcing axioms of low consistency strength, the novel iterated resurrection axioms.",
+      "type":     "Role",
+      "_date":    "16.03.02"
+    },
+    {
+      "title":    "Adjunct Professor for the “Object-Oriented Programming” course, Computer Science major",
+      "subtitle": "Università del Piemonte Orientale, Vercelli, 01/03/2017-31/09/2018",
+      "type":     "Role",
+      "_date":    "17.09.31"
+    },
+    {
+      "title":    "Co-supervisor for the Bachelor thesis of Luca Serena, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, 16/10/2017",
+      "type":     "Role",
+      "_date":    "17.10.16"
+    },
+    {
+      "title":    "Teaching assistant “articolo 76” for the ”Informatics” course, Mathematics for Finance and Insurance major",
+      "subtitle": "Università degli Studi di Torino, 01/10/2016-31/01/2017",
+      "type":     "Role",
+      "_date":    "16.10.01"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Tehran, Iran, 2017",
+      "type":     "Role",
+      "_date":    "17.08.10"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Kazan, Russia, 2016",
+      "type":     "Role",
+      "_date":    "16.08.10"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Almaty, Kazakhstan, 2015",
+      "type":     "Role",
+      "_date":    "15.08.10"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Taipei, Taiwan, 2014",
+      "type":     "Role",
+      "_date":    "14.08.10"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Brisbane, Australia, 2013",
+      "type":     "Role",
+      "_date":    "13.08.10"
+    },
+    {
+      "title":    "Local Organization Co-Chair",
+      "subtitle": "iFM 2017, Torino",
+      "type":     "Role",
+      "_date":    "17.09.17"
+    },
+    {
+      "title":    "Artifact Evaluation Committee member",
+      "subtitle": "OOPSLA track, SPLASH 2017, Vancouver, Canada",
+      "type":     "Role",
+      "_date":    "17.10.25"
+    },
+    {
+      "title":    "Program Committe member",
+      "subtitle": "ALP4IoT workshop, iFM 2017, Torino",
+      "type":     "Role",
+      "_date":    "17.09.17"
+    },
+    {
+      "title":    "Program Committe member",
+      "subtitle": "eCAS workshop, SASO 2017 conference, Tucson, USA",
+      "type":     "Role",
+      "_date":    "17.09.22"
+    },
+    {
+      "title":    "Best Paper of COORDINATION",
+      "subtitle": "Optimally-Self-Healing Distributed Gradient Structures through Bounded Information Speed, 20/06/2017",
+      "type":     "Prize",
+      "_date":    "17.06.20"
     }
   ],
   "teaching": [
