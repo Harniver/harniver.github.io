@@ -2,7 +2,7 @@ app.controller('gamesCtrl', function($scope, $rootScope, $routeParams, $location
   $rootScope.games = $rootScope.pageSet($scope, $routeParams.page, $rootScope.games, "Games", "#ccbc14", 2, [
     { link: "games/wip",  title: "Work in Progress" },
   ]);
-  var getContents;
+  let getContents;
   switch ($routeParams.page) {
     /*------------------------------
       games

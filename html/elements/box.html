@@ -2,11 +2,9 @@
   <div class="box-header" ng-style="{'background-color': i._color}">
     <table style="width:100%">
       <tr>
-        <td>{{i.pretitle}}<br ng-if="(i.pretitle+i.title).length > 110"><b>{{i.title}}</b></td>
-        <td class="flushleft">
-          <div ng-if="i.text">
-            <i ng-class="{'fa fa-chevron-up': i._show == true, 'fa fa-chevron-down': i._show == false}" ng-click="i._show = !i._show"></i>
-          </div>
+        <td>{{i.num}}{{i.pretitle}}<br ng-if="i.pretitle && (i.pretitle+i.title).length > 110"><b>{{i.title}}</b></td>
+        <td class="flushleft" ng-if="i.text.length">
+          <i ng-class="{'fa fa-chevron-up': i._show == true, 'fa fa-chevron-down': i._show == false}" ng-click="i._show = !i._show"></i>
         </td>
       </tr>
     </table>

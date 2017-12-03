@@ -2,7 +2,7 @@ app.controller('musicCtrl', function($scope, $rootScope, $routeParams, $location
   $rootScope.music = $rootScope.pageSet($scope, $routeParams.page, $rootScope.music, "Music", "#992121", 3, [
     { link: "music/wip",  title: "Work in Progress" },
   ]);
-  var getContents;
+  let getContents;
   switch ($routeParams.page) {
     /*------------------------------
       music

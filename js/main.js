@@ -50,10 +50,9 @@ app.run(function($rootScope) {
 
   function addAlpha(hex, alpha, value) {
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-      var c = hex.substring(1).split('');
-      if (c.length == 3) {
+      let c = hex.substring(1).split('');
+      if (c.length == 3)
         c = [c[0], c[0], c[1], c[1], c[2], c[2]];
-      }
       c = '0x'+c.join('');
       c = [(c>>16)&255, (c>>8)&255, c&255];
       if (value < 1)
@@ -94,7 +93,7 @@ app.run(function($rootScope) {
       return $scope.data = cache;
     }
     console.log(pagetitle + ": computing header");
-    var lowtitle = normalize(pagetitle);
+    const lowtitle = normalize(pagetitle);
     links.unshift({ link: lowtitle, title: pagetitle })
     $scope.data = {};
     $scope.data.background = {'background-color': color};

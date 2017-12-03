@@ -1,8 +1,8 @@
 app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
   $rootScope.research = $rootScope.pageSet($scope, $routeParams.page, $rootScope.research, "Research", "#2b8441", 2, [
-    { link: "research/topics",  title: "Topics" },
+    { link: "research/topics",        title: "Topics" },
     { link: "research/publications",  title: "Publications" },
-    { link: "research/teaching",  title: "Teaching" },
+    { link: "research/teaching",      title: "Teaching" },
   ]);
   /*------------------------------
     helper functions
@@ -28,26 +28,32 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   };
   function formatOther(p) {
     return {
-      title:      p.title,
-      subtitle:   p.subtitle,
-      text:       "",
+      title:      p.title + ".",
+      subtitle:   p.subtitle + ".",
+      text:       ("text" in p) ? p.text : [],
       _template:  "box",
-      _color:     p.type == "Role" ? "#e5c7b5" : "#f4f4cb",
+      _color:     p.type == "Role" ? "#e5c7b5" : p.type == "Position" ? "#fff" : "#f4f4cb",
       _date:      p._date
     };
   };
-  function addByKeyword(content, data, formatter, getKeyword) {
-    idx = new Map();
-    for (i=0; i<content.length; ++i) idx[content[i].title] = i;
-    for (d of data) {
-      k = getKeyword(d);
+  function addByKeyword(content, data, numbers, formatter, getKeyword) {
+    let idx = new Map();
+    for (let i=0; i<content.length; ++i) idx[content[i].title] = i;
+    for (const d of data) {
+      const k = getKeyword(d);
       if (! (k in idx)) continue;
-      x = formatter(d);
+      const x = formatter(d);
       content[idx[k]].items.push(x)
     }
-    for (c of content) c.items.sort(function(a,b) {return a._date < b._date ? 1 : -1;});
+    for (let c of content) {
+      c.items.sort(function(a,b) {return a._date < b._date ? 1 : -1;});
+      if (numbers) {
+        const pfx = "[" + c.title.replace(/[^A-Z]/g, "");
+        for (let i=0; i<c.items.length; ++i) c.items[i].num = pfx + (c.items.length - i) + "] ";
+      }
+    }
   };
-  var getContents;
+  let getContents;
   switch ($routeParams.page) {
     /*------------------------------
       research
@@ -55,13 +61,17 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     case undefined:
       $scope.data.expand = false;
       getContents = function(db) {
-        years = ["2010"]
-        for (i=2013; i<=2017; ++i) years.push(String(i));
-        content = [];
-        for (i=years.length-1; i>=0; --i)
+        let years = ["2010"]
+        for (let i=2013; i<=2017; ++i) years.push(String(i));
+        let content = [];
+        for (let i=years.length-1; i>=0; --i)
           content.push({title: years[i], text: "", _template: "section", items: []});
-        addByKeyword(content, db.publications, formatPublication, function(i) {return ["Journal Papers", "Books", "Book Chapters"].includes(i.type) ? String(i.year) : undefined;});
-        addByKeyword(content, db.news, formatOther, function(i) {return "20" + i._date.substr(0,2);});
+        addByKeyword(content, db.publications, false, formatPublication, function(i) {
+          return ["Journal Papers", "Books", "Book Chapters"].includes(i.type) ? String(i.year) : undefined;
+        });
+        addByKeyword(content, db.news, false, formatOther, function(i) {
+          return "20" + i._date.substr(0,2);
+        });
         return content;
       };
       break;
@@ -71,10 +81,12 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     case "topics":
       $scope.data.expand = false;
       getContents = function(db) {
-        content = [];
-        for (d of db.topics)
+        let content = [];
+        for (const d of db.topics)
           content.push({title: d.title, text: d.abstract, _template: "section", items: []});
-        addByKeyword(content, db.publications, formatPublication, function(i) {return i.topic;});
+        addByKeyword(content, db.publications, true, formatPublication, function(i) {
+          return i.topic;
+        });
         return content;
       };
       break;
@@ -84,10 +96,12 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     case "publications":
       $scope.data.expand = false;
       getContents = function(db) {
-        content = [];
-        for (d of db.types)
+        let content = [];
+        for (const d of db.types)
           content.push({title: d, text: "", _template: "section", items: []});
-        addByKeyword(content, db.publications, formatPublication, function(i) {return i.type;});
+        addByKeyword(content, db.publications, true, formatPublication, function(i) {
+          return i.type;
+        });
         return content;
       };
       break;
