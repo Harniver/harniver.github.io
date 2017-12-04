@@ -7,6 +7,10 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   /*------------------------------
     helper functions
   ------------------------------*/
+  function boxHeight(text) {
+    if (! (text instanceof Array)) return 0;
+    return 200 * text.join().length / $(window).width() + 19 * text.length + 18;
+  }
   function toLink(l) {
     if (l == "") return "";
     if (l.startsWith("arXiv:")) return l.replace("arXiv:", "https://arxiv.org/abs/");

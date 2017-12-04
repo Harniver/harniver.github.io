@@ -1,7 +1,5 @@
-* max-height dei box a seconda della lunghezza testo
+* transition max-height auto to zero (how?)
 * bug: affix si perde a secondo ingresso
-* mobile: link in nuova riga
-* mobile: mostrare search bar
 
 * Controllare mobile in modalità desktop
 * Sidebar in caso mobile (foldable e folded di default in sottopagine, hidden)

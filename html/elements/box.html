@@ -11,7 +11,12 @@
     <table style="width:100%">
       <tr>
         <td><i>{{i.subtitle}}</i></td>
-        <td class="flushleft">
+        <td class="flushleft hidden-xs hidden-sm">
+          <a ng-href="{{i.link}}" target="_blank"><u>{{i.subsubtitle}}</u></a>
+        </td>
+      </tr>
+      <tr>
+        <td class="visible-xs visible-sm">
           <a ng-href="{{i.link}}" target="_blank"><u>{{i.subsubtitle}}</u></a>
         </td>
       </tr>
