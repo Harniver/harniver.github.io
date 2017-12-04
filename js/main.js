@@ -114,7 +114,8 @@ app.run(function($rootScope) {
       'box-shadow': '0px 3px 13px 2px ' + addAlpha(color,0.2,0.4),
       'margin-bottom': '30px'
     };
-    $scope.data.title = pagetitle;
+    $scope.data.page = lowtitle;
+    $scope.data.title = "news";
     $scope.data.theme = lowtitle;
     $scope.data.pages = links;
     $scope.data.nphoto = nphoto;
@@ -133,6 +134,7 @@ app.run(function($rootScope) {
   };
 
   $rootScope.contentsSet = function($scope, $http, $sce, page, cache, file, extractor) {
+    $scope.data.title = $scope.data.page + "/" + (page ? page : "news");
     if ($scope.contents.length > 0) return;
     if (cache.db != undefined) {
       console.log(file + ": extracting " + page);
