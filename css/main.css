@@ -434,7 +434,11 @@ input{
   max-height: 500px;
   padding: 10px;
   overflow: hidden;
+}
+.box-content p {
   font-size: 15px;
+  color: #3d3d3d;
+  line-height: normal;
 }
 
 /* ------------------------------------------------------------------------------
@@ -673,12 +677,6 @@ input{
 	font-size: 23px;
 	font-weight: 700;
 	margin-top:55px;
-}
-.inner-description p {
-	color: #3d3d3d;
-	font-size: 17px;
-	line-height: 33px;
-	font-weight: 400;
 }
 .inner-description img {
   width:100%;

@@ -31,6 +31,18 @@ app.config(function($routeProvider) {
     })
 });
 
+app.directive("mathjaxBind", function() {
+  return {
+    restrict: "A",
+    controller: ["$scope", "$element", "$attrs", function($scope, $element, $attrs) {
+      $scope.$watch($attrs.mathjaxBind, function(texExpression) {
+        $element.html(texExpression);
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, $element[0]]);
+      });
+    }]
+  };
+});
+
 app.run(function($rootScope) {
   $rootScope.$on("$routeChangeSuccess", function(event, currentRoute, previousRoute) {
     window.scrollTo(0, 0);

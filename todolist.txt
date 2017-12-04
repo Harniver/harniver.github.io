@@ -1,9 +1,12 @@
-* titoli che cambiano con la pagina
+* teaching
+  - tesi: fatte/in corso/proposte
+  - corsi con link (e materiali?)
+  - olimpiadi con link (e altro?)
+* titoli che cambiano con la pagina: news/topics/...
 * max-height dei box a seconda della lunghezza testo
 * bug: affix si perde a secondo ingresso
 * mobile: link in nuova riga
 * mobile: mostrare search bar
-* latex e/o html in box content
 
 * Controllare mobile in modalità desktop
 * Sidebar in caso mobile (foldable e folded di default in sottopagine, hidden)
@@ -11,6 +14,7 @@
 * Immagine home
 * Wallpaper per ogni sezione principale
 * sottomenu?
+* link ai social
 
 names.py:
 * filtering del dizionario in base alle statistiche
