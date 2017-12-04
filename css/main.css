@@ -440,6 +440,26 @@ input{
   color: #3d3d3d;
   line-height: normal;
 }
+.box-content ul, .box-content ol {
+  margin-left: 20px;
+  line-height: 200%;
+}
+.box-content ul li {
+  display: list-item;
+  list-style-type: disc;
+}
+.box-content ul ul li {
+  list-style-type: circle;
+  line-height: 150%;
+}
+.box-content a {
+  color: #3d3d3d;
+  text-decoration: underline;
+}
+.box-content a:hover {
+  color: #888;
+  text-decoration: underline;
+}
 
 /* ------------------------------------------------------------------------------
 	Banner

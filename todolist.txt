@@ -1,8 +1,3 @@
-* teaching
-  - tesi: fatte/in corso/proposte
-  - corsi con link (e materiali?)
-  - olimpiadi con link (e altro?)
-* titoli che cambiano con la pagina: news/topics/...
 * max-height dei box a seconda della lunghezza testo
 * bug: affix si perde a secondo ingresso
 * mobile: link in nuova riga

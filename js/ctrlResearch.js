@@ -111,6 +111,10 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     case "teaching":
       $scope.data.expand = true;
       getContents = function(db) {
+        for (let d of db.teaching) {
+          d._template = "box";
+          d._color = "#e5c7b5";
+        }
         return db.teaching;
       };
       break;
