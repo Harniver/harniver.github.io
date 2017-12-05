@@ -9,19 +9,19 @@
   "topics": [
     {
       "title":    "Aggregate Computing",
-      "abstract": ""
+      "abstract": "Aggregate computing is..."
     },
     {
       "title":    "Algorithms",
-      "abstract": ""
+      "abstract": "Algorithms are..."
     },
     {
       "title":    "Logic and Set Theory",
-      "abstract": ""
+      "abstract": "Logic and set theory is..."
     },
     {
       "title":    "Didactics",
-      "abstract": ""
+      "abstract": "Didactics is..."
     }
   ],
   "types": ["Journal Papers", "Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
@@ -324,87 +324,87 @@
     },
     {
       "title":    "Ph.D. in Mathematics",
-      "subtitle": "Università degli Studi di Torino, 02/03/2016",
+      "subtitle": "Università degli Studi di Torino, 01/01/2012-02/03/2016",
       "text":     ["The thesis develops on two connected topics. Firstly, the definability of generic large cardinal axioms: the novel notion of C-system of filters is introduced, generalizing the standard definitions of extenders and towers and simplifying the classical treatment of the subject. Secondly, how to obtain strong forms of generic absoluteness from forcing axioms of low consistency strength, the novel iterated resurrection axioms."],
       "type":     "Position",
-      "_date":    "16.03.02"
+      "_date":    "12.01.01"
     },
     {
       "title":    "Adjunct Professor for the “Object-Oriented Programming” course, Computer Science major",
       "subtitle": "Università del Piemonte Orientale, Vercelli, 01/03/2017-31/09/2018",
       "type":     "Position",
-      "_date":    "17.09.31"
+      "_date":    "17.03.01"
     },
     {
       "title":    "Co-supervisor for the Bachelor thesis of Luca Serena, Computer Science major",
       "subtitle": "Università degli Studi di Torino, 16/10/2017",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.10.16"
     },
     {
       "title":    "Teaching assistant “articolo 76” for the ”Informatics” course, Mathematics for Finance and Insurance major",
       "subtitle": "Università degli Studi di Torino, 01/10/2016-31/01/2017",
-      "type":     "Role",
+      "type":     "Position",
       "_date":    "16.10.01"
     },
     {
       "title":    "Scientific Organizer of the ioIT",
       "subtitle": "1st International Olympiads in Informatics in Teams, Bologna, 17-20/05/2017",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.05.19"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Tehran, Iran, 2017",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Kazan, Russia, 2016",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "16.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Almaty, Kazakhstan, 2015",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "15.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Taipei, Taiwan, 2014",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "14.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Brisbane, Australia, 2013",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "13.08.10"
     },
     {
       "title":    "Local Organization Co-Chair",
       "subtitle": "iFM 2017, Torino",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.09.17"
     },
     {
       "title":    "Artifact Evaluation Committee member",
       "subtitle": "OOPSLA track, SPLASH 2017, Vancouver, Canada",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.10.25"
     },
     {
       "title":    "Program Committe member",
       "subtitle": "ALP4IoT workshop, iFM 2017, Torino",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.09.17"
     },
     {
       "title":    "Program Committe member",
       "subtitle": "eCAS workshop, SASO 2017 conference, Tucson, USA",
-      "type":     "Role",
+      "type":     "Event",
       "_date":    "17.09.22"
     },
     {

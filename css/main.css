@@ -36,6 +36,7 @@ h4 {
 	font-size: 22px;
 	color: #2d3033;
 	font-weight: 400;
+  text-align: center;
 }
 h5 {
 	font-size: 14px;
@@ -70,6 +71,7 @@ h5 {
 
 a {
   color: #3d3d3d;
+  cursor: pointer;
 }
 a:hover, a:focus {
   color: #888;
@@ -415,6 +417,7 @@ input{
   font-size: 16px;
   color: #3d3d3d;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .box-header {
   box-shadow: 0px 0px 6px 2px #ddd;

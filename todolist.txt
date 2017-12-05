@@ -1,7 +1,8 @@
 * transition max-height auto to zero (how?)
 * bug: affix si perde a secondo ingresso
+* user agent per modalità desktop in viewport
 
-* Controllare mobile in modalità desktop
+* TOPIC DESCRIPTIONS
 * Sidebar in caso mobile (foldable e folded di default in sottopagine, hidden)
 * Evidenziare pagina corrente nel menu
 * Immagine home
