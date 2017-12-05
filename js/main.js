@@ -107,18 +107,18 @@ app.run(function($rootScope) {
       cache.set("_pending_", []);
       $http.get("json/"+def.theme+".json").then(function (success) {
         cache.set("_db_", success.data);
-        for (f of cache.get("_pending_")) f();
+        for (let f of cache.get("_pending_")) f();
         cache.set("_pending_", []);
       }, function (error) {
         console.log(def.theme + ": failed download\n" + JSON.stringify(error));
       });
     }
     console.log(def.theme + "/" + page + ": computing header");
-    for (p of pages)
+    for (let p of pages)
       if (!("link" in p))
         p.link = def.theme+"/"+(p.title == "Home" ? "" : normalize(p.title));
       else p.link = def.theme+"/"+p.link;
-    for (p of pages) if (p.link == def.theme+"/"+page)
+    for (let p of pages) if (p.link == def.theme+"/"+page)
       cache.set(page, $.extend(deepCopy(def), p));
     if (!cache.has(page)) $location.url(pages[0].link);
     let c = $scope.data = cache.get(page);
@@ -130,6 +130,7 @@ app.run(function($rootScope) {
     };
     c.pi = 0;
     c.searchKey = "";
+    c.hidebar = pages[0].link == def.theme+"/"+page ? "" : "hidden-xs hidden-sm";
     c.affix = function() {
       $('#scroller').affix({
         offset: {
@@ -138,9 +139,14 @@ app.run(function($rootScope) {
         }
       });
     };
-    c.pages = pages;
+    c.pages = [];
     c.contents = [];
     c.address = [];
+    for (let p of pages) c.pages.push({
+      title: p.title,
+      link: p.link,
+      current: p.title == c.title ? "current" : ""
+    });
     function finish() {
       console.log(def.theme + "/" + page + ": extracting content");
       c.contents = c.painter(deepCopy(cache.get("_db_")));

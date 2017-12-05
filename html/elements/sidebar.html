@@ -1,6 +1,6 @@
 <div class="sidebar-inside" ng-style="data.bgalpha">
-  <img src="static/photo.{{data.theme}}.{{data.pi}}.jpg" alt="" ng-click="data.pi = (data.pi+1)%data.nphoto" ng-mouseover="data.pi = (data.pi+1)%data.nphoto"></img><br>
-  <div class="textbox">
+  <img src="static/photo.{{data.theme}}.{{data.pi}}.jpg" alt="" ng-click="data.pi = (data.pi+1)%data.nphoto" ng-mouseover="data.pi = (data.pi+1)%data.nphoto" ng-class="data.hidebar"></img>
+  <div class="textbox" ng-class="data.hidebar">
     <div ng-repeat="x in data.address">
       <ng-bind-html ng-bind-html="x"></ng-bind-html>
       <br>

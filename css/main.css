@@ -176,6 +176,10 @@ ul li {
 .navbar-collapse a:hover, .navbar-collapse a.active {
 	color: #fff;
 }
+.navbar-collapse a.current {
+  color: #fff;
+  cursor: default;
+}
 @media (max-width: 767px) {
   .primary-nav {
     background-color: rgba(0, 0, 0, 0.70);
