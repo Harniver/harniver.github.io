@@ -1,28 +1,28 @@
 app.controller('musicCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
-  $rootScope.music = $rootScope.pageSet($scope, $routeParams.page, $rootScope.music, "Music", "#992121", 3, [
-    { link: "music/wip",  title: "Work in Progress" },
-  ]);
-  let getContents;
-  switch ($routeParams.page) {
+  /*------------------------------
+    default values
+  ------------------------------*/
+  let def = {
+    nphoto: 3,          // number of photos
+    theme:  "music",    // resources theme and overall title
+    color:  "#992121",  // theme color
+  };
+  let pages = [{
     /*------------------------------
-      music
+      home page
     ------------------------------*/
-    case undefined:
-      getContents = function(db) {
-        return db.contents;
-      };
-      break;
+    title:    "Home",
+    painter:  function(db) {
+                return db.contents;
+              }
+  }, {
     /*------------------------------
-      wip
+      topics page
     ------------------------------*/
-    case "wip":
-      getContents = function(db) {
-        return db.contents;
-      };
-      break;
-    default:
-      $location.url("music");
-      return;
-  }
-  $rootScope.contentsSet($scope, $http, $sce, $routeParams.page, $rootScope.music, 'json/music.json', getContents);
+    title:    "Work in Progress",
+    painter:  function(db) {
+                return db.contents;
+              }
+  }];
+  $rootScope.pageSet($scope, $location, $http, $sce, $routeParams.page, def, pages);
 });

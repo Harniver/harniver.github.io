@@ -1,28 +1,28 @@
 app.controller('gamesCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
-  $rootScope.games = $rootScope.pageSet($scope, $routeParams.page, $rootScope.games, "Games", "#ccbc14", 2, [
-    { link: "games/wip",  title: "Work in Progress" },
-  ]);
-  let getContents;
-  switch ($routeParams.page) {
+  /*------------------------------
+    default values
+  ------------------------------*/
+  let def = {
+    nphoto: 2,          // number of photos
+    theme:  "games",    // resources theme and overall title
+    color:  "#ccbc14",  // theme color
+  };
+  let pages = [{
     /*------------------------------
-      games
+      home page
     ------------------------------*/
-    case undefined:
-      getContents = function(db) {
-        return db.contents;
-      };
-      break;
+    title:    "Home",
+    painter:  function(db) {
+                return db.contents;
+              }
+  }, {
     /*------------------------------
-      wip
+      topics page
     ------------------------------*/
-    case "wip":
-      getContents = function(db) {
-        return db.contents;
-      };
-      break;
-    default:
-      $location.url("games");
-      return;
-  }
-  $rootScope.contentsSet($scope, $http, $sce, $routeParams.page, $rootScope.games, 'json/games.json', getContents);
+    title:    "Work in Progress",
+    painter:  function(db) {
+                return db.contents;
+              }
+  }];
+  $rootScope.pageSet($scope, $location, $http, $sce, $routeParams.page, def, pages);
 });

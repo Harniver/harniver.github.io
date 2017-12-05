@@ -1,28 +1,28 @@
 app.controller('societyCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
-  $rootScope.society = $rootScope.pageSet($scope, $routeParams.page, $rootScope.society, "Society", "#a0a0a0", 3, [
-    { link: "society/wip",  title: "Work in Progress" },
-  ]);
-  let getContents;
-  switch ($routeParams.page) {
+  /*------------------------------
+    default values
+  ------------------------------*/
+  let def = {
+    nphoto: 3,          // number of photos
+    theme:  "society",  // resources theme and overall title
+    color:  "#a0a0a0",  // theme color
+  };
+  let pages = [{
     /*------------------------------
-      games
+      home page
     ------------------------------*/
-    case undefined:
-      getContents = function(db) {
-        return db.contents;
-      };
-      break;
+    title:    "Home",
+    painter:  function(db) {
+                return db.contents;
+              }
+  }, {
     /*------------------------------
-      wip
+      topics page
     ------------------------------*/
-    case "wip":
-      getContents = function(db) {
-        return db.contents;
-      };
-      break;
-    default:
-      $location.url("society");
-      return;
-  }
-  $rootScope.contentsSet($scope, $http, $sce, $routeParams.page, $rootScope.society, 'json/society.json', getContents);
+    title:    "Work in Progress",
+    painter:  function(db) {
+                return db.contents;
+              }
+  }];
+  $rootScope.pageSet($scope, $location, $http, $sce, $routeParams.page, def, pages);
 });

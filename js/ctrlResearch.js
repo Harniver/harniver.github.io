@@ -1,11 +1,4 @@
 app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $location, $http, $sce) {
-  $rootScope.research = $rootScope.pageSet($scope, $routeParams.page, $rootScope.research, "Research", "#2b8441", 2, [
-    { link: "research/topics",        title: "Topics" },
-    { link: "research/publications",  title: "Publications" },
-    { link: "research/teaching",      title: "Teaching" },
-  ]);
-  var teaser = false;           // if box teasers are present
-  $scope.data.maxlen = 1000;    // how many sections initially
   /*------------------------------
     helper functions
   ------------------------------*/
@@ -18,15 +11,33 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   function getMonth(x) {
     return ["", "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][parseInt(x._date.substr(3,2))];
   }
+  function getColor(x) {
+    switch (x.type) {
+      case "Event":
+        return "#e5c7b5";
+      case "Position":
+        return "#fff";
+      case "Prize":
+        return "#f4f4cb";
+      case "Project":
+        return "#ff7fc9";
+      default:
+        return "#eee";
+    }
+  }
   function toLink(l) {
     if (l == "") return "";
-    if (l.startsWith("arXiv:")) return l.replace("arXiv:", "https://arxiv.org/abs/");
+    if (l.startsWith("http")) return l;
     if (l.startsWith("ISBN:")) return "";
+    if (l.startsWith("arXiv:")) return l.replace("arXiv:", "https://arxiv.org/abs/");
     return "https://doi.org/" + l;
   };
+  /*------------------------------
+    formatting functions
+  ------------------------------*/
   function formatPublication(p) {
     return {
-      teaser:       teaser ? "new paper!" : "",
+      teaser:       $scope.data.teaser ? "new paper!" : "",
       pretitle:     p.authors + ". ",
       title:        p.title + ".",
       subtitle:     p.journal + ", " + p.year + ".",
@@ -44,14 +55,14 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   };
   function formatOther(p) {
     return {
-      teaser:     p.teaser ? p.teaser : p.type == "Event" ? "new event!" : p.type == "Position" ? "new position!" : "new prize!",
+      teaser:     $scope.data.teaser ? (p.teaser ? p.teaser : "new "+p.type.toLowerCase()+"!") : "",
       title:      p.title + ".",
       subtitle:   p.subtitle + ".",
       text:       ("text" in p) ? p.text : [],
       _dim:       boxHeight(p.text),
       _show:      false,
       _template:  "box",
-      _color:     p.type == "Event" ? "#e5c7b5" : p.type == "Position" ? "#fff" : "#f4f4cb",
+      _color:     getColor(p),
       _date:      p._date
     };
   };
@@ -72,84 +83,100 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       }
     }
   };
-  let getContents;
-  switch ($routeParams.page) {
+  /*------------------------------
+    default values
+  ------------------------------*/
+  let def = {
+    nphoto: 2,          // number of photos
+    theme:  "research", // resources theme and overall title
+    color:  "#2b8441",  // theme color
+    teaser: false,      // if box teasers are present
+    maxlen: 1000        // how many sections initially
+  };
+  let pages = [{
     /*------------------------------
-      research
+      home page
     ------------------------------*/
-    case undefined:
-      teaser = true;
-      $scope.data.maxlen = 1;
-      getContents = function(db) {
-        let years = ["2010"]
-        for (let i=2012; i<=2017; ++i) years.push(String(i));
-        let k = 0;
-        let content = [];
-        for (let i=years.length-1; i>=0; --i)
-          content.push({title: years[i], text: "", _template: "section", items: [], num:++k});
-        addByKeyword(content, db.publications, false, formatPublication, function(i) {
-          return ["Journal Papers", "Books", "Book Chapters"].includes(i.type) ? String(i.year) : undefined;
-        });
-        addByKeyword(content, db.news, false, formatOther, function(i) {
-          return "20" + i._date.substr(0,2);
-        });
-        for (let c of content) if (c.items.length > 4) {
-          for (let i=0; i<c.items.length; ++i)
-            if (i==0 || getMonth(c.items[i]) != getMonth(c.items[i-1])) {
-              c.items.splice(i, 0, {title: getMonth(c.items[i]), _template: "subsection"});
-              i++;
-            }
-        }
-        return content;
-      };
-      break;
+    title:    "Home",
+    maxlen:   1,
+    teaser:   true,
+    painter:  function(db) {
+                let years = ["2010"];
+                for (let i=2012; i<=2017; ++i) years.push(String(i));
+                let k = 0;
+                let content = [];
+                for (let i=years.length-1; i>=0; --i)
+                  content.push({title: years[i], text: "", _template: "section", items: [], num:++k});
+                addByKeyword(content, db.publications, false, formatPublication, function(i) {
+                  return ["Journal Papers", "Books", "Book Chapters"].includes(i.type) ? String(i.year) : undefined;
+                });
+                addByKeyword(content, db.news, false, formatOther, function(i) {
+                  return "20" + i._date.substr(0,2);
+                });
+                for (let c of content) if (c.items.length > 4) {
+                  for (let i=0; i<c.items.length; ++i)
+                    if (i==0 || getMonth(c.items[i]) != getMonth(c.items[i-1])) {
+                      c.items.splice(i, 0, {title: getMonth(c.items[i]), _template: "subsection"});
+                      i++;
+                    }
+                }
+                return content;
+              }
+  }, {
     /*------------------------------
-      research/topics
+      topics page
     ------------------------------*/
-    case "topics":
-      getContents = function(db) {
-        let k = 0;
-        let content = [];
-        for (const d of db.topics)
-          content.push({title: d.title, text: d.abstract, _template: "section", items: [], num:++k});
-        addByKeyword(content, db.publications, true, formatPublication, function(i) {
-          return i.topic;
-        });
-        return content;
-      };
-      break;
+    title:    "Topics",
+    painter:  function(db) {
+                let k = 0;
+                let content = [];
+                for (const d of db.topics)
+                  content.push({title: d.title, text: d.abstract, _template: "section", items: [], num:++k});
+                addByKeyword(content, db.publications, true, formatPublication, function(i) {
+                  return i.topic;
+                });
+                return content;
+              }
+  }, {
     /*------------------------------
-      research/publications
+      publications page
     ------------------------------*/
-    case "publications":
-      getContents = function(db) {
-        let k = 0;
-        let content = [];
-        for (const d of db.types)
-          content.push({title: d, text: "", _template: "section", items: [], num:++k});
-        addByKeyword(content, db.publications, true, formatPublication, function(i) {
-          return i.type;
-        });
-        return content;
-      };
-      break;
+    title:   "Publications",
+    painter:  function(db) {
+                let k = 0;
+                let content = [];
+                for (const d of db.types)
+                  content.push({title: d, text: "", _template: "section", items: [], num:++k});
+                addByKeyword(content, db.publications, true, formatPublication, function(i) {
+                  return i.type;
+                });
+                return content;
+              }
+  }, {
     /*------------------------------
-      research/teaching
+      events page
     ------------------------------*/
-    case "teaching":
-      getContents = function(db) {
-        for (let d of db.teaching) {
-          d._template = "box";
-          d._color = "#e5c7b5";
-          d._dim = boxHeight(d.text);
-          d._show = true;
-        }
-        return db.teaching;
-      };
-      break;
-    default:
-      $location.url("research");
-      return;
-  }
-  $rootScope.contentsSet($scope, $http, $sce, $routeParams.page, $rootScope.research, 'json/research.json', getContents);
+    title:    "Events",
+    painter:  function(db) {
+                let content = [];
+                for (let d of db.news) if (d.type == "Event")
+                  content.push(formatOther(d));
+                return content;
+              }
+  }, {
+    /*------------------------------
+      teaching page
+    ------------------------------*/
+    title:   "Teaching",
+    painter:  function(db) {
+                for (let d of db.teaching) {
+                  d._template = "box";
+                  d._color = "#e5c7b5";
+                  d._dim = boxHeight(d.text);
+                  d._show = true;
+                }
+                return db.teaching;
+              }
+  }];
+  $rootScope.pageSet($scope, $location, $http, $sce, $routeParams.page, def, pages);
 });
