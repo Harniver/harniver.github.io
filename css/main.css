@@ -442,9 +442,53 @@ input{
   transition: max-height linear 0.4s;
 }
 .box-content {
-  max-height: 500px;
   padding: 10px;
   overflow: hidden;
+}
+.dim1 {
+  max-height: 100px;
+}
+.dim2 {
+  max-height: 200px;
+}
+.dim3 {
+  max-height: 300px;
+}
+.dim4 {
+  max-height: 400px;
+}
+.dim5 {
+  max-height: 500px;
+}
+.dim6 {
+  max-height: 600px;
+}
+.dim7 {
+  max-height: 700px;
+}
+.dim8 {
+  max-height: 800px;
+}
+.dim9 {
+  max-height: 900px;
+}
+.dim10 {
+  max-height: 1000px;
+}
+.dim11 {
+  max-height: 1100px;
+}
+.dim12 {
+  max-height: 1200px;
+}
+.dim13 {
+  max-height: 1300px;
+}
+.dim14 {
+  max-height: 1400px;
+}
+.dim15 {
+  max-height: 1500px;
 }
 .box-content p {
   font-size: 15px;

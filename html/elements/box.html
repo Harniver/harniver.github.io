@@ -23,7 +23,7 @@
       </tr>
     </table>
   </div>
-  <div class="box-content" ng-show="i._show" ng-init="i._show = data.expand">
+  <div class="box-content" ng-class="i._dim" ng-show="i._show">
     <p ng-repeat="line in i.text"><span mathjax-bind="line"></span></p>
   </div>
 </div>

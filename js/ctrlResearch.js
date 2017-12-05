@@ -4,12 +4,16 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     { link: "research/publications",  title: "Publications" },
     { link: "research/teaching",      title: "Teaching" },
   ]);
+  var teaser = false;           // if box teasers are present
+  $scope.data.maxlen = 1000;    // how many sections initially
   /*------------------------------
     helper functions
   ------------------------------*/
   function boxHeight(text) {
-    if (! (text instanceof Array)) return 0;
-    return 200 * text.join().length / $(window).width() + 19 * text.length + 18;
+    if (! (text instanceof Array)) return undefined;
+    let w = $(window).width();
+    if (w <= 767) w *= 12 / 9;
+    return "dim" + Math.floor((200 * text.join().length / w + 19 * text.length + 18)/100 + 1);
   }
   function getMonth(x) {
     return ["", "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][parseInt(x._date.substr(3,2))];
@@ -20,7 +24,6 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     if (l.startsWith("ISBN:")) return "";
     return "https://doi.org/" + l;
   };
-  var teaser = false;
   function formatPublication(p) {
     return {
       teaser:       teaser ? "new paper!" : "",
@@ -30,6 +33,10 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       subsubtitle:  p.link,
       link:         toLink(p.link),
       text:         p.abstract,
+      topic:        p.topic,
+      type:         p.type,
+      _dim:         boxHeight(p.abstract),
+      _show:        false,
       _template:    "box",
       _color:       "#eee",
       _date:        p._date
@@ -41,6 +48,8 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       title:      p.title + ".",
       subtitle:   p.subtitle + ".",
       text:       ("text" in p) ? p.text : [],
+      _dim:       boxHeight(p.text),
+      _show:      false,
       _template:  "box",
       _color:     p.type == "Event" ? "#e5c7b5" : p.type == "Position" ? "#fff" : "#f4f4cb",
       _date:      p._date
@@ -69,7 +78,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       research
     ------------------------------*/
     case undefined:
-      $scope.data.expand = false;
+      teaser = true;
       $scope.data.maxlen = 1;
       getContents = function(db) {
         let years = ["2010"]
@@ -78,7 +87,6 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
         let content = [];
         for (let i=years.length-1; i>=0; --i)
           content.push({title: years[i], text: "", _template: "section", items: [], num:++k});
-        teaser = true;
         addByKeyword(content, db.publications, false, formatPublication, function(i) {
           return ["Journal Papers", "Books", "Book Chapters"].includes(i.type) ? String(i.year) : undefined;
         });
@@ -99,14 +107,11 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       research/topics
     ------------------------------*/
     case "topics":
-      $scope.data.expand = false;
-      $scope.data.maxlen = 100;
       getContents = function(db) {
         let k = 0;
         let content = [];
         for (const d of db.topics)
           content.push({title: d.title, text: d.abstract, _template: "section", items: [], num:++k});
-        teaser = false;
         addByKeyword(content, db.publications, true, formatPublication, function(i) {
           return i.topic;
         });
@@ -117,14 +122,11 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       research/publications
     ------------------------------*/
     case "publications":
-      $scope.data.expand = false;
-      $scope.data.maxlen = 100;
       getContents = function(db) {
         let k = 0;
         let content = [];
         for (const d of db.types)
           content.push({title: d, text: "", _template: "section", items: [], num:++k});
-        teaser = false;
         addByKeyword(content, db.publications, true, formatPublication, function(i) {
           return i.type;
         });
@@ -135,12 +137,12 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       research/teaching
     ------------------------------*/
     case "teaching":
-      $scope.data.expand = true;
-      $scope.data.maxlen = 100;
       getContents = function(db) {
         for (let d of db.teaching) {
           d._template = "box";
           d._color = "#e5c7b5";
+          d._dim = boxHeight(d.text);
+          d._show = true;
         }
         return db.teaching;
       };
