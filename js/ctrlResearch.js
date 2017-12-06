@@ -20,15 +20,15 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   function getColor(x) {
     switch (x.type) {
       case "Event":
-        return "#e5c7b5";
-      case "Position":
         return "#fff";
+      case "Position":
+        return "#e5c7b5";
       case "Prize":
         return "#f4f4cb";
       case "Project":
         return "#ff7fc9";
       default:
-        return "#eee";
+        return "#d1f3ff";
     }
   };
   function toText(l) {
@@ -57,6 +57,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       text:         p.abstract,
       topic:        p.topic,
       type:         p.type,
+      _top:         $scope.data.select ? (p._top ? p._top : 1000) : 0,
       _dim:         boxHeight(p.abstract),
       _show:        false,
       _template:    "box",
@@ -88,7 +89,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       idx.set(content[i].title ? content[i].title : content[i].subtitle, i);
       content[i]._template = "section";
       content[i].items = [];
-      content[i].num = i;
+      content[i]._num = i;
     }
     function getIdx(d) {
       for (const key of getKeyword(d)) if (idx.has(key)) return idx.get(key);
@@ -99,11 +100,19 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       if (i != undefined) content[i].items.push(formatter(d));
     }
     for (let c of content) {
-      c.items.sort(function(a,b) {return a._date < b._date ? 1 : -1;});
-      if (numbers) {
-        const pfx = "[" + c.title.replace(/[^A-Z]/g, "");
-        for (let i=0; i<c.items.length; ++i) c.items[i].num = pfx + (c.items.length - i) + "] ";
+      function compare(a,b) {
+        if (a._top != b._top) return a._top < b._top ? -1 : 1;
+        return a._date < b._date ? 1 : -1;
+      };
+      c.items.sort(compare);
+      let maxlen = undefined;
+      const pfx = "[" + c.title.replace(/[^A-Z]/g, "");
+      for (let i=0; i<c.items.length; ++i) {
+        c.items[i]._num = i;
+        if (numbers) c.items[i].num = pfx + ($scope.data.select ? i+1 : c.items.length-i) + "] ";
+        if (maxlen == undefined && c.items[i]._top == 1000) maxlen = i;
       }
+      c.maxlen = maxlen;
     }
   };
   function partitionDates(data, filter) {
@@ -119,7 +128,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     }
     let content = [];
     for (const d of dates) content.push({title: "", subtitle: d[0], _date: d[1]});
-    content.sort(function(a,b) {return a._date < b._date ? 1 : -1;});
+    content.sort((a,b) => (a._date < b._date ? 1 : -1));
     return content;
   }
   /*------------------------------
@@ -130,6 +139,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     theme:  "research", // resources theme and overall title
     color:  "#2b8441",  // theme color
     teaser: false,      // if box teasers are present
+    select: false,      // if some boxes are to be promoted
     maxlen: 1000        // how many sections initially
   };
   let pages = [{
@@ -171,6 +181,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       topics page
     ------------------------------*/
     title:    "Topics",
+    select:   true,
     painter:  function(db) {
                 let content = [];
                 for (const d of db.topics) content.push({title: d.title, text: d.abstract});
@@ -214,7 +225,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     painter:  function(db) {
                 for (let d of db.teaching) {
                   d._template = "box";
-                  d._color = "#e5c7b5";
+                  d._color = "#c9f2c9";
                   d._dim = boxHeight(d.text);
                   d._show = true;
                 }

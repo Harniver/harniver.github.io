@@ -9,19 +9,32 @@
   "topics": [
     {
       "title":    "Aggregate Computing",
-      "abstract": "Aggregate computing is..."
+      "abstract": [
+        "The complexity of large-scale distributed systems, particularly when deployed in physical space, calls for new mechanisms to address composability and reusability of collective adaptive behaviour. Aggregate computing is a paradigm aiming to address this problem, by modelling whole systems as a single <em>aggregate computing machine.</em> In this way, collective data structures can be atomically manipulated, enabling for two dual but consistent viewpoints: <em>local</em> (machine code executed by each agent) and <em>global</em> (computation on the system as a whole). The global viewpoint provides a convenient abstraction, in which complex programs can be safely composed and built from simpler reusable <em>building blocks</em>.",
+        "These goals are achieved by means of the notion of <em>computational field:</em> a global, distributed map from computational devices to computational objects (data, functions, processes). Computing with fields means computing such global structures, and defining a reusable block of behaviour means to define a reusable computation from fields to fields: this functional view holds at any level of abstraction, from low-level mechanisms up to whole applications, which ultimately work by getting input fields from sensors and processing them to produce output fields to actuators.",
+        "My research interests in this topic encompass:<ul><li>algorithms and reusable building blocks for aggregate systems; [AC1]</li><li>design and formalisation of programming languages for aggregate computing; [AC2]</li><li>definition and automatic assessment of resilience properties. [AC3]</li></ul>"
+      ]
     },
     {
       "title":    "Algorithms",
-      "abstract": "Algorithms are..."
+      "abstract": [
+        "[Work in Progress]",
+        "My research interests in this topic encompass:<ul><li>dynamic programming and speed-up techniques; [A1]</li><li>parity games solving and related graph algorithms.</li></ul>"
+      ]
     },
     {
       "title":    "Logic and Set Theory",
-      "abstract": "Logic and set theory is..."
+      "abstract": [
+        "[Work in Progress]",
+        "My research interests in this topic encompass:<ul><li>the search for natural axioms limiting the independence phenomenon; [LST1]</li><li>large cardinal elementary embeddings and forcing. [LST2]</li></ul>"
+      ]
     },
     {
       "title":    "Didactics",
-      "abstract": "Didactics is..."
+      "abstract": [
+        "[Work in Progress]",
+        "My interests in this topic encompass:<ul><li>on-line and on-site trainings on olympic and recreational informatics; [D1]</li><li>interactive learning of olympic and recreational mathematics. [D2]</li></ul>"
+      ]
     }
   ],
   "types": ["Journal Papers", "Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
@@ -34,6 +47,7 @@
       "link":     "arXiv:1711.08297",
       "topic":    "Aggregate Computing",
       "type":     "Journal Papers",
+      "_top":     3,
       "_date":    "17.11.22",
       "abstract": [
         "Collective adaptive systems are an emerging class of networked computational systems, particularly suited in application domains such as smart cities, complex sensor networks, and the Internet of Things. These systems tend to feature large scale, heterogeneity of communication model (including opportunistic peer-to-peer wireless interaction), and require inherent self-adaptiveness properties to address unforeseen changes in operating conditions. In this context, it is extremely difficult (if not seemingly intractable) to engineer reusable pieces of distributed behaviour so as to make them provably correct and smoothly composable.",
@@ -48,6 +62,7 @@
       "link":     "10.1016/j.jda.2017.07.002",
       "topic":    "Algorithms",
       "type":     "Journal Papers",
+      "_top":     1,
       "_date":    "17.07.01",
       "abstract": [
         "We study the problem of broadcasting a common, possibly large, content into a wireless mesh network consisting of $N$ end-users and of one or multiple access points that act as gateways to Internet. Each end-user is characterized by a maximum possible reception rate that depends on the distance and on the interface used to communicate with the associated access point. The end-user satisfaction is proportional to the actual rate received. The overall end-user satisfaction is the sum of the satisfaction of each end-user. Our goal is to maximize the overall end-user satisfaction under the constraint that the access points can retransmit at different rates the same common content at most $K$ times.",
@@ -62,6 +77,7 @@
       "link":     "10.1142/S0219061317500052",
       "topic":    "Logic and Set Theory",
       "type":     "Journal Papers",
+      "_top":     1,
       "_date":    "17.05.11",
       "abstract": [
         "The resurrection axioms are forcing axioms introduced recently by Hamkins and Johnstone, developing on ideas of Chalons and Veličković. We introduce a stronger form of resurrection axioms (the iterated resurrection axioms $RA_\\alpha(\\Gamma)$ for a class of forcings $\\Gamma$ and a given ordinal $\\alpha$), and show that $RA_\\omega(\\Gamma)$ implies generic absoluteness for the first-order theory of $H_{\\gamma^+}$ with respect to forcings in $\\Gamma$ preserving the axiom, where $\\gamma = \\gamma_\\Gamma$ is a cardinal which depends on $\\Gamma$ ($\\gamma_\\Gamma = \\omega_1$ if $\\Gamma$ is any among the classes of countably closed, proper, semiproper, stationary set preserving forcings).",
@@ -76,6 +92,7 @@
       "link":     "10.1017/jsl.2017.27",
       "topic":    "Logic and Set Theory",
       "type":     "Journal Papers",
+      "_top":     2,
       "_date":    "17.09.08",
       "abstract": [
         "We introduce the notion of $\\mathcal{C}$-system of filters, generalizing the standard definitions of both extenders and towers of normal ideals. This provides a framework to develop the theory of extenders and towers in a more general and concise way. In this framework we investigate the topic of definability of generic large cardinals properties."
@@ -143,6 +160,7 @@
       "link":     "10.1007/978-3-319-59746-1_4",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
+      "_top":     1,
       "_date":    "17.05.27",
       "abstract": [
         "With the constant increase in the number of interconnected devices in today networks, more and more computations can be described by spatial computing abstractions. In this context, distances can be estimated in a fully-distributed way by the so-called gradient self-organisation pattern: it is a basic building block also for large-scale system coordination, frequently used to broadcast information, forecast pointwise events, as carrier for distributed sensing, and as combinator for higher-level spatial structures. However, computing gradients is very problematic in a mutable environment: existing algorithms fail in reaching adequate trade offs between accuracy and reaction speed to environment changes.",
@@ -196,6 +214,7 @@
       "link":     "ISBN:9788846742797",
       "topic":    "Didactics",
       "type":     "Book Chapters",
+      "_top":     1,
       "_date":    "15.07.01",
       "abstract": [
         "Le Olimpiadi Italiane di Informatica (OII) sono una realtà nazionale e internazionale che coinvolge studenti e docenti delle scuole superiori e non solo, e ruota intorno ad alcune competizioni di problem-solving che si svolgono a più livelli. Uno sguardo disattento potrebbe quindi concludere che questa manifestazione coinvolga un numero troppo esiguo di persone (proprio in quanto competizione) per avere un impatto dal punto di vista educativo, e che sia svolta a un livello troppo prematuro (data la giovane età dei partecipanti) per avere un impatto dal punto di vista del progresso scientifico. Tuttavia, entrambe queste conclusioni sono inesatte e trascurano molti aspetti del progetto che trascendono le singole gare di cui è composto. Come approfondiremo meglio più avanti, le OII sono infatti un’occasione di ritrovo oltre che una competizione; e come tale hanno avuto il ruolo di mettere in rete scuole del territorio e docenti, promuovendo e dando visibilità all’entusiasmo degli insegnanti che in questo modo hanno trovato occasioni pubbliche per confrontarsi con ragazzi e colleghi in altre scuole e nelle università. Ognuno dei docenti e dei ragazzi che ha partecipato alle OII ha fatto ritorno a casa con un nuovo bagaglio di esperienze e contatti, ha esteso gli effetti di questa manifestazione nel proprio territorio a persone che non vi hanno partecipato direttamente promuovendo così, in modo trasversale ma sempre guardando ai giovani, le conoscenze informatiche così importanti ai giorni nostri. D'altro lato, evidenze statistiche mostrano come buone prestazioni a livello di problem-solving (e in particolare di Olimpiadi di Informatica) si traducano, anni dopo, in maggiori probabilità di lavorare in campo informatico sia nella ricerca pubblica che in aziende private, contribuendo in questo modo allo sviluppo della materia. Ma il ruolo delle Olimpiadi non si ferma all’individuazione delle eccellenze, fornendo visibilità, borse di studio o contatti. Quello che è molto più importante, e che genuinamente caratterizza le OII, è che esse forniscono a ragazzi dotati di talento una possibilità di raggiungere consapevolezza dei propri interessi e delle proprie capacità, fornendo così una motivazione e occasioni di miglioramento che difficilmente potrebbero verificarsi lungo un programma didattico uniformato, che spesso non li spinge a superare i propri limiti. In questo articolo ci proponiamo di presentare le Olimpiadi di Informatica in Italia descrivendone la struttura, illustrando il tipo di competenze coinvolte e riportando testimonianze dirette di docenti e studenti che hanno attivamente partecipato a questo progetto, con l’attenzione volta soprattutto a riferimenti ed esempi che possano essere utili per chi si avvicina alle OII per la prima volta."
@@ -209,6 +228,7 @@
       "link":     "ISBN:9788867054114",
       "topic":    "Didactics",
       "type":     "Books",
+      "_top":     2,
       "_date":    "16.01.01",
       "abstract": [
         "Nonostante sia presente nelle Indicazioni Nazionali, l’insegnamento della geometria solida è spesso messo in secondo piano nella comune pratica didattica per le sue difficoltà concettuali e gli ampi prerequisiti teorici. Questo volume vuole offrire una proposta di didattica costruttiva della geometria solida fondata sull’uso degli <i>ZOMETOOL</i>, un innovativo strumento didattico adatto a costruire figure sia bidimensionali che tridimensionali.",
@@ -237,6 +257,7 @@
       "link":     "arXiv:1610.08116",
       "topic":    "Aggregate Computing",
       "type":     "Submitted Preprints",
+      "_top":     2,
       "_date":    "17.11.01",
       "abstract": [
         "The complexity of large-scale distributed systems, particularly when deployed in physical space, calls for new mechanisms to address composability and reusability of collective adaptive behaviour. Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of such systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This paper proposes a full formal foundation for field computations, in terms of a core (higher-order) calculus of computational fields containing a few key syntactic constructs, and equipped with typing, denotational and operational semantics. Critically, this allows formal establishment of a link between the micro- and macro-levels of collective adaptive systems, by a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
@@ -307,12 +328,14 @@
     {
       "title":    "Research grant on “Formal methods for the Internet of Things”",
       "subtitle": "Università degli Studi di Torino, 01/12/2017-31/03/2018",
+      "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
       "type":     "Position",
       "_date":    "17.12.01"
     },
     {
       "title":    "Research assistant on “Formal methods for the Internet of Things”",
       "subtitle": "Università degli Studi di Torino, 01/01/2016-30/11/2017",
+      "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
       "type":     "Position",
       "_date":    "16.01.01"
     },
@@ -326,19 +349,21 @@
       "title":    "Ph.D. in Mathematics",
       "subtitle": "Università degli Studi di Torino, 01/01/2012-02/03/2016",
       "text":     ["The thesis develops on two connected topics. Firstly, the definability of generic large cardinal axioms: the novel notion of C-system of filters is introduced, generalizing the standard definitions of extenders and towers and simplifying the classical treatment of the subject. Secondly, how to obtain strong forms of generic absoluteness from forcing axioms of low consistency strength, the novel iterated resurrection axioms."],
+      "link":     "http://logicatorino.altervista.org/indexeng.html",
       "type":     "Position",
       "_date":    "12.01.01"
     },
     {
       "title":    "Adjunct Professor for the “Object-Oriented Programming” course, Computer Science major",
       "subtitle": "Università del Piemonte Orientale, Vercelli, 01/03/2017-31/09/2018",
+      "link":     "https://upobook.uniupo.it/personale/1486",
       "type":     "Position",
       "_date":    "17.03.01"
     },
     {
       "title":    "Co-supervisor for the Bachelor thesis of Luca Serena, Computer Science major",
       "subtitle": "Università degli Studi di Torino, 16/10/2017",
-      "type":     "Event",
+      "type":     "Role",
       "_date":    "17.10.16"
     },
     {
@@ -350,90 +375,105 @@
     {
       "title":    "Scientific Organizer of the ioIT",
       "subtitle": "1st International Olympiads in Informatics in Teams, Bologna, 17-20/05/2017",
+      "link":     "https://ioi.team/",
       "type":     "Event",
       "_date":    "17.05.19"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Tehran, Iran, 2017",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2017",
       "type":     "Event",
       "_date":    "17.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Kazan, Russia, 2016",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2016",
       "type":     "Event",
       "_date":    "16.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Almaty, Kazakhstan, 2015",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2015",
       "type":     "Event",
       "_date":    "15.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Taipei, Taiwan, 2014",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2014",
       "type":     "Event",
       "_date":    "14.08.10"
     },
     {
       "title":    "Team leader of the Italian team",
       "subtitle": "International Olympiads in Informatics, Brisbane, Australia, 2013",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2013",
       "type":     "Event",
       "_date":    "13.08.10"
     },
     {
       "title":    "Local Organization Co-Chair",
       "subtitle": "iFM 2017, Torino",
+      "link":     "http://ifm2017.di.unito.it/",
       "type":     "Event",
       "_date":    "17.09.17"
     },
     {
       "title":    "Artifact Evaluation Committee member",
       "subtitle": "OOPSLA track, SPLASH 2017, Vancouver, Canada",
+      "link":     "https://2017.splashcon.org/track/splash-2017-OOPSLA-Artifacts",
       "type":     "Event",
       "_date":    "17.10.25"
     },
     {
       "title":    "Program Committe member",
       "subtitle": "ALP4IoT workshop, iFM 2017, Torino",
+      "link":     "http://apice.unibo.it/xwiki/bin/view/ALP4IoT2016/WebHome",
       "type":     "Event",
       "_date":    "17.09.17"
     },
     {
       "title":    "Program Committe member",
       "subtitle": "eCAS workshop, SASO 2017 conference, Tucson, USA",
+      "link":     "http://apice.unibo.it/xwiki/bin/view/ECAS2017/",
       "type":     "Event",
       "_date":    "17.09.22"
     },
     {
       "title":    "Best Paper of COORDINATION",
       "subtitle": "Optimally-Self-Healing Distributed Gradient Structures through Bounded Information Speed, 20/06/2017",
+      "link":     "http://2017.discotec.org/program#joint-session-1",
       "type":     "Prize",
       "_date":    "17.06.20"
     },
     {
       "title":    "First place in the national competition for INdAM master’s degree scholarships",
       "subtitle": "Istituto Nazionale di Alta Matematica, 26/03/2009",
+      "link":     "http://www.altamatematica.it/sites/default/files/graduatoriaspecialistica08-09.pdf",
       "type":     "Prize",
       "_date":    "09.03.26"
     },
     {
       "title":    "First place in the national competition for INdAM bachelor’s degree scholarships",
       "subtitle": "Istituto Nazionale di Alta Matematica, 14/10/2005",
+      "link":     "http://www.altamatematica.it/sites/default/files/graduatoriamerito05-06.pdf",
       "type":     "Prize",
       "_date":    "05.10.14"
     },
     {
       "title":    "Bronze medal at the IOI",
       "subtitle": "International Olympiads in Informatics, Nowi Sącz, Poland, 2005",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2005",
       "type":     "Prize",
       "_date":    "05.08.20"
     },
     {
       "title":    "Bronze medal at the IOI",
       "subtitle": "International Olympiads in Informatics, Athens, Greece, 2004",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2004",
       "type":     "Prize",
       "_date":    "04.08.20"
     }
@@ -442,7 +482,7 @@
     {
       "title": "Courses",
       "text": [
-        "<ul><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a></li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a></li></ul>",
+        "<ul><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li></ul>",
         "Further information available <a href=\"https://upobook.uniupo.it/personale/1486\" target=\"_blank\">here.</a>"
       ]
     },
@@ -455,7 +495,7 @@
     },
     {
       "title": "Thesis Proposals",
-      "text": ["<ul><li>Completed:<ul><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a></li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Distributed Data Collection in Situated Networks.</i></a></li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeVTRzcTJiR2NwUXM/view\" target=\"_blank\">Accelerating aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
+      "text": ["<ul><li>Completed:<ul><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Distributed Data Collection in Situated Networks.</i></a><br>Bachelor in Computer Science, Università di Torino.</li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeVTRzcTJiR2NwUXM/view\" target=\"_blank\">Accelerating aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
     }
   ]
 }

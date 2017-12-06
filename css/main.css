@@ -16,7 +16,7 @@
 p {
 	font-size: 14px;
 	line-height: 22.4px;
-	color: #6c7279;
+	color: #4c5156;
 }
 h1 {
 	font-size: 65px;
@@ -43,6 +43,7 @@ h5 {
 	color: #2d3033;
 	text-transform: uppercase;
 	font-weight: 700;
+  text-align: center;
 }
 .btn {
 	background-color: #3bc492;
@@ -85,13 +86,6 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	color: #6c7279;
-}
-ul, ol {
-	margin: 0;
-	padding: 0;
-}
-ul li {
-	list-style: none;
 }
 .section {
 	padding: 100px 0;
@@ -500,12 +494,7 @@ input{
   line-height: normal;
 }
 .box-content ul, .box-content ol {
-  margin-left: 20px;
   line-height: 200%;
-}
-.box-content ul li {
-  display: list-item;
-  list-style-type: disc;
 }
 .box-content ul ul li {
   list-style-type: circle;

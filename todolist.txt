@@ -1,14 +1,11 @@
-* transition max-height auto to zero (how?)
-* bug: affix si perde a secondo ingresso
+* bug: affix on change view & fix mobile searchbar 
 * user agent per modalità desktop in viewport
 
-* TOPIC DESCRIPTIONS
-* Sidebar in caso mobile (foldable e folded di default in sottopagine, hidden)
-* Evidenziare pagina corrente nel menu
-* Immagine home
-* Wallpaper per ogni sezione principale
-* sottomenu?
+* subpage in name (with gimp?)
 * link ai social
+* expand topic descriptions
+* Wallpaper per ogni sezione principale
+* Immagine home
 
 names.py:
 * filtering del dizionario in base alle statistiche
