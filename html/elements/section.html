@@ -1,7 +1,13 @@
-<section id="{{i._ref}}">
-  <h3>{{i.title}}</h3>
+<section id="{{i._ref}}" ng-init="j=i">
+  <h3 ng-if="i.title">{{i.title}}</h3>
+  <h4 ng-if="i.subtitle">{{i.subtitle}}</h4>
   <p>{{i.text}}</p>
   <div ng-repeat="i in i.items | filter : {'_key': data.searchKey}">
-    <div ng-include="'html/elements/'+i._template+'.html'"></div>
+    <div ng-hide="i.num >= j.maxlen">
+      <div ng-include="'html/elements/'+i._template+'.html'"></div>
+    </div>
+    <h4 ng-if="i.num && i.num == j.maxlen">
+      <a ng-click="j.maxlen = j.maxlen + 2"><u>show more</u></a>
+    </h4>
   </div>
 </section>

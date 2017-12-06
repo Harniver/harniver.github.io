@@ -7,10 +7,16 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     let w = $(window).width();
     if (w <= 767) w *= 12 / 9;
     return "dim" + Math.floor((200 * text.join().length / w + 19 * text.length + 18)/100 + 1);
-  }
+  };
+  function getYear(x) {
+    return "20" + x._date.substr(0,2);
+  };
   function getMonth(x) {
     return ["", "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][parseInt(x._date.substr(3,2))];
-  }
+  };
+  function getDate(x) {
+    return getMonth(x) + " " + getYear(x);
+  };
   function getColor(x) {
     switch (x.type) {
       case "Event":
@@ -24,9 +30,14 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       default:
         return "#eee";
     }
-  }
+  };
+  function toText(l) {
+    if (l == "" || l == undefined) return "";
+    if (l.startsWith("http")) return "website";
+    return l;
+  };
   function toLink(l) {
-    if (l == "") return "";
+    if (l == "" || l == undefined) return "";
     if (l.startsWith("http")) return l;
     if (l.startsWith("ISBN:")) return "";
     if (l.startsWith("arXiv:")) return l.replace("arXiv:", "https://arxiv.org/abs/");
@@ -37,11 +48,11 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   ------------------------------*/
   function formatPublication(p) {
     return {
-      teaser:       $scope.data.teaser ? "new paper!" : "",
+      teaser:       $scope.data.teaser ? "new publication!" : "",
       pretitle:     p.authors + ". ",
       title:        p.title + ".",
       subtitle:     p.journal + ", " + p.year + ".",
-      subsubtitle:  p.link,
+      subsubtitle:  toText(p.link),
       link:         toLink(p.link),
       text:         p.abstract,
       topic:        p.topic,
@@ -55,25 +66,37 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   };
   function formatOther(p) {
     return {
-      teaser:     $scope.data.teaser ? (p.teaser ? p.teaser : "new "+p.type.toLowerCase()+"!") : "",
-      title:      p.title + ".",
-      subtitle:   p.subtitle + ".",
-      text:       ("text" in p) ? p.text : [],
-      _dim:       boxHeight(p.text),
-      _show:      false,
-      _template:  "box",
-      _color:     getColor(p),
-      _date:      p._date
+      teaser:       $scope.data.teaser ? (p.teaser ? p.teaser : "new "+p.type.toLowerCase()+"!") : "",
+      title:        p.title + ".",
+      subtitle:     p.subtitle + ".",
+      subsubtitle:  toText(p.link),
+      link:         toLink(p.link),
+      text:         ("text" in p) ? p.text : [],
+      _dim:         boxHeight(p.text),
+      _show:        false,
+      _template:    "box",
+      _color:       getColor(p),
+      _date:        p._date
     };
+  };
+  function formatAll(p) {
+    return $rootScope.research.get("_db_").types.includes(p.type) ? formatPublication(p) : formatOther(p);
   };
   function addByKeyword(content, data, numbers, formatter, getKeyword) {
     let idx = new Map();
-    for (let i=0; i<content.length; ++i) idx[content[i].title] = i;
+    for (let i=0; i<content.length; ++i) {
+      idx.set(content[i].title ? content[i].title : content[i].subtitle, i);
+      content[i]._template = "section";
+      content[i].items = [];
+      content[i].num = i;
+    }
+    function getIdx(d) {
+      for (const key of getKeyword(d)) if (idx.has(key)) return idx.get(key);
+      return undefined;
+    };
     for (const d of data) {
-      const k = getKeyword(d);
-      if (! (k in idx)) continue;
-      const x = formatter(d);
-      content[idx[k]].items.push(x)
+      const i = getIdx(d);
+      if (i != undefined) content[i].items.push(formatter(d));
     }
     for (let c of content) {
       c.items.sort(function(a,b) {return a._date < b._date ? 1 : -1;});
@@ -83,6 +106,22 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
       }
     }
   };
+  function partitionDates(data, filter) {
+    let yc = new Map();
+    for (const d of data) if (filter(d)) {
+      let y = getYear(d);
+      yc.set(y, yc.has(y) ? yc.get(y)+1 : 1);
+    }
+    let dates = new Map();
+    for (const d of data) if (filter(d)) {
+      if (yc.get(getYear(d)) <= 4) dates.set(getYear(d), d._date);
+      else dates.set(getDate(d), d._date);
+    }
+    let content = [];
+    for (const d of dates) content.push({title: "", subtitle: d[0], _date: d[1]});
+    content.sort(function(a,b) {return a._date < b._date ? 1 : -1;});
+    return content;
+  }
   /*------------------------------
     default values
   ------------------------------*/
@@ -101,26 +140,31 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     maxlen:   1,
     teaser:   true,
     painter:  function(db) {
-                let years = ["2010"];
-                for (let i=2012; i<=2017; ++i) years.push(String(i));
-                let k = 0;
-                let content = [];
-                for (let i=years.length-1; i>=0; --i)
-                  content.push({title: years[i], text: "", _template: "section", items: [], num:++k});
-                addByKeyword(content, db.publications, false, formatPublication, function(i) {
-                  return ["Journal Papers", "Books", "Book Chapters"].includes(i.type) ? String(i.year) : undefined;
+                let highlighs = partitionDates(db.news, function(x) {
+                  return ["Prize", "Project"].includes(x.type);
                 });
-                addByKeyword(content, db.news, false, formatOther, function(i) {
-                  return "20" + i._date.substr(0,2);
+                addByKeyword(highlighs, db.news, false, formatOther, function(x) {
+                  return ["Prize", "Project"].includes(x.type) ? [getDate(x), getYear(x)] : [];
                 });
-                for (let c of content) if (c.items.length > 4) {
-                  for (let i=0; i<c.items.length; ++i)
-                    if (i==0 || getMonth(c.items[i]) != getMonth(c.items[i-1])) {
-                      c.items.splice(i, 0, {title: getMonth(c.items[i]), _template: "subsection"});
-                      i++;
-                    }
-                }
-                return content;
+                let data = db.publications.concat(db.news);
+                let updates = partitionDates(data, function(x) {
+                  return !(["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type));
+                });
+                addByKeyword(updates, data, false, formatAll, function(x) {
+                  return ["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type) ? [] : [getDate(x), getYear(x)];
+                });
+                return [
+                  {
+                    title:      "News Highlights",
+                    items:      highlighs,
+                    _template:  "section"
+                  },{
+                    title:      "Live Updates",
+                    items:      updates,
+                    maxlen:     1,
+                    _template:  "section"
+                  }
+                ];
               }
   }, {
     /*------------------------------
@@ -128,12 +172,10 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     ------------------------------*/
     title:    "Topics",
     painter:  function(db) {
-                let k = 0;
                 let content = [];
-                for (const d of db.topics)
-                  content.push({title: d.title, text: d.abstract, _template: "section", items: [], num:++k});
+                for (const d of db.topics) content.push({title: d.title, text: d.abstract});
                 addByKeyword(content, db.publications, true, formatPublication, function(i) {
-                  return i.topic;
+                  return [i.topic];
                 });
                 return content;
               }
@@ -143,12 +185,10 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     ------------------------------*/
     title:   "Publications",
     painter:  function(db) {
-                let k = 0;
                 let content = [];
-                for (const d of db.types)
-                  content.push({title: d, text: "", _template: "section", items: [], num:++k});
+                for (const d of db.types) content.push({title: d});
                 addByKeyword(content, db.publications, true, formatPublication, function(i) {
-                  return i.type;
+                  return [i.type];
                 });
                 return content;
               }
@@ -158,9 +198,12 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     ------------------------------*/
     title:    "Events",
     painter:  function(db) {
-                let content = [];
-                for (let d of db.news) if (d.type == "Event")
-                  content.push(formatOther(d));
+                let content = partitionDates(db.news, function(x) {
+                  return x.type == "Event";
+                });
+                addByKeyword(content, db.news, false, formatOther, function(x) {
+                  return x.type != "Event" ? [] : [getDate(x), getYear(x)];
+                });
                 return content;
               }
   }, {
