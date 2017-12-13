@@ -1,11 +1,8 @@
+> expand topic descriptions
 * bug: affix on change view & fix mobile searchbar 
+* bug: extra show more for few seconds
 * user agent per modalità desktop in viewport
-
-* subpage in name (with gimp?)
-* link ai social
-* expand topic descriptions
-* Wallpaper per ogni sezione principale
-* Immagine home
+* home banner & other missing wallpapers
 
 names.py:
 * filtering del dizionario in base alle statistiche

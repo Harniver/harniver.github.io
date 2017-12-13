@@ -443,6 +443,13 @@
       "_date":    "17.09.22"
     },
     {
+      "title":    "Invited talk \"Memoization of Parity Games: a practical proposal\"",
+      "subtitle": "Seminari del Dipartimento di Informatica, Verona, Italy",
+      "link":     "http://www.di.univr.it/?ent=seminario&id=3956",
+      "type":     "Event",
+      "_date":    "17.04.19"
+    },
+    {
       "title":    "Best Paper of COORDINATION",
       "subtitle": "Optimally-Self-Healing Distributed Gradient Structures through Bounded Information Speed, 20/06/2017",
       "link":     "http://2017.discotec.org/program#joint-session-1",
@@ -482,7 +489,7 @@
     {
       "title": "Courses",
       "text": [
-        "<ul><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li></ul>",
+        "<ul><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatica</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
         "Further information available <a href=\"https://upobook.uniupo.it/personale/1486\" target=\"_blank\">here.</a>"
       ]
     },

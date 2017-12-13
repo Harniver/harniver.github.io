@@ -122,7 +122,10 @@ app.run(function($rootScope) {
       cache.set(page, $.extend(deepCopy(def), p));
     if (!cache.has(page)) $location.url(pages[0].link);
     let c = $scope.data = cache.get(page);
-    c.background = {'background-color': c.color};
+    c.background = {
+      'background-color': c.color,
+      'background-image': "url('static/wall."+def.theme+".jpg')"
+    };
     c.bgalpha = {
       'background-color': c.color,
       'box-shadow': '0px 3px 13px 2px ' + addAlpha(c.color,0.2,0.4),
