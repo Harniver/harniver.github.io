@@ -738,7 +738,7 @@ input{
 
 .innerbanner {
 	min-height: 100%;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
 }
 .innerbanner-text {
@@ -771,7 +771,8 @@ input{
   border-radius:0%;
 }
 img.mail {
-  width: 75%;
+  height: 25px;
+  width: 167px;
   margin: 5px;
 }
 

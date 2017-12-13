@@ -138,7 +138,7 @@ app.run(function($rootScope) {
       $('#scroller').affix({
         offset: {
           top: 899, //$('#scroller').offset().top
-          bottom: 90 // footer height
+          bottom: 104 // footer height
         }
       });
     };
