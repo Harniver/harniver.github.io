@@ -1,10 +1,7 @@
 > expand topic descriptions
-* bug: affix on change view & fix mobile searchbar 
-* bug: extra show more for few seconds
-* user agent per modalità desktop in viewport
-* home banner & other missing wallpapers
-
-names.py:
-* filtering del dizionario in base alle statistiche
-* filtering online delle parole create
-* verosimiglianza entropica: 4q*(1-q) con q quantile
+* bug: mathjax on change view
+* bug: affix on change view 
+* bug: affix mobile searchbar 
+* bug: extra show more for few seconds (events/sidebar)
+* sometime: home banner & other missing wallpapers
+* sometime: user agent per modalità desktop in viewport

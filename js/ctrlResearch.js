@@ -164,6 +164,16 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
                 });
                 return [
                   {
+                    title:      "Short Bio",
+                    items: [{
+                      title:      "",
+                      main:       db.bio,
+                      _template:  "box",
+                      _color:     "#fff",
+                      _show:      false
+                    }],
+                    _template:  "section"
+                  },{
                     title:      "News Highlights",
                     items:      highlighs,
                     _template:  "section"
