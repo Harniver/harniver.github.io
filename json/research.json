@@ -41,15 +41,44 @@
   "types": ["Journal Papers", "Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
   "publications": [
     {
+      "title":    "A Higher-order Calculus of Computational Fields",
+      "authors":  "G. Audrito, M. Viroli, F. Damiani, D. Pianini, J. Beal",
+      "journal":  "ACM Transactions on Computational Logic, accepted with minor revisions",
+      "year":     2018,
+      "link":     "arXiv:1610.08116",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_top":     2,
+      "_date":    "18.10.12",
+      "abstract": [
+        "The complexity of large-scale distributed systems, particularly when deployed in physical space, calls for new mechanisms to address composability and reusability of collective adaptive behaviour. Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of such systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This paper proposes a full formal foundation for field computations, in terms of a core (higher-order) calculus of computational fields containing a few key syntactic constructs, and equipped with typing, denotational and operational semantics. Critically, this allows formal establishment of a link between the micro- and macro-levels of collective adaptive systems, by a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
+      ]
+    },
+    {
+      "title":    "Optimal Single-Path Information Propagation in Gradient-based Algorithms",
+      "authors":  "G. Audrito, F. Damiani, M. Viroli",
+      "journal":  "Science of Computer Programming",
+      "year":     2018,
+      "link":     "10.1016/j.scico.2018.06.002",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_top":     1,
+      "_date":    "18.06.20",
+      "abstract": [
+        "Scenarios like wireless network networks, Internet of Things, and pervasive computing, promote full distribution of computation as well as opportunistic, peer-to-peer interactions between devices spread in the environment. In this context, computing estimated distances between devices in the network is a key component, commonly referred to as the gradient self-organisation pattern: it is frequently used to broadcast information, forecast pointwise events, as carrier for distributed sensing, and as combinator for higher-level spatial structures. However, computing gradients is very problematic in an environment affected by mutability in the position and working frequency of devices: existing algorithms fail in reaching adequate trade offs between accuracy and reaction speed to environment changes.",
+        "We propose <i>BIS</i> (Bounded Information Speed) gradient, a fully-distributed algorithm which uses time information to achieve a smooth and predictable reaction speed, and prove it is optimal across algorithms following a single-path-communication strategy to spread information. We empirically evaluate <i>BIS</i> gradient and compare it with other approaches, showing that <i>BIS</i> achieves the best accuracy while keeping smoothness under control, and accordingly enables for improved performance when used as building block in more complex algorithms for creating spatial structures and performing distributed collection of data."
+      ]
+    },
+    {
       "title":    "Engineering Resilient Collective Adaptive Systems by Self-Stabilisation",
       "authors":  "M. Viroli, G. Audrito, J. Beal, F. Damiani, D. Pianini",
       "journal":  "ACM Transactions on Modeling and Computer Simulation",
-      "year":     2017,
-      "link":     "arXiv:1711.08297",
+      "year":     2018,
+      "link":     "10.1145/3177774",
       "topic":    "Aggregate Computing",
       "type":     "Journal Papers",
       "_top":     3,
-      "_date":    "17.11.22",
+      "_date":    "18.03.12",
       "abstract": [
         "Collective adaptive systems are an emerging class of networked computational systems, particularly suited in application domains such as smart cities, complex sensor networks, and the Internet of Things. These systems tend to feature large scale, heterogeneity of communication model (including opportunistic peer-to-peer wireless interaction), and require inherent self-adaptiveness properties to address unforeseen changes in operating conditions. In this context, it is extremely difficult (if not seemingly intractable) to engineer reusable pieces of distributed behaviour so as to make them provably correct and smoothly composable.",
         "Building on the field calculus, a computational model (and associated toolchain) capturing the notion of aggregate network-level computation, we address this problem with an engineering methodology coupling formal theory and computer simulation. On the one hand, functional properties are addressed by identifying the largest-to-date field calculus fragment generating self-stabilising behaviour, guaranteed to eventually attain a correct and stable final state despite any transient perturbation in state or topology, and including highly reusable building blocks for information spreading, aggregation, and time evolution. On the other hand, dynamical properties are addressed by simulation, empirically evaluating the different performances that can be obtained by switching between implementations of building blocks with provably equivalent functional properties. Overall, our methodology sheds light on how to identify core building blocks of collective behaviour, and how to select implementations that improve system performance while leaving overall system function and resiliency properties unchanged."
@@ -114,11 +143,64 @@
       ]
     },
     {
+      "title":    "On distributed runtime verification by aggregate computing",
+      "authors":  "G. Audrito, F. Damiani, V. Stolz, M. Viroli",
+      "journal":  "To appear on VORTEX workshop, ECOOP-ISSTA conference",
+      "year":     2018,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "18.07.17",
+      "abstract": [
+        "Runtime verification is a computing analysis paradigm based on observing a system at runtime (to check its expected behavior) by means of monitors generated from formal specifications. Distributed runtime verification is runtime verification in connection with distributed systems: it comprises both monitoring of distributed systems and using distributed systems for monitoring. Aggregate computing is a programming paradigm based on a reference computing machine that is the aggregate collection of devices that cooperatively carry out a computational process: the details of behaviour, position and number of devices are largely abstracted away, to be replaced with a space-filling computational environment. In this position paper we argue, by means of simple examples, that aggregate computing is particularly well suited for implementing  distributed monitors. Our aim is to foster further research on  how to  generate aggregate computing monitors from suitable formal specifications."
+      ]
+    },
+    {
+      "title":    "Fostering Informatics Education through Teams Olympiad",
+      "authors":  "N. Amaroli, G. Audrito, L. Laura",
+      "journal":  "To appear on Olympiads in Informatics",
+      "year":     2018,
+      "link":     "",
+      "topic":    "Didactics",
+      "type":     "Proceedings",
+      "_date":    "18.09.05",
+      "abstract": [
+        "Even though the International Olympiad in Informatics directly involves a restricted number of pupils from each country, one of its primary goals is stimulating interest in computer science and information technology over the whole younger segment of the world’s population. In several countries, this aim has to be accomplished without an active intervention of the Ministry of Education on school programs, relying on the efforts of small devoted organizations. In this context, promoting the involvement of a large number of school teachers may be as crucial as difficult to achieve.",
+        "Following a 9-year experience of teams competitions in Italy, recently shared with other European countries, we argue that teams Olympiad may be an effective tool for widening the participation of high-school students and teachers, synergistically cooperating with existing individual competitions. On the one hand, teams contests foster peer education, encouraging talented students to help training fellows. On the other hand, these competitions can be more appealing both for average students, valuing group membership more than personal accomplishments, and most importantly, teachers: team achievements are more recognizably linked with the overall school or teacher performance than solitary excellences, resulting in increased returns rewarding the involved subjects."
+      ]
+    },
+    {
+      "title":    "Space-Time Universality of Field Calculus",
+      "authors":  "G. Audrito, J. Beal, F. Damiani, M. Viroli",
+      "journal":  "International Conference on Coordination Languages and Models",
+      "year":     2018,
+      "link":     "10.1007/978-3-319-92408-3_1",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "18.06.18",
+      "abstract": [
+        "Recent work in the area of coordination models and collective adaptive systems promotes a view of distributed computations as functional blocks manipulating data structures spread over space and evolving over time. In this paper, we address expressiveness issues of such computations, and specifically focus on the <i>field calculus</i>, a prominent emerging language in this context. Based on the classical notion of <i>event structure</i>, we introduce the <i>cone Turing machine</i> as a ground for studying computability issues, and first use it to prove that field calculus is <i>space-time universal</i>. We then observe that, in the most general case, field calculus computations can be rather inefficient in the size of messages exchanged, but this can be remedied by an encoding to nearly similar computations with slower information speed. We capture this concept by a notion of <i>delayed space-time universality</i>, which we prove to hold for the set of message-efficient algorithms expressible by field calculus. As a corollary, it is derived that field calculus can implement with message-size efficiency all self-stabilising distributed algorithms."
+      ]
+    },
+    {
+      "title":    "From Field-Based Coordination to Aggregate Computing",
+      "authors":  "M. Viroli, J. Beal, F. Damiani, G. Audrito, R. Casadei, D. Pianini",
+      "journal":  "International Conference on Coordination Languages and Models",
+      "year":     2018,
+      "link":     "10.1007/978-3-319-92408-3_12",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "18.06.19",
+      "abstract": [
+        "Aggregate computing is an emerging approach to the engineering of complex coordination for distributed systems, based on viewing system interactions in terms of information propagating through collectives of devices, rather than in terms of individual devices and their interaction with their peers and environment. The foundation of this approach is the distillation of a number of prior approaches, both formal and pragmatic, proposed under the umbrella of field-based coordination, and culminating into the <i>field calculus</i>, a functional programming model for the specification and composition of collective behaviours with equivalent local and aggregate semantics. This foundation has been elaborated into a layered approach to engineering coordination of complex distributed systems, building up to pragmatic applications through intermediate layers encompassing reusable libraries of provably resilient program components. In this survey, we trace the development and antecedents of field calculus, review the current state of aggregate computing theory and practice, and discuss a roadmap of current research directions that we believe can significantly impact the agenda of coordination models and languages."
+      ]
+    },
+    {
       "title":    "Aggregate Graph Statistics",
       "authors":  "G. Audrito, F. Damiani, M. Viroli",
       "journal":  "ALP4IoT workshop, iFM conference",
       "year":     2017,
-      "link":     "",
+      "link":     "10.4204/EPTCS.264.2",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
       "_date":    "17.09.18",
@@ -131,7 +213,7 @@
       "authors":  "G. Audrito, S. Bergamini",
       "journal":  "ALP4IoT workshop, iFM conference",
       "year":     2017,
-      "link":     "",
+      "link":     "10.4204/EPTCS.264.3",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
       "_date":    "17.09.18",
@@ -161,7 +243,6 @@
       "link":     "10.1007/978-3-319-59746-1_4",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
-      "_top":     1,
       "_date":    "17.05.27",
       "abstract": [
         "With the constant increase in the number of interconnected devices in today networks, more and more computations can be described by spatial computing abstractions. In this context, distances can be estimated in a fully-distributed way by the so-called gradient self-organisation pattern: it is a basic building block also for large-scale system coordination, frequently used to broadcast information, forecast pointwise events, as carrier for distributed sensing, and as combinator for higher-level spatial structures. However, computing gradients is very problematic in a mutable environment: existing algorithms fail in reaching adequate trade offs between accuracy and reaction speed to environment changes.",
@@ -251,31 +332,17 @@
       ]
     },
     {
-      "title":    "A Higher-order Calculus of Computational Fields",
-      "authors":  "G. Audrito, M. Viroli, F. Damiani, D. Pianini, J. Beal",
-      "journal":  "Submitted to ACM Transactions on Computational Logic",
-      "year":     2017,
-      "link":     "arXiv:1610.08116",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_top":     2,
-      "_date":    "17.11.01",
-      "abstract": [
-        "The complexity of large-scale distributed systems, particularly when deployed in physical space, calls for new mechanisms to address composability and reusability of collective adaptive behaviour. Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of such systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This paper proposes a full formal foundation for field computations, in terms of a core (higher-order) calculus of computational fields containing a few key syntactic constructs, and equipped with typing, denotational and operational semantics. Critically, this allows formal establishment of a link between the micro- and macro-levels of collective adaptive systems, by a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
-      ]
-    },
-    {
-      "title":    "Optimal Single-Path Information Propagation in Gradient-based Algorithms",
-      "authors":  "G. Audrito, F. Damiani, M. Viroli",
-      "journal":  "Submitted to Science of Computer Programming",
-      "year":     2017,
+      "title":    "Real-Time Guarantees of Aggregate Computations with the Field Calculus",
+      "authors":  "G. Audrito, F. Damiani, M. Viroli, E. Bini",
+      "journal":  "Submitted to EEE Real-Time Systems Symposium",
+      "year":     2018,
       "link":     "",
       "topic":    "Aggregate Computing",
       "type":     "Submitted Preprints",
-      "_date":    "17.10.01",
+      "_date":    "18.10.18",
       "abstract": [
-        "Scenarios like wireless network networks, Internet of Things, and pervasive computing, promote full distribution of computation as well as opportunistic, peer-to-peer interactions between devices spread in the environment. In this context, computing estimated distances between devices in the network is a key component, commonly referred to as the gradient self-organisation pattern: it is frequently used to broadcast information, forecast pointwise events, as carrier for distributed sensing, and as combinator for higher-level spatial structures. However, computing gradients is very problematic in an environment affected by mutability in the position and working frequency of devices: existing algorithms fail in reaching adequate trade offs between accuracy and reaction speed to environment changes.",
-        "We propose <i>BIS</i> (Bounded Information Speed) gradient, a fully-distributed algorithm which uses time information to achieve a smooth and predictable reaction speed, and prove it is optimal across algorithms following a single-path-communication strategy to spread information. We empirically evaluate <i>BIS</i> gradient and compare it with other approaches, showing that <i>BIS</i> achieves the best accuracy while keeping smoothness under control, and accordingly enables for improved performance when used as building block in more complex algorithms for creating spatial structures and performing distributed collection of data."
+        "As the density of sensing/computation/actuation nodes is increasing, it becomes more and more feasible and useful to think at an entire network of physical devices as a single, continuous space-time computing machine.  The emergent behaviour of the whole software system running on top is then induced by local computations deployed within each node and by the resulting information diffusion dynamics. A relevant example of this distribution model is given by <i>aggregate computing</i> and its companion language <i>field calculus</i>, a minimal set of purely functional constructs used to manipulate distributed data structures evolving over space and time, and resulting in robustness to changes.",
+        "In this paper, we study real-time characteristics of aggregate computing and field calculus, providing an analytic result linking the quality of the output of an aggregate computation to the amount of computing resources dedicated. We apply this procedure to the archetypical and widely-used case of aggregate computation called <i>gradient</i>: a fully-distributed estimation of distances over a metric space by a spanning tree. The resulting error bounds are then exploited for network design, suggesting an optimal density value taking broadcast interferences into account. Finally, an empirical evaluation of the proposed algorithms is performed validating the theoretical results and showing that the average performance is much better than the worst-case bounds previously obtained."
       ]
     },
     {
@@ -327,6 +394,13 @@
   ],
   "news": [
     {
+      "title":    "Research assistant on “Formal methods for the Internet of Things”",
+      "subtitle": "Università degli Studi di Torino, 01/04/2018-31/03/2019",
+      "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
+      "type":     "Position",
+      "_date":    "18.04.01"
+    },
+    {
       "title":    "Research grant on “Formal methods for the Internet of Things”",
       "subtitle": "Università degli Studi di Torino, 01/12/2017-31/03/2018",
       "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
@@ -356,10 +430,16 @@
     },
     {
       "title":    "Adjunct Professor for the “Object-Oriented Programming” course, Computer Science major",
-      "subtitle": "Università del Piemonte Orientale, Vercelli, 01/03/2017-31/09/2018",
+      "subtitle": "Università del Piemonte Orientale, Vercelli, 01/03/2017-31/09/2019",
       "link":     "https://upobook.uniupo.it/personale/1486",
       "type":     "Position",
       "_date":    "17.03.01"
+    },
+    {
+      "title":    "Co-supervisor for the Bachelor thesis of Sergio Bergamini, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, 13/07/2018",
+      "type":     "Role",
+      "_date":    "18.07.13"
     },
     {
       "title":    "Co-supervisor for the Bachelor thesis of Luca Serena, Computer Science major",
@@ -379,6 +459,13 @@
       "link":     "https://ioi.team/",
       "type":     "Event",
       "_date":    "17.05.19"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Tsukuba, Japan, 2018",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2018",
+      "type":     "Event",
+      "_date":    "18.09.01"
     },
     {
       "title":    "Team leader of the Italian team",
@@ -424,10 +511,24 @@
     },
     {
       "title":    "Artifact Evaluation Committee member",
+      "subtitle": "OOPSLA track, SPLASH 2018, Boston, USA",
+      "link":     "https://2018.splashcon.org/track/splash-2018-OOPSLA-Artifacts",
+      "type":     "Event",
+      "_date":    "18.11.04"
+    },
+    {
+      "title":    "Artifact Evaluation Committee member",
       "subtitle": "OOPSLA track, SPLASH 2017, Vancouver, Canada",
       "link":     "https://2017.splashcon.org/track/splash-2017-OOPSLA-Artifacts",
       "type":     "Event",
       "_date":    "17.10.25"
+    },
+    {
+      "title":    "Program Committe member",
+      "subtitle": "FAS* Posters and Demos 2018, Tucson, USA",
+      "link":     "https://saso2018.fbk.eu/",
+      "type":     "Event",
+      "_date":    "18.09.03"
     },
     {
       "title":    "Program Committe member",
@@ -490,7 +591,7 @@
     {
       "title": "Courses",
       "text": [
-        "<ul><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatica</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
+        "<ul><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatica</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
         "Further information available <a href=\"https://upobook.uniupo.it/personale/1486\" target=\"_blank\">here.</a>"
       ]
     },
@@ -503,7 +604,7 @@
     },
     {
       "title": "Thesis Proposals",
-      "text": ["<ul><li>Completed:<ul><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Distributed Data Collection in Situated Networks.</i></a><br>Bachelor in Computer Science, Università di Torino.</li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeVTRzcTJiR2NwUXM/view\" target=\"_blank\">Accelerating aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
+      "text": ["<ul><li>Completed:<ul><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Distributed Data Collection in Situated Networks.</i></a><br>Bachelor in Computer Science, Università di Torino, 13/07/2018.</li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeVTRzcTJiR2NwUXM/view\" target=\"_blank\">Accelerating aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
     }
   ]
 }
