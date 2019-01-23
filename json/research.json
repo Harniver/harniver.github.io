@@ -43,13 +43,13 @@
     {
       "title":    "A Higher-order Calculus of Computational Fields",
       "authors":  "G. Audrito, M. Viroli, F. Damiani, D. Pianini, J. Beal",
-      "journal":  "ACM Transactions on Computational Logic, accepted with minor revisions",
-      "year":     2018,
-      "link":     "arXiv:1610.08116",
+      "journal":  "ACM Transactions on Computational Logic",
+      "year":     2019,
+      "link":     "10.1145/3285956",
       "topic":    "Aggregate Computing",
       "type":     "Journal Papers",
       "_top":     2,
-      "_date":    "18.10.12",
+      "_date":    "19.01.10",
       "abstract": [
         "The complexity of large-scale distributed systems, particularly when deployed in physical space, calls for new mechanisms to address composability and reusability of collective adaptive behaviour. Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of such systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This paper proposes a full formal foundation for field computations, in terms of a core (higher-order) calculus of computational fields containing a few key syntactic constructs, and equipped with typing, denotational and operational semantics. Critically, this allows formal establishment of a link between the micro- and macro-levels of collective adaptive systems, by a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
       ]
@@ -143,24 +143,52 @@
       ]
     },
     {
-      "title":    "On distributed runtime verification by aggregate computing",
-      "authors":  "G. Audrito, F. Damiani, V. Stolz, M. Viroli",
-      "journal":  "To appear on VORTEX workshop, ECOOP-ISSTA conference",
-      "year":     2018,
+      "title":    "Effective Collective Summarisation of Distributed Data in Mobile Multi-Agent Systems",
+      "authors":  "G. Audrito, S. Bergamini, F. Damiani, M. Viroli",
+      "journal":  "To appear on International Conference on Autonomous Agents and Multiagent Systems",
+      "year":     2019,
       "link":     "",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
-      "_date":    "18.07.17",
+      "_date":    "19.05.17",
+      "abstract": [
+        "One of the key applications of physically-deployed multi-agent systems, such as mobile robots, drones, or personal agents in human mobility scenarios, is to promote a pervasive notion of distributed sensing achieved by strict agent cooperation. A quintessential operation of distributed sensing is data summarisation over a region of space, which finds many applications in variations of counting problems: counting items, measuring space, averaging environmental values, and so on. A typical strategy to perform peer-to-peer data summarisation with local interactions is to progressively accumulate information towards one or more collector agents, though this typically exhibits several sources of fragility, especially in scenarios featuring high mobility.",
+        "In this paper, we introduce a new self-stabilising multi-agent algorithm for dynamic summarisation of distributed data, called <i>parametric weighted multi-path</i>, based on a local strategy to break, send, and then recombine sensed data across neighbours based on their estimated distance, ultimately resulting in the formation of multiple, dynamic and emergent paths of information flow towards collectors. By empirical evaluation via simulation in synthetic and realistic case studies, accounting for various sources of volatility, using different state-of-the-art distance estimations, and comparing to other existing implementations of aggregation algorithms, we show that <i>parametric weighted multi-path</i> is able to retain adequate accuracy even in high-variability scenarios where all other algorithms are significantly diverging from correct estimations."
+      ]
+    },
+    {
+      "title":    "On distributed runtime verification by aggregate computing",
+      "authors":  "G. Audrito, F. Damiani, V. Stolz, M. Viroli",
+      "journal":  "To appear on VORTEX workshop, ECOOP-ISSTA conference",
+      "year":     2019,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "19.02.17",
       "abstract": [
         "Runtime verification is a computing analysis paradigm based on observing a system at runtime (to check its expected behavior) by means of monitors generated from formal specifications. Distributed runtime verification is runtime verification in connection with distributed systems: it comprises both monitoring of distributed systems and using distributed systems for monitoring. Aggregate computing is a programming paradigm based on a reference computing machine that is the aggregate collection of devices that cooperatively carry out a computational process: the details of behaviour, position and number of devices are largely abstracted away, to be replaced with a space-filling computational environment. In this position paper we argue, by means of simple examples, that aggregate computing is particularly well suited for implementing  distributed monitors. Our aim is to foster further research on  how to  generate aggregate computing monitors from suitable formal specifications."
       ]
     },
     {
-      "title":    "Fostering Informatics Education through Teams Olympiad",
-      "authors":  "N. Amaroli, G. Audrito, L. Laura",
-      "journal":  "To appear on Olympiads in Informatics",
+      "title":    "Distributed Real-Time Shortest-Paths Computations with the Field Calculus",
+      "authors":  "G. Audrito, F. Damiani, M. Viroli, E. Bini",
+      "journal":  "IEEE Real-Time Systems Symposium",
       "year":     2018,
       "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "18.12.18",
+      "abstract": [
+        "As the density of sensing/computation/actuation nodes is increasing, it becomes more and more feasible and useful to think at an entire network of physical devices as a single, continuous space-time computing machine.  The emergent behaviour of the whole software system running on top is then induced by local computations deployed within each node and by the resulting information diffusion dynamics. A relevant example of this distribution model is given by <i>aggregate computing</i> and its companion language <i>field calculus</i>, a minimal set of purely functional constructs used to manipulate distributed data structures evolving over space and time, and resulting in robustness to changes.",
+        "In this paper, we study real-time characteristics of aggregate computing and field calculus, providing an analytic result linking the quality of the output of an aggregate computation to the amount of computing resources dedicated. We apply this procedure to the archetypical and widely-used case of aggregate computation called <i>gradient</i>: a fully-distributed estimation of distances over a metric space by a spanning tree. The resulting error bounds are then exploited for network design, suggesting an optimal density value taking broadcast interferences into account. Finally, an empirical evaluation of the proposed algorithms is performed validating the theoretical results and showing that the average performance is much better than the worst-case bounds previously obtained."
+      ]
+    },
+    {
+      "title":    "Fostering Informatics Education through Teams Olympiad",
+      "authors":  "N. Amaroli, G. Audrito, L. Laura",
+      "journal":  "Olympiads in Informatics",
+      "year":     2018,
+      "link":     "10.15388/ioi.2018.11",
       "topic":    "Didactics",
       "type":     "Proceedings",
       "_date":    "18.09.05",
@@ -329,20 +357,6 @@
       "_date":    "10.01.01",
       "abstract": [
         "Questo libro è stato pensato come supporto per lo studente che intende prepararsi per le olimpiadi della matematica, e cerca una solida base di teoria prima di affrontare i problemi proposti. Resta comunque accertato il fatto che, per ottenere buoni risultati alle olimpiadi, sia assolutamente necessario allenarsi con molti esercizi, per creare un occhio attento a discernere le diverse tipologie e strategie risolutive. Gli argomenti teorici richiesti dalle olimpiadi della matematica sono, in buona parte, al di fuori dell’attuale programma ministeriale; eppure siamo convinti che possano essere di grande aiuto per lo sviluppo di una mentalità scientifica, deduttiva e creativa. Abbiamo quindi cercato di rivolgere questo libro ad un pubblico di studenti il più ampio possibile, conservando un’impostazione rigorosa ma rinunciando ad ogni inutile formalismo ed evidenziando in particolar modo gli aspetti applicativi. Per iniziare un allenamento di tipo pratico, abbiamo inserito alcuni esercizi alla fine di ogni capitolo, di cui una parte con soluzione proposta nella parte finale del fascicolo; molti altri se ne possono trovare in [2], [3] e [4], raccolte di problemi proposti effettivamente in sede olimpica. Abbiamo scelto, alla fine di ogni capitolo, di segnalare alcuni esercizi presi da queste fonti, citando semplicemente la gara e il numero di esercizio corrispondente (nei riferimenti a [4]), o il codice numerico (nei riferimenti a [2] o [3]). Inoltre, tra le novità della nuova edizione, ogni capitolo si introduce con un problema, in modo tale da far ambientare subito il lettore con l’argomento, e accontentare i più desiderosi di passare subito alla pratica. Infine abbiamo inserito, per chi fosse particolarmente interessato e volesse spingersi un po’ oltre quelle che possono essere le ambizioni di base, alcuni paragrafi di approfondimento, nei quali vengono introdotti e affrontati alcuni argomenti più impegnativi e meno comuni, ma che possono comunque risultare utili nella risoluzione di problemi olimpionici, in particolare nelle fasi più avanzate della gara. Buona lettura — e buone olimpiadi — a tutti!"
-      ]
-    },
-    {
-      "title":    "Real-Time Guarantees of Aggregate Computations with the Field Calculus",
-      "authors":  "G. Audrito, F. Damiani, M. Viroli, E. Bini",
-      "journal":  "Submitted to EEE Real-Time Systems Symposium",
-      "year":     2018,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "18.10.18",
-      "abstract": [
-        "As the density of sensing/computation/actuation nodes is increasing, it becomes more and more feasible and useful to think at an entire network of physical devices as a single, continuous space-time computing machine.  The emergent behaviour of the whole software system running on top is then induced by local computations deployed within each node and by the resulting information diffusion dynamics. A relevant example of this distribution model is given by <i>aggregate computing</i> and its companion language <i>field calculus</i>, a minimal set of purely functional constructs used to manipulate distributed data structures evolving over space and time, and resulting in robustness to changes.",
-        "In this paper, we study real-time characteristics of aggregate computing and field calculus, providing an analytic result linking the quality of the output of an aggregate computation to the amount of computing resources dedicated. We apply this procedure to the archetypical and widely-used case of aggregate computation called <i>gradient</i>: a fully-distributed estimation of distances over a metric space by a spanning tree. The resulting error bounds are then exploited for network design, suggesting an optimal density value taking broadcast interferences into account. Finally, an empirical evaluation of the proposed algorithms is performed validating the theoretical results and showing that the average performance is much better than the worst-case bounds previously obtained."
       ]
     },
     {
