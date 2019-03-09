@@ -174,7 +174,7 @@
       "authors":  "G. Audrito, F. Damiani, M. Viroli, E. Bini",
       "journal":  "IEEE Real-Time Systems Symposium",
       "year":     2018,
-      "link":     "",
+      "link":     "10.1109/RTSS.2018.00013",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
       "_date":    "18.12.18",
@@ -618,7 +618,7 @@
     },
     {
       "title": "Thesis Proposals",
-      "text": ["<ul><li>Completed:<ul><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Distributed Data Collection in Situated Networks.</i></a><br>Bachelor in Computer Science, Università di Torino, 13/07/2018.</li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeVTRzcTJiR2NwUXM/view\" target=\"_blank\">Accelerating aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
+      "text": ["<ul><li>Completed:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Blocchi Resilienti per la Collezione di Dati Distribuiti.</i></a><br>Bachelor in Computer Science, Università di Torino, 13/07/2018.</li><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <i>Optimal Algorithms for Aggregate Computing.</i><br>Master in Computer Science, Università di Torino.</li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
     }
   ]
 }
