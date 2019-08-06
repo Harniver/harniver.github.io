@@ -34,12 +34,25 @@
       "title":    "Didactics",
       "abstract": [
         "[Work in Progress]",
-        "My interests in this topic encompass:<ul><li>on-line and on-site trainings on olympic and recreational informatics; [D1]</li><li>interactive learning of olympic and recreational mathematics. [D2]</li></ul>"
+        "My interests in this topic encompass:<ul><li>on-line and on-site trainings on olympic and recreational informatics; [D1, D2]</li><li>interactive learning of olympic and recreational mathematics. [D2]</li></ul>"
       ]
     }
   ],
   "types": ["Journal Papers", "Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
   "publications": [
+    {
+      "title":    "From Distributed Coordination to Field Calculus and Aggregate Computing",
+      "authors":  "M. Viroli, J. Beal, F. Damiani, G. Audrito, R. Casadei, D. Pianini",
+      "journal":  "To appear on Journal of Logical and Algebraic Methods in Programming",
+      "year":     2019,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_date":    "19.09.10",
+      "abstract": [
+        "Aggregate computing is an emerging approach to the engineering of complex coordination for distributed systems, based on viewing system interactions in terms of information propagating through collectives of devices, rather than in terms of individual devices and their interaction with their peers and environment. The foundation of this approach is the distillation of a number of prior approaches, both formal and pragmatic, proposed under the umbrella of field-based coordination, and culminating into the field calculus, a universal functional programming model for the specification and composition of collective behaviours with equivalent local and aggregate semantics. This foundation has been elaborated into a layered approach to engineering coordination of complex distributed systems, building up to pragmatic applications through intermediate layers encompassing reusable libraries of program components. Furthermore, some of these components are formally shown to satisfy formal properties like self-stabilisation, which transfer to whole application services by functional composition. In this survey, we trace the development and antecedents of field calculus, review the field calculus itself and the current state of aggregate computing theory and practice, and discuss a roadmap of current research directions with implications for the development of a broad range of distributed systems."
+      ]
+    },
     {
       "title":    "A Higher-order Calculus of Computational Fields",
       "authors":  "G. Audrito, M. Viroli, F. Damiani, D. Pianini, J. Beal",
@@ -143,11 +156,66 @@
       ]
     },
     {
+      "title":    "Recommending Tasks in Online Judges",
+      "authors":  "G. Audrito, T. Di Mascio, P. Fantozzi, L. Laura, G. Martini, U. Nanni, M. Temperini",
+      "journal":  "International Conference on Methodologies and Intelligent Systems for Technology Enhanced Learning",
+      "year":     2019,
+      "link":     "10.1007/978-3-030-23990-9_16",
+      "topic":    "Didactics",
+      "type":     "Proceedings",
+      "_top":     2,
+      "_date":    "19.08.10",
+      "abstract": [
+        "Online Judges are e-learning tools used to improve the programming skills, tipically for programming contests such as International Olympiads in Informatics and ACM International Collegiate Programming Contest.",
+        "In this context, due to the nowadays broad list of programming tasks available in Online Judges, it is crucial to help the learner by recommending a challenging but not unsolvable task. So far, in the literature, few authors focused on Recommender Systems (RSs) for Online Judges; in this paper we discuss some peculiarities of this problem, that prevent the use of standard RSs, and address a first building brick: the assessment of (relative) tasks hardness.",
+        "We also present the results of a preliminary experimental evaluation of our approach, that proved to be effective against the available dataset, consisting in all the submissions made in the Italian National Online Judge, used to train students for the Italian Olympiads in Informatics."
+      ]
+    },
+    {
+      "title":    "The Share Operator for Field-Based Coordination",
+      "authors":  "G. Audrito, J. Beal, F. Damiani, D. Pianini, M. Viroli",
+      "journal":  "International Conference on Coordination Languages and Models",
+      "year":     2019,
+      "link":     "10.1007/978-3-030-22397-7_4",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "19.07.17",
+      "abstract": [
+        "Recent work in the area of coordination models and collective adaptive systems promotes a view of distributed computations as functions manipulating computational fields (data structures spread over space and evolving over time), and introduces the field calculus as a formal foundation for field computations. With the field calculus, evolution (time) and neighbor interaction (space) are handled by separate functional operators: however, this intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. In addition to conceptual economy, use of the share operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of a number of frequently used network propagation and collection algorithms."
+      ]
+    },
+    {
+      "title":    "Aggregate Processes in Field Calculus",
+      "authors":  "R. Casadei, M. Viroli, G. Audrito, D. Pianini, F. Damiani",
+      "journal":  "International Conference on Coordination Languages and Models",
+      "year":     2019,
+      "link":     "10.1007/978-3-030-22397-7_12",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "19.07.16",
+      "abstract": [
+        "Engineering distributed applications and services in emerging and open computing scenarios like the Internet of Things, cyber-physical systems and pervasive computing, calls for identifying proper abstractions to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent field computation whose execution and interactions are sustained by a dynamic team of devices, and whose spatial region can opportunistically vary over time. We formalise this notion by extending the Field Calculus with a new primitive construct, <b>spawn</b>, used to instantiate a set of field computations and regulate key aspects of their life-cycle. By virtue of an open-source implementation in the ScaFi framework, we show basic programming examples and benefits via two case studies of mobile ad-hoc networks and drone swarm scenarios, evaluated by simulation."
+      ]
+    },
+    {
+      "title":    "On a Higher-Order Calculus of Computational Fields",
+      "authors":  "G. Audrito, M. Viroli, F. Damiani, D. Pianini, J. Beal",
+      "journal":  "International Conference on Formal Techniques for Distributed Objects, Components, and Systems",
+      "year":     2019,
+      "link":     "10.1007/978-3-030-21759-4_17",
+      "topic":    "Aggregate Computing",
+      "type":     "Proceedings",
+      "_date":    "19.07.15",
+      "abstract": [
+        "Journal first track (summary of [JP7]). Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of distributed systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This approach is particularly suited in complex large-scale distributed systems, like Internet-of-Things and Cyber-Physical Systems, where new mechanisms are needed to address composability and reusability of collective adaptive behaviour. This work introduces a full formal foundation for field computations, in terms of an core calculus equipped with typing, denotational and operational semantics. Critically, we apply techniques for formal programming languages to the context of collective adaptive systems: we provide formal establishment of a link between the micro- and macro-levels of collective adaptive systems, via a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
+      ]
+    },
+    {
       "title":    "Effective Collective Summarisation of Distributed Data in Mobile Multi-Agent Systems",
       "authors":  "G. Audrito, S. Bergamini, F. Damiani, M. Viroli",
-      "journal":  "To appear on International Conference on Autonomous Agents and Multiagent Systems",
+      "journal":  "International Conference on Autonomous Agents and Multiagent Systems",
       "year":     2019,
-      "link":     "",
+      "link":     "https://dl.acm.org/citation.cfm?id=3331882",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
       "_date":    "19.05.17",
@@ -191,6 +259,7 @@
       "link":     "10.15388/ioi.2018.11",
       "topic":    "Didactics",
       "type":     "Proceedings",
+      "_top":     1,
       "_date":    "18.09.05",
       "abstract": [
         "Even though the International Olympiad in Informatics directly involves a restricted number of pupils from each country, one of its primary goals is stimulating interest in computer science and information technology over the whole younger segment of the world’s population. In several countries, this aim has to be accomplished without an active intervention of the Ministry of Education on school programs, relying on the efforts of small devoted organizations. In this context, promoting the involvement of a large number of school teachers may be as crucial as difficult to achieve.",
@@ -324,7 +393,6 @@
       "link":     "ISBN:9788846742797",
       "topic":    "Didactics",
       "type":     "Book Chapters",
-      "_top":     1,
       "_date":    "15.07.01",
       "abstract": [
         "Le Olimpiadi Italiane di Informatica (OII) sono una realtà nazionale e internazionale che coinvolge studenti e docenti delle scuole superiori e non solo, e ruota intorno ad alcune competizioni di problem-solving che si svolgono a più livelli. Uno sguardo disattento potrebbe quindi concludere che questa manifestazione coinvolga un numero troppo esiguo di persone (proprio in quanto competizione) per avere un impatto dal punto di vista educativo, e che sia svolta a un livello troppo prematuro (data la giovane età dei partecipanti) per avere un impatto dal punto di vista del progresso scientifico. Tuttavia, entrambe queste conclusioni sono inesatte e trascurano molti aspetti del progetto che trascendono le singole gare di cui è composto. Come approfondiremo meglio più avanti, le OII sono infatti un’occasione di ritrovo oltre che una competizione; e come tale hanno avuto il ruolo di mettere in rete scuole del territorio e docenti, promuovendo e dando visibilità all’entusiasmo degli insegnanti che in questo modo hanno trovato occasioni pubbliche per confrontarsi con ragazzi e colleghi in altre scuole e nelle università. Ognuno dei docenti e dei ragazzi che ha partecipato alle OII ha fatto ritorno a casa con un nuovo bagaglio di esperienze e contatti, ha esteso gli effetti di questa manifestazione nel proprio territorio a persone che non vi hanno partecipato direttamente promuovendo così, in modo trasversale ma sempre guardando ai giovani, le conoscenze informatiche così importanti ai giorni nostri. D'altro lato, evidenze statistiche mostrano come buone prestazioni a livello di problem-solving (e in particolare di Olimpiadi di Informatica) si traducano, anni dopo, in maggiori probabilità di lavorare in campo informatico sia nella ricerca pubblica che in aziende private, contribuendo in questo modo allo sviluppo della materia. Ma il ruolo delle Olimpiadi non si ferma all’individuazione delle eccellenze, fornendo visibilità, borse di studio o contatti. Quello che è molto più importante, e che genuinamente caratterizza le OII, è che esse forniscono a ragazzi dotati di talento una possibilità di raggiungere consapevolezza dei propri interessi e delle proprie capacità, fornendo così una motivazione e occasioni di miglioramento che difficilmente potrebbero verificarsi lungo un programma didattico uniformato, che spesso non li spinge a superare i propri limiti. In questo articolo ci proponiamo di presentare le Olimpiadi di Informatica in Italia descrivendone la struttura, illustrando il tipo di competenze coinvolte e riportando testimonianze dirette di docenti e studenti che hanno attivamente partecipato a questo progetto, con l’attenzione volta soprattutto a riferimenti ed esempi che possano essere utili per chi si avvicina alle OII per la prima volta."
@@ -338,7 +406,7 @@
       "link":     "ISBN:9788867054114",
       "topic":    "Didactics",
       "type":     "Books",
-      "_top":     2,
+      "_top":     3,
       "_date":    "16.01.01",
       "abstract": [
         "Nonostante sia presente nelle Indicazioni Nazionali, l’insegnamento della geometria solida è spesso messo in secondo piano nella comune pratica didattica per le sue difficoltà concettuali e gli ampi prerequisiti teorici. Questo volume vuole offrire una proposta di didattica costruttiva della geometria solida fondata sull’uso degli <i>ZOMETOOL</i>, un innovativo strumento didattico adatto a costruire figure sia bidimensionali che tridimensionali.",
@@ -408,6 +476,13 @@
   ],
   "news": [
     {
+      "title":    "Research assistant on “Aggregate Programming”, San Paolo internationalization grant",
+      "subtitle": "Università degli Studi di Torino, 01/04/2019-31/03/2020",
+      "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
+      "type":     "Position",
+      "_date":    "19.04.01"
+    },
+    {
       "title":    "Research assistant on “Formal methods for the Internet of Things”",
       "subtitle": "Università degli Studi di Torino, 01/04/2018-31/03/2019",
       "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
@@ -450,6 +525,12 @@
       "_date":    "17.03.01"
     },
     {
+      "title":    "Teaching assistant “articolo 76” for the ”Informatics” course, Mathematics for Finance and Insurance major",
+      "subtitle": "Università degli Studi di Torino, 01/10/2016-31/01/2017",
+      "type":     "Position",
+      "_date":    "16.10.01"
+    },
+    {
       "title":    "Co-supervisor for the Bachelor thesis of Sergio Bergamini, Computer Science major",
       "subtitle": "Università degli Studi di Torino, 13/07/2018",
       "type":     "Role",
@@ -462,17 +543,25 @@
       "_date":    "17.10.16"
     },
     {
-      "title":    "Teaching assistant “articolo 76” for the ”Informatics” course, Mathematics for Finance and Insurance major",
-      "subtitle": "Università degli Studi di Torino, 01/10/2016-31/01/2017",
-      "type":     "Position",
-      "_date":    "16.10.01"
+      "title":    "Selected participant",
+      "subtitle": "Heidelberg Laureate Forum, Heidelberg, Germany, 22-27/09/2019",
+      "link":     "https://www.heidelberg-laureate-forum.org/event_2019",
+      "type":     "Event",
+      "_date":    "19.09.25"
     },
     {
-      "title":    "Scientific Organizer of the ioIT",
-      "subtitle": "1st International Olympiads in Informatics in Teams, Bologna, 17-20/05/2017",
-      "link":     "https://ioi.team/",
+      "title":    "Scientific Organizer of the IIOT",
+      "subtitle": "1st International Informatics Olympiads in Teams, Bologna, 17-20/05/2017",
+      "link":     "https://iio.team",
       "type":     "Event",
       "_date":    "17.05.19"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Baku, Azerbaijan, 2019",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2019",
+      "type":     "Event",
+      "_date":    "19.08.06"
     },
     {
       "title":    "Team leader of the Italian team",
@@ -515,6 +604,13 @@
       "link":     "http://stats.ioinformatics.org/delegations/ITA/2013",
       "type":     "Event",
       "_date":    "13.08.10"
+    },
+    {
+      "title":    "Program Committe member",
+      "subtitle": "VORTEX workshop, ECOOP 2019, London, United Kingdom.",
+      "link":     "https://2019.ecoop.org/home/vortex-2019",
+      "type":     "Event",
+      "_date":    "19.07.15"
     },
     {
       "title":    "Local Organization Co-Chair",
@@ -605,15 +701,15 @@
     {
       "title": "Courses",
       "text": [
-        "<ul><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatica</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
+        "<ul><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatics</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
         "Further information available <a href=\"https://upobook.uniupo.it/personale/1486\" target=\"_blank\">here.</a>"
       ]
     },
     {
       "title": "Olympiads in Informatics",
       "text": [
-        "<b>International Olympiads in Informatics in Teams (ioIT).</b><br>Check out the <a href=\"https://ioi.team/\" target=\"_blank\">international</a> and <a href=\"http://www.olimpiadi-informatica-squadre-italia.it/\" target=\"_blank\">italian</a> websites.<br>Live announcements on upcoming events are available in <a href=\"http://codeforces.com/blog/harniver\" target=\"_blank\">my codeforces blog</a>.",
-        "<b>Olimpiadi Italiane di Informatica (OII).</b><br>Check out the <a href=\"https://training.olinfo.it\" target=\"_blank\">training</a> and <a href=\"https://www.olimpiadi-informatica.it/\" target=\"_blank\">istitutional</a> websites."
+        "<b>International Informatics Olympiads in Teams (IIOT).</b><br>Check out the <a href=\"https://iio.team\" target=\"_blank\">international</a> and <a href=\"https://sites.google.com/aldini.istruzioneer.it/olimpiadi-informatica-squadre\" target=\"_blank\">italian</a> websites.<br>Live announcements on upcoming events are available in <a href=\"http://codeforces.com/blog/harniver\" target=\"_blank\">my codeforces blog</a>.",
+        "<b>Olimpiadi Italiane di Informatica (OII).</b><br>Check out the <a href=\"https://stats.olinfo.it\" target=\"_blank\">statistics</a>, <a href=\"https://training.olinfo.it\" target=\"_blank\">training</a> and <a href=\"https://www.olimpiadi-informatica.it\" target=\"_blank\">istitutional</a> websites."
       ]
     },
     {
