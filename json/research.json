@@ -164,7 +164,7 @@
       "topic":    "Didactics",
       "type":     "Proceedings",
       "_top":     2,
-      "_date":    "19.08.10",
+      "_date":    "19.06.27",
       "abstract": [
         "Online Judges are e-learning tools used to improve the programming skills, tipically for programming contests such as International Olympiads in Informatics and ACM International Collegiate Programming Contest.",
         "In this context, due to the nowadays broad list of programming tasks available in Online Judges, it is crucial to help the learner by recommending a challenging but not unsolvable task. So far, in the literature, few authors focused on Recommender Systems (RSs) for Online Judges; in this paper we discuss some peculiarities of this problem, that prevent the use of standard RSs, and address a first building brick: the assessment of (relative) tasks hardness.",
@@ -179,7 +179,7 @@
       "link":     "10.1007/978-3-030-22397-7_4",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
-      "_date":    "19.07.17",
+      "_date":    "19.06.17",
       "abstract": [
         "Recent work in the area of coordination models and collective adaptive systems promotes a view of distributed computations as functions manipulating computational fields (data structures spread over space and evolving over time), and introduces the field calculus as a formal foundation for field computations. With the field calculus, evolution (time) and neighbor interaction (space) are handled by separate functional operators: however, this intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. In addition to conceptual economy, use of the share operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of a number of frequently used network propagation and collection algorithms."
       ]
@@ -192,7 +192,7 @@
       "link":     "10.1007/978-3-030-22397-7_12",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
-      "_date":    "19.07.16",
+      "_date":    "19.06.16",
       "abstract": [
         "Engineering distributed applications and services in emerging and open computing scenarios like the Internet of Things, cyber-physical systems and pervasive computing, calls for identifying proper abstractions to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent field computation whose execution and interactions are sustained by a dynamic team of devices, and whose spatial region can opportunistically vary over time. We formalise this notion by extending the Field Calculus with a new primitive construct, <b>spawn</b>, used to instantiate a set of field computations and regulate key aspects of their life-cycle. By virtue of an open-source implementation in the ScaFi framework, we show basic programming examples and benefits via two case studies of mobile ad-hoc networks and drone swarm scenarios, evaluated by simulation."
       ]
@@ -205,7 +205,7 @@
       "link":     "10.1007/978-3-030-21759-4_17",
       "topic":    "Aggregate Computing",
       "type":     "Proceedings",
-      "_date":    "19.07.15",
+      "_date":    "19.06.15",
       "abstract": [
         "Journal first track (summary of [JP7]). Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of distributed systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This approach is particularly suited in complex large-scale distributed systems, like Internet-of-Things and Cyber-Physical Systems, where new mechanisms are needed to address composability and reusability of collective adaptive behaviour. This work introduces a full formal foundation for field computations, in terms of an core calculus equipped with typing, denotational and operational semantics. Critically, we apply techniques for formal programming languages to the context of collective adaptive systems: we provide formal establishment of a link between the micro- and macro-levels of collective adaptive systems, via a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
       ]
