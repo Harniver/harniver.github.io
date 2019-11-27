@@ -38,14 +38,14 @@
       ]
     }
   ],
-  "types": ["Journal Papers", "Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
+  "types": ["Journal Papers", "Conference Proceedings", "Workshop Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
   "publications": [
     {
       "title":    "From Distributed Coordination to Field Calculus and Aggregate Computing",
       "authors":  "M. Viroli, J. Beal, F. Damiani, G. Audrito, R. Casadei, D. Pianini",
-      "journal":  "To appear on Journal of Logical and Algebraic Methods in Programming",
+      "journal":  "Journal of Logical and Algebraic Methods in Programming",
       "year":     2019,
-      "link":     "",
+      "link":     "10.1016/j.jlamp.2019.100486",
       "topic":    "Aggregate Computing",
       "type":     "Journal Papers",
       "_date":    "19.09.10",
@@ -162,7 +162,7 @@
       "year":     2019,
       "link":     "10.1007/978-3-030-23990-9_16",
       "topic":    "Didactics",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_top":     2,
       "_date":    "19.06.27",
       "abstract": [
@@ -178,10 +178,10 @@
       "year":     2019,
       "link":     "10.1007/978-3-030-22397-7_4",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "19.06.17",
       "abstract": [
-        "Recent work in the area of coordination models and collective adaptive systems promotes a view of distributed computations as functions manipulating computational fields (data structures spread over space and evolving over time), and introduces the field calculus as a formal foundation for field computations. With the field calculus, evolution (time) and neighbor interaction (space) are handled by separate functional operators: however, this intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. In addition to conceptual economy, use of the share operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of a number of frequently used network propagation and collection algorithms."
+        "Recent work in the area of coordination models and collective adaptive systems promotes a view of distributed computations as functions manipulating computational fields (data structures spread over space and evolving over time), and introduces the field calculus as a formal foundation for field computations. With the field calculus, evolution (time) and neighbor interaction (space) are handled by separate functional operators: however, this intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. In addition to conceptual economy, use of the <b>share</b> operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of a number of frequently used network propagation and collection algorithms."
       ]
     },
     {
@@ -191,7 +191,7 @@
       "year":     2019,
       "link":     "10.1007/978-3-030-22397-7_12",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "19.06.16",
       "abstract": [
         "Engineering distributed applications and services in emerging and open computing scenarios like the Internet of Things, cyber-physical systems and pervasive computing, calls for identifying proper abstractions to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent field computation whose execution and interactions are sustained by a dynamic team of devices, and whose spatial region can opportunistically vary over time. We formalise this notion by extending the Field Calculus with a new primitive construct, <b>spawn</b>, used to instantiate a set of field computations and regulate key aspects of their life-cycle. By virtue of an open-source implementation in the ScaFi framework, we show basic programming examples and benefits via two case studies of mobile ad-hoc networks and drone swarm scenarios, evaluated by simulation."
@@ -204,7 +204,7 @@
       "year":     2019,
       "link":     "10.1007/978-3-030-21759-4_17",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "19.06.15",
       "abstract": [
         "Journal first track (summary of [JP7]). Computational fields have been proposed as an effective abstraction to fill the gap between the macro-level of distributed systems (specifying a system’s collective behaviour) and the micro-level (individual devices’ actions of computation and interaction to implement that collective specification), thereby providing a basis to better facilitate the engineering of collective APIs and complex systems at higher levels of abstraction. This approach is particularly suited in complex large-scale distributed systems, like Internet-of-Things and Cyber-Physical Systems, where new mechanisms are needed to address composability and reusability of collective adaptive behaviour. This work introduces a full formal foundation for field computations, in terms of an core calculus equipped with typing, denotational and operational semantics. Critically, we apply techniques for formal programming languages to the context of collective adaptive systems: we provide formal establishment of a link between the micro- and macro-levels of collective adaptive systems, via a result of computational adequacy and abstraction for the (aggregate) denotational semantics with respect to the (per-device) operational semantics."
@@ -217,24 +217,11 @@
       "year":     2019,
       "link":     "https://dl.acm.org/citation.cfm?id=3331882",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "19.05.17",
       "abstract": [
         "One of the key applications of physically-deployed multi-agent systems, such as mobile robots, drones, or personal agents in human mobility scenarios, is to promote a pervasive notion of distributed sensing achieved by strict agent cooperation. A quintessential operation of distributed sensing is data summarisation over a region of space, which finds many applications in variations of counting problems: counting items, measuring space, averaging environmental values, and so on. A typical strategy to perform peer-to-peer data summarisation with local interactions is to progressively accumulate information towards one or more collector agents, though this typically exhibits several sources of fragility, especially in scenarios featuring high mobility.",
         "In this paper, we introduce a new self-stabilising multi-agent algorithm for dynamic summarisation of distributed data, called <i>parametric weighted multi-path</i>, based on a local strategy to break, send, and then recombine sensed data across neighbours based on their estimated distance, ultimately resulting in the formation of multiple, dynamic and emergent paths of information flow towards collectors. By empirical evaluation via simulation in synthetic and realistic case studies, accounting for various sources of volatility, using different state-of-the-art distance estimations, and comparing to other existing implementations of aggregation algorithms, we show that <i>parametric weighted multi-path</i> is able to retain adequate accuracy even in high-variability scenarios where all other algorithms are significantly diverging from correct estimations."
-      ]
-    },
-    {
-      "title":    "On distributed runtime verification by aggregate computing",
-      "authors":  "G. Audrito, F. Damiani, V. Stolz, M. Viroli",
-      "journal":  "To appear on VORTEX workshop, ECOOP-ISSTA conference",
-      "year":     2019,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
-      "_date":    "19.02.17",
-      "abstract": [
-        "Runtime verification is a computing analysis paradigm based on observing a system at runtime (to check its expected behavior) by means of monitors generated from formal specifications. Distributed runtime verification is runtime verification in connection with distributed systems: it comprises both monitoring of distributed systems and using distributed systems for monitoring. Aggregate computing is a programming paradigm based on a reference computing machine that is the aggregate collection of devices that cooperatively carry out a computational process: the details of behaviour, position and number of devices are largely abstracted away, to be replaced with a space-filling computational environment. In this position paper we argue, by means of simple examples, that aggregate computing is particularly well suited for implementing  distributed monitors. Our aim is to foster further research on  how to  generate aggregate computing monitors from suitable formal specifications."
       ]
     },
     {
@@ -244,7 +231,7 @@
       "year":     2018,
       "link":     "10.1109/RTSS.2018.00013",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "18.12.18",
       "abstract": [
         "As the density of sensing/computation/actuation nodes is increasing, it becomes more and more feasible and useful to think at an entire network of physical devices as a single, continuous space-time computing machine.  The emergent behaviour of the whole software system running on top is then induced by local computations deployed within each node and by the resulting information diffusion dynamics. A relevant example of this distribution model is given by <i>aggregate computing</i> and its companion language <i>field calculus</i>, a minimal set of purely functional constructs used to manipulate distributed data structures evolving over space and time, and resulting in robustness to changes.",
@@ -258,7 +245,7 @@
       "year":     2018,
       "link":     "10.15388/ioi.2018.11",
       "topic":    "Didactics",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_top":     1,
       "_date":    "18.09.05",
       "abstract": [
@@ -273,7 +260,7 @@
       "year":     2018,
       "link":     "10.1007/978-3-319-92408-3_1",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "18.06.18",
       "abstract": [
         "Recent work in the area of coordination models and collective adaptive systems promotes a view of distributed computations as functional blocks manipulating data structures spread over space and evolving over time. In this paper, we address expressiveness issues of such computations, and specifically focus on the <i>field calculus</i>, a prominent emerging language in this context. Based on the classical notion of <i>event structure</i>, we introduce the <i>cone Turing machine</i> as a ground for studying computability issues, and first use it to prove that field calculus is <i>space-time universal</i>. We then observe that, in the most general case, field calculus computations can be rather inefficient in the size of messages exchanged, but this can be remedied by an encoding to nearly similar computations with slower information speed. We capture this concept by a notion of <i>delayed space-time universality</i>, which we prove to hold for the set of message-efficient algorithms expressible by field calculus. As a corollary, it is derived that field calculus can implement with message-size efficiency all self-stabilising distributed algorithms."
@@ -286,37 +273,10 @@
       "year":     2018,
       "link":     "10.1007/978-3-319-92408-3_12",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "18.06.19",
       "abstract": [
         "Aggregate computing is an emerging approach to the engineering of complex coordination for distributed systems, based on viewing system interactions in terms of information propagating through collectives of devices, rather than in terms of individual devices and their interaction with their peers and environment. The foundation of this approach is the distillation of a number of prior approaches, both formal and pragmatic, proposed under the umbrella of field-based coordination, and culminating into the <i>field calculus</i>, a functional programming model for the specification and composition of collective behaviours with equivalent local and aggregate semantics. This foundation has been elaborated into a layered approach to engineering coordination of complex distributed systems, building up to pragmatic applications through intermediate layers encompassing reusable libraries of provably resilient program components. In this survey, we trace the development and antecedents of field calculus, review the current state of aggregate computing theory and practice, and discuss a roadmap of current research directions that we believe can significantly impact the agenda of coordination models and languages."
-      ]
-    },
-    {
-      "title":    "Aggregate Graph Statistics",
-      "authors":  "G. Audrito, F. Damiani, M. Viroli",
-      "journal":  "ALP4IoT workshop, iFM conference",
-      "year":     2017,
-      "link":     "10.4204/EPTCS.264.2",
-      "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
-      "_date":    "17.09.18",
-      "abstract": [
-        "Collecting statistic from graph-based data is an increasingly studied topic in the data mining community. We argue that these statistics have great value as well in dynamic IoT contexts: they can support complex computational activities involving distributed coordination and provision of situation recognition. We show that the <i>HyperANF</i> algorithm for calculating the neighbourhood function of vertices of a graph naturally allows for a fully distributed and asynchronous implementation, thanks to a mapping to the field calculus, a distribution model proposed for collective adaptive systems. This mapping gives evidence that the field calculus framework is well-suited to accommodate massively parallel computations over graphs. Furthermore, it provides a new “self-stabilising” building block which can be used in aggregate computing in several contexts, there including improved leader election or network vulnerabilities detection."
-      ]
-    },
-    {
-      "title":    "Resilient Blocks for Summarising Distributed Data",
-      "authors":  "G. Audrito, S. Bergamini",
-      "journal":  "ALP4IoT workshop, iFM conference",
-      "year":     2017,
-      "link":     "10.4204/EPTCS.264.3",
-      "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
-      "_date":    "17.09.18",
-      "abstract": [
-        "Summarising distributed data is a central routine for parallel programming, lying at the core of widely used frameworks such as the map/reduce paradigm. In the IoT context it is even more crucial, being a privileged mean to allow long-range interactions: in fact, summarising is needed to avoid data explosion in each computational unit.",
-        "We introduce a new algorithm for dynamic summarising of distributed data, <i>weighted multi-path</i>, improving over the state-of-the-art multi-path algorithm. We validate the new algorithm in an archetypal scenario, taking into account sources of volatility of many sorts and comparing it to other existing implementations. We thus show that weighted multi-path retains adequate accuracy even in high-variability scenarios where the other algorithms are diverging significantly from the correct values."
       ]
     },
     {
@@ -326,7 +286,7 @@
       "year":     2017,
       "link":     "10.1109/SASO.2017.18",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "17.09.20",
       "abstract": [
         "With the constant increase in the number of interconnected devices in today networks, and the high demand of adaptiveness, more and more computations can be designed according to self-organisation principles. In this context, a key building block for large-scale system coordination, called gradient, is used to estimate distances in a fully-distributed way: it is the basis for a vast variety of higher level patterns including information broadcast, events forecasting, distributed sensing, and so on. However, computing gradients is very problematic in mobile environments: the fastest self-healing gradient conceived so far (called <i>BIS</i>) achieves a reaction speed proportional to the single-path speed of information in the network. In this paper we introduce a new gradient algorithm, <i>SVD</i> (Stale Values Detection) gradient, which uses broadcasts to reach a reaction speed that is equal to the multi-path speed of information, namely, the fastest speed possibly achievable by network algorithms. We then combine <i>SVD</i> with other blocks (metric correction, smooth filtering, <i>BIS</i> gradient, information damping) proposing a composed block called <i>ULT</i>(imate) gradient. We evaluate the resulting algorithm and compare it with other approaches, showing it scores best both on accuracy and smoothness while keeping communication cost under control."
@@ -339,24 +299,11 @@
       "year":     2017,
       "link":     "10.1007/978-3-319-59746-1_4",
       "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "17.05.27",
       "abstract": [
         "With the constant increase in the number of interconnected devices in today networks, more and more computations can be described by spatial computing abstractions. In this context, distances can be estimated in a fully-distributed way by the so-called gradient self-organisation pattern: it is a basic building block also for large-scale system coordination, frequently used to broadcast information, forecast pointwise events, as carrier for distributed sensing, and as combinator for higher-level spatial structures. However, computing gradients is very problematic in a mutable environment: existing algorithms fail in reaching adequate trade offs between accuracy and reaction speed to environment changes.",
         "In this paper we introduce a new gradient algorithm, <i>BIS</i> (Bounded Information Speed) gradient, which uses time information to achieve a smooth and predictable reaction speed, which is proved optimal for algorithms following a single-path-communication strategy. Following a proposed methodology for empirical evaluation of performance of spatial computing algorithms, we evaluate <i>BIS</i> gradient and compare it with other approaches. We show that <i>BIS</i> achieves the best accuracy while keeping smoothness under control."
-      ]
-    },
-    {
-      "title":    "Run-time Management of Computation Domains in Field Calculus",
-      "authors":  "G. Audrito, F. Damiani, M. Viroli, R. Casadei",
-      "journal":  "IEEE International Workshops on Foundations and Applications of Self* Systems",
-      "year":     2016,
-      "link":     "10.1109/FAS-W.2016.50",
-      "topic":    "Aggregate Computing",
-      "type":     "Proceedings",
-      "_date":    "16.09.14",
-      "abstract": [
-        "The field calculus is proposed as a foundational model for collective adaptive systems, capturing in a tiny language essential aspects of distributed interaction, restriction and evolution, as well as providing ground for engineering resiliency properties. In this paper, we investigate the interplay between interaction and restriction: known as \"domain alignment\" in field calculus, it is extremely powerful but can cause subtle bugs when not handled properly. We propose a disciplined programming approach based on the interplay between a weak and a strong version of alignment, mixing static and dynamic checks. This is exemplified to design a new reusable component dynamically updating the strategy by which a device can extract information from neighbours, which find applications, for instance, in the on-the-fly evolution of metrics in smart mobility applications."
       ]
     },
     {
@@ -366,7 +313,7 @@
       "year":     2016,
       "link":     "10.1109/SMARTCOMP.2016.7501711",
       "topic":    "Algorithms",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "16.05.19",
       "abstract": [
         "We consider the problem of allocating $N$ uniform data to $K$ transmission channels so as the average Expected Delay (AED) is minimized. This problem arises in designing efficient data-diffusion broadcast algorithms in a smart environment. We show that the basic dynamic rogramming algorithm for solving the uniform pallocation problem can be spedup up to $O(NK)$ time by applying an optimal algorithm to find the row-minima of totally monotone matrices. Such a new algorithm is always faster than the best previously known algorithm for the uniform allocation problem that runs in $O(NK \\log N)$. Moreover, it is computationally optimal for the uniform allocation of up to $N$ data and $K$ channels. We then reduce the largest allocation problem, i.e., the subproblem with exactly $N$ data and $K$ channels, to the problem of finding a minimum weight $K$-link path in a particular directed acyclic graph. We also present two heuristics and we show by extended simulations their effectiveness in practical scenarios. Both the $K$-link path algorithm and the heuristics are much faster than $O(NK)$. We then compare the behaviours of our algorithms on the online version of the allocation problem in which new single items are inserted for broadcast."
@@ -379,10 +326,63 @@
       "year":     2012,
       "link":     "",
       "topic":    "Didactics",
-      "type":     "Proceedings",
+      "type":     "Conference Proceedings",
       "_date":    "12.08.01",
       "abstract": [
         "Changing the teaching of informatics in secondary (and primary) education is in many countries difficult to achieve, owing to several reasons: the natural tendency of institutions and people to stick to well-established practices, a distorted view of informatics prevailing in society and among those who take the decisions, the specific fact that in several school systems the teaching of informatics is largely committed to teachers of other scientific disciplines. We describe the Italian situation and our experience in Turin where we have organised training stages for the Olympiad in Informatics and supported the organisation of other informatics contests. On its basis we argue how the different kinds of competition can help to change informatics education in Italy, by making problem solving and programming play a central role."
+      ]
+    },
+    {
+      "title":    "On distributed runtime verification by aggregate computing",
+      "authors":  "G. Audrito, F. Damiani, V. Stolz, M. Viroli",
+      "journal":  "VORTEX workshop, ECOOP-ISSTA conference",
+      "year":     2018,
+      "link":     "10.4204/EPTCS.302.4",
+      "topic":    "Aggregate Computing",
+      "type":     "Workshop Proceedings",
+      "_date":    "19.02.17",
+      "abstract": [
+        "Runtime verification is a computing analysis paradigm based on observing a system at runtime (to check its expected behavior) by means of monitors generated from formal specifications. Distributed runtime verification is runtime verification in connection with distributed systems: it comprises both monitoring of distributed systems and using distributed systems for monitoring. Aggregate computing is a programming paradigm based on a reference computing machine that is the aggregate collection of devices that cooperatively carry out a computational process: the details of behaviour, position and number of devices are largely abstracted away, to be replaced with a space-filling computational environment. In this position paper we argue, by means of simple examples, that aggregate computing is particularly well suited for implementing  distributed monitors. Our aim is to foster further research on  how to  generate aggregate computing monitors from suitable formal specifications."
+      ]
+    },
+    {
+      "title":    "Aggregate Graph Statistics",
+      "authors":  "G. Audrito, F. Damiani, M. Viroli",
+      "journal":  "ALP4IoT workshop, iFM conference",
+      "year":     2017,
+      "link":     "10.4204/EPTCS.264.2",
+      "topic":    "Aggregate Computing",
+      "type":     "Workshop Proceedings",
+      "_date":    "17.09.18",
+      "abstract": [
+        "Collecting statistic from graph-based data is an increasingly studied topic in the data mining community. We argue that these statistics have great value as well in dynamic IoT contexts: they can support complex computational activities involving distributed coordination and provision of situation recognition. We show that the <i>HyperANF</i> algorithm for calculating the neighbourhood function of vertices of a graph naturally allows for a fully distributed and asynchronous implementation, thanks to a mapping to the field calculus, a distribution model proposed for collective adaptive systems. This mapping gives evidence that the field calculus framework is well-suited to accommodate massively parallel computations over graphs. Furthermore, it provides a new “self-stabilising” building block which can be used in aggregate computing in several contexts, there including improved leader election or network vulnerabilities detection."
+      ]
+    },
+    {
+      "title":    "Resilient Blocks for Summarising Distributed Data",
+      "authors":  "G. Audrito, S. Bergamini",
+      "journal":  "ALP4IoT workshop, iFM conference",
+      "year":     2017,
+      "link":     "10.4204/EPTCS.264.3",
+      "topic":    "Aggregate Computing",
+      "type":     "Workshop Proceedings",
+      "_date":    "17.09.18",
+      "abstract": [
+        "Summarising distributed data is a central routine for parallel programming, lying at the core of widely used frameworks such as the map/reduce paradigm. In the IoT context it is even more crucial, being a privileged mean to allow long-range interactions: in fact, summarising is needed to avoid data explosion in each computational unit.",
+        "We introduce a new algorithm for dynamic summarising of distributed data, <i>weighted multi-path</i>, improving over the state-of-the-art multi-path algorithm. We validate the new algorithm in an archetypal scenario, taking into account sources of volatility of many sorts and comparing it to other existing implementations. We thus show that weighted multi-path retains adequate accuracy even in high-variability scenarios where the other algorithms are diverging significantly from the correct values."
+      ]
+    },
+    {
+      "title":    "Run-time Management of Computation Domains in Field Calculus",
+      "authors":  "G. Audrito, F. Damiani, M. Viroli, R. Casadei",
+      "journal":  "IEEE International Workshops on Foundations and Applications of Self* Systems",
+      "year":     2016,
+      "link":     "10.1109/FAS-W.2016.50",
+      "topic":    "Aggregate Computing",
+      "type":     "Workshop Proceedings",
+      "_date":    "16.09.14",
+      "abstract": [
+        "The field calculus is proposed as a foundational model for collective adaptive systems, capturing in a tiny language essential aspects of distributed interaction, restriction and evolution, as well as providing ground for engineering resiliency properties. In this paper, we investigate the interplay between interaction and restriction: known as \"domain alignment\" in field calculus, it is extremely powerful but can cause subtle bugs when not handled properly. We propose a disciplined programming approach based on the interplay between a weak and a strong version of alignment, mixing static and dynamic checks. This is exemplified to design a new reusable component dynamically updating the strategy by which a device can extract information from neighbours, which find applications, for instance, in the on-the-fly evolution of metrics in smart mobility applications."
       ]
     },
     {
@@ -425,6 +425,60 @@
       "_date":    "10.01.01",
       "abstract": [
         "Questo libro è stato pensato come supporto per lo studente che intende prepararsi per le olimpiadi della matematica, e cerca una solida base di teoria prima di affrontare i problemi proposti. Resta comunque accertato il fatto che, per ottenere buoni risultati alle olimpiadi, sia assolutamente necessario allenarsi con molti esercizi, per creare un occhio attento a discernere le diverse tipologie e strategie risolutive. Gli argomenti teorici richiesti dalle olimpiadi della matematica sono, in buona parte, al di fuori dell’attuale programma ministeriale; eppure siamo convinti che possano essere di grande aiuto per lo sviluppo di una mentalità scientifica, deduttiva e creativa. Abbiamo quindi cercato di rivolgere questo libro ad un pubblico di studenti il più ampio possibile, conservando un’impostazione rigorosa ma rinunciando ad ogni inutile formalismo ed evidenziando in particolar modo gli aspetti applicativi. Per iniziare un allenamento di tipo pratico, abbiamo inserito alcuni esercizi alla fine di ogni capitolo, di cui una parte con soluzione proposta nella parte finale del fascicolo; molti altri se ne possono trovare in [2], [3] e [4], raccolte di problemi proposti effettivamente in sede olimpica. Abbiamo scelto, alla fine di ogni capitolo, di segnalare alcuni esercizi presi da queste fonti, citando semplicemente la gara e il numero di esercizio corrispondente (nei riferimenti a [4]), o il codice numerico (nei riferimenti a [2] o [3]). Inoltre, tra le novità della nuova edizione, ogni capitolo si introduce con un problema, in modo tale da far ambientare subito il lettore con l’argomento, e accontentare i più desiderosi di passare subito alla pratica. Infine abbiamo inserito, per chi fosse particolarmente interessato e volesse spingersi un po’ oltre quelle che possono essere le ambizioni di base, alcuni paragrafi di approfondimento, nei quali vengono introdotti e affrontati alcuni argomenti più impegnativi e meno comuni, ma che possono comunque risultare utili nella risoluzione di problemi olimpionici, in particolare nelle fasi più avanzate della gara. Buona lettura — e buone olimpiadi — a tutti!"
+      ]
+    },
+    {
+      "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
+      "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
+      "journal":  "Submitted to IFAC World Congress",
+      "year":     2019,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "19.11.18",
+      "abstract": [
+        "Leader election, one of the most fundamental coordination problems in distributed systems, has been addressed in many different ways suitable for different systems. Among these works, resilient leader election algorithms are of particular interest due to the ongoing emergence of open, complex distributed systems such as smart cities and the Internet of Things. However, previous algorithms with <i>O(diameter)</i> stabilization time complexity either assume some prior knowledge of the network or that very large messages can be sent. In this paper, we present a resilient leader election algorithm with <i>O(diameter)</i> stabilization time, small messages, and no prior knowledge of the network. This algorithm is based on aggregate computing, which provides a layered approach to algorithm development based on composition of resilient algorithmic <i>building blocks</i>. With our algorithm, a key design parameter $K$ defines important performance attributes: a larger $K$ will delay the recovery from loss of current leader, while a small $K$ may lead to multiple leaders, and the algorithm will stabilize with <i>O(diameter)</i> time complexity when $K \\geq 2$."
+      ]
+    },
+    {
+      "title":    "Adaptive distributed monitors of spatial properties for cyber-physical systems",
+      "authors":  "G. Audrito, R. Casadei, F. Damiani, V. Stolz, M. Viroli",
+      "journal":  "Submitted to Journal of Systems and Software",
+      "year":     2019,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "19.10.31",
+      "abstract": [
+        "Cyber-physical systems increasingly feature highly-distributed and mobile deployments of devices spread over large physical environments: in these contexts, it is generally very difficult to engineer trustworthy critical services, mostly because formal methods generally hardly scale with the number of involved devices, especially when faults, continuous changes, and dynamic topologies are the norm. To start addressing this problem, in this paper we devise a formally correct and self-adaptive implementation of distributed monitors for spatial properties. We start from the Spatial Logic of Closure Spaces, and provide a compositional translation that takes a formula and yields a distributed program that provides runtime verification of its validity. Crucially, such programs are expressed in terms of the field calculus, a recently emerged computational model that focusses on global-level outcomes instead of single-device behaviour, and expresses distributed computations by pure functions and the functional composition mechanism. By reusing previous results and tools of the field calculus, we prove correctness of the translation, self-stabilisation of the derived monitors, and empirically evaluate adaptivity of such monitors in a realistic smart city scenario of safe crowd monitoring and control."
+      ]
+    },
+    {
+      "title":    "Aggregate Programming in Scala with ScaFi",
+      "authors":  "R. Casadei, M. Viroli, G. Audrito, F. Damiani",
+      "journal":  "Submitted to ACM Transactions on Programming Languages and Systems",
+      "year":     2019,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "19.10.11",
+      "abstract": [
+        "Recent works propose Aggregate Computing as a new paradigm to design and implement Collective Adaptive Systems in scenarios like Internet of Things (IoT) and large-scale Cyber-Physical Systems (CPS). It is based on the idea of programming distributed systems by focussing on the overall behaviour of an “aggregate”, seen as a space-time computation carried on by a potentially vast and heterogeneous set of devices. The concept of “field computation” grounds the foundations of this computational model, the design of aggregate specifications and analysis of behavioural properties, targeting system engineering and development.",
+        "To support smooth adoption in the context of mainstream programming, in this paper we present theory and practice of ScaFi (Scala Fields), a programming language and system for Aggregate Computing based on Scala. ScaFi provides a Scala-internal Domain-Specific Language (DSL) that integrates the key mechanisms of field computations into the Scala language and type system to enable exploitation of the Java ecosystem, (re-)use of advanced typing and static features, and combination with the actors paradigm. Integration with Scala is deep with ScaFi thanks to a semantic model for field computations based on a novel notion of “computation against a neighbour”, i.e., by expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions.",
+        "We present ScaFi architecture, programming techniques, and formal foundation by means of a core calculus (FScaFi), and showcase its development framework through a case study of decentralised edge computing."
+      ]
+    },
+    {
+      "title":    "Field-based Coordination with the share Operator",
+      "authors":  "G. Audrito, J. Beal, F. Damiani, D. Pianini, M. Viroli",
+      "journal":  "Submitted to Logical Methods in Computer Science",
+      "year":     2019,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "19.10.08",
+      "abstract": [
+        "Field-based coordination has been proposed as a model for coordinating collective adaptive systems, promoting a view of distributed computations as functions manipulating data structures spread over space and evolving over time, called computational fields. The field calculus is a formal foundation for field computations, providing specific constructs for evolution (time) and neighbor interaction (space), which are handled by separate operators (called <b>rep</b> and <b>nbr</b>, respectively). This approach, however, intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. We show that for an important class of self-stabilising computations, <b>share</b> can replace all occurrences of <b>rep</b> and <b>nbr</b> constructs. In addition to conceptual economy, use of the <b>share</b> operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of frequently used network propagation and collection algorithms."
       ]
     },
     {
@@ -607,7 +661,7 @@
     },
     {
       "title":    "Program Committe member",
-      "subtitle": "VORTEX workshop, ECOOP 2019, London, United Kingdom.",
+      "subtitle": "VORTEX workshop, ECOOP 2019, London, United Kingdom",
       "link":     "https://2019.ecoop.org/home/vortex-2019",
       "type":     "Event",
       "_date":    "19.07.15"
