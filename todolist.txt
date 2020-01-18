@@ -7,13 +7,14 @@
 * sometime: user agent per modalità desktop in viewport
 
 Games:
-\_board games
+\_board
 | \_ spacciato
 | |_ il conclave
-|_party games
+|_party
 | \_ caccia alle streghe
 | |_ mafia
 |_roleplay
 | \_ chimera
-|_pc games
+|_videogames
   \_ city quiz!
+  |_ meow purr

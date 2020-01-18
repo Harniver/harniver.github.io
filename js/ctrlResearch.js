@@ -153,7 +153,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
                   return ["Prize", "Project"].includes(x.type) || x.highlight == true;
                 });
                 addByKeyword(highlighs, db.news, false, formatOther, function(x) {
-                  return ["Prize", "Project"].includes(x.type) ? [getDate(x), getYear(x)] : [];
+                  return ["Prize", "Project"].includes(x.type) || x.highlight == true ? [getDate(x), getYear(x)] : [];
                 });
                 let data = db.publications.concat(db.news);
                 let updates = partitionDates(data, function(x) {
