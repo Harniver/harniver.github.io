@@ -157,10 +157,10 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
                 });
                 let data = db.publications.concat(db.news);
                 let updates = partitionDates(data, function(x) {
-                  return !(["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type));
+                  return !(["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type)) && x.highlight != true;
                 });
                 addByKeyword(updates, data, false, formatAll, function(x) {
-                  return ["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type) ? [] : [getDate(x), getYear(x)];
+                  return ["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type) && x.highlight != true ? [] : [getDate(x), getYear(x)];
                 });
                 return [
                   {
