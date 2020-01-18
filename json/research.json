@@ -194,7 +194,7 @@
       "type":     "Conference Proceedings",
       "_date":    "19.06.16",
       "abstract": [
-        "Engineering distributed applications and services in emerging and open computing scenarios like the Internet of Things, cyber-physical systems and pervasive computing, calls for identifying proper abstractions to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent field computation whose execution and interactions are sustained by a dynamic team of devices, and whose spatial region can opportunistically vary over time. We formalise this notion by extending the Field Calculus with a new primitive construct, <b>spawn</b>, used to instantiate a set of field computations and regulate key aspects of their life-cycle. By virtue of an open-source implementation in the ScaFi framework, we show basic programming examples and benefits via two case studies of mobile ad-hoc networks and drone swarm scenarios, evaluated by simulation."
+        "Engineering distributed applications and services in emerging and open computing scenarios like the Internet of Things, cyber-physical systems and pervasive computing, calls for identifying proper abstractions to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent field computation whose execution and interactions are sustained by a dynamic team of devices, and whose spatial region can opportunistically vary over time. We formalise this notion by extending the Field Calculus with a new primitive construct, <b>spawn</b>, used to instantiate a set of field computations and regulate key aspects of their life-cycle. By virtue of an open-source implementation in the <span style=\"font-variant:small-caps;\">ScaFi</span> framework, we show basic programming examples and benefits via two case studies of mobile ad-hoc networks and drone swarm scenarios, evaluated by simulation."
       ]
     },
     {
@@ -428,6 +428,19 @@
       ]
     },
     {
+      "title":    "Engineering Collective Intelligence at the Edge with Aggregate Processes",
+      "authors":  "R. Casadei, M. Viroli, G. Audrito, D. Pianini, F. Damiani",
+      "journal":  "Submitted to Engineering Applications of Artificial Intelligence",
+      "year":     2020,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "15.01.20",
+      "abstract": [
+        "Edge computing promotes the execution of complex computational processes without the cloud, namely, on top of the heterogeneous, articulated, and possibly mobile systems composed of IoT and Edge devices. Such a pervasive smart fabric augments our bodies and environment with computing and networking capabilities, leading to a complex and dynamic ecosystem of devices that should not only exhibit individual intelligence but also <i>collective intelligence</i>. There, moreover, self-adaptation and self-organisation mechanisms are also typically required to ensure continuous and inherent toleration of changes of various kinds, to distribution of devices, energy available, computational load, as well as faults. To achieve this behaviour in a massively distributed setting like the edge computing demands, we seek for identifying proper abstractions (and engineering tools therefore) to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent collective computation whose execution and interactions are sustained by a dynamic team of devices, whose spatial region can opportunistically vary over time. We ground this notion by extending the Aggregate Computing toolchain (model, language, and platform) with a new primitive construct, <b>spawn</b>, used to instantiate aggregate processes and regulate key aspects of their lifecycle. By virtue of an open-source implementation in the <span style=\"font-variant:small-caps;\">ScaFi</span> framework, we show basic programming examples as well as case studies of edge computing in mobile ad-hoc networks, evaluated by simulation in realistic settings."
+      ]
+    },
+    {
       "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
       "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
       "journal":  "Submitted to IFAC World Congress",
@@ -464,8 +477,8 @@
       "_date":    "19.10.11",
       "abstract": [
         "Recent works propose Aggregate Computing as a new paradigm to design and implement Collective Adaptive Systems in scenarios like Internet of Things (IoT) and large-scale Cyber-Physical Systems (CPS). It is based on the idea of programming distributed systems by focussing on the overall behaviour of an “aggregate”, seen as a space-time computation carried on by a potentially vast and heterogeneous set of devices. The concept of “field computation” grounds the foundations of this computational model, the design of aggregate specifications and analysis of behavioural properties, targeting system engineering and development.",
-        "To support smooth adoption in the context of mainstream programming, in this paper we present theory and practice of ScaFi (Scala Fields), a programming language and system for Aggregate Computing based on Scala. ScaFi provides a Scala-internal Domain-Specific Language (DSL) that integrates the key mechanisms of field computations into the Scala language and type system to enable exploitation of the Java ecosystem, (re-)use of advanced typing and static features, and combination with the actors paradigm. Integration with Scala is deep with ScaFi thanks to a semantic model for field computations based on a novel notion of “computation against a neighbour”, i.e., by expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions.",
-        "We present ScaFi architecture, programming techniques, and formal foundation by means of a core calculus (FScaFi), and showcase its development framework through a case study of decentralised edge computing."
+        "To support smooth adoption in the context of mainstream programming, in this paper we present theory and practice of <span style=\"font-variant:small-caps;\">ScaFi</span> (Scala Fields), a programming language and system for Aggregate Computing based on Scala. <span style=\"font-variant:small-caps;\">ScaFi</span> provides a Scala-internal Domain-Specific Language (DSL) that integrates the key mechanisms of field computations into the Scala language and type system to enable exploitation of the Java ecosystem, (re-)use of advanced typing and static features, and combination with the actors paradigm. Integration with Scala is deep with <span style=\"font-variant:small-caps;\">ScaFi</span> thanks to a semantic model for field computations based on a novel notion of “computation against a neighbour”, i.e., by expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions.",
+        "We present <span style=\"font-variant:small-caps;\">ScaFi</span> architecture, programming techniques, and formal foundation by means of a core calculus (<span style=\"font-variant:small-caps;\">FScaFi</span>), and showcase its development framework through a case study of decentralised edge computing."
       ]
     },
     {
@@ -572,6 +585,14 @@
       "_date":    "12.01.01"
     },
     {
+      "title":    "Instructor the “Aggregate Programming for the Internet of Things” course, Ph.D. in Electrical and Computer Engineering",
+      "subtitle": "University of Iowa, Iowa City, USA, 22/01/2020-30/03/2020",
+      "link":     "https://myui.uiowa.edu/my-ui/courses/details.page?id=906087&ci=148347",
+      "type":     "Position",
+      "highlight": true,
+      "_date":    "20.01.22"
+    },
+    {
       "title":    "Adjunct Professor for the “Object-Oriented Programming” course, Computer Science major",
       "subtitle": "Università del Piemonte Orientale, Vercelli, 01/03/2017-31/09/2019",
       "link":     "https://upobook.uniupo.it/personale/1486",
@@ -597,10 +618,19 @@
       "_date":    "17.10.16"
     },
     {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, 2013-2019",
+      "link":     "http://stats.ioinformatics.org/people/836",
+      "type":     "Role",
+      "highlight": true,
+      "_date":    "13.08.09"
+    },
+    {
       "title":    "Selected participant",
       "subtitle": "Heidelberg Laureate Forum, Heidelberg, Germany, 22-27/09/2019",
       "link":     "https://www.heidelberg-laureate-forum.org/event_2019",
       "type":     "Event",
+      "highlight": true,
       "_date":    "19.09.25"
     },
     {
@@ -755,7 +785,7 @@
     {
       "title": "Courses",
       "text": [
-        "<ul><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatics</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
+        "<ul><li>2019/20. <a href=\"https://myui.uiowa.edu/my-ui/courses/details.page?id=906087&ci=148347\" target=\"_blank\"><i>Aggregate Programming for the Internet of Things.</i></a> Ph.D. in Electrical and Computer Engineering, University of Iowa, Iowa City, USA.</li><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatics</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
         "Further information available <a href=\"https://upobook.uniupo.it/personale/1486\" target=\"_blank\">here.</a>"
       ]
     },

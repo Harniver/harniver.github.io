@@ -150,7 +150,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     teaser:   true,
     painter:  function(db) {
                 let highlighs = partitionDates(db.news, function(x) {
-                  return ["Prize", "Project"].includes(x.type);
+                  return ["Prize", "Project"].includes(x.type) || x.highlight == true;
                 });
                 addByKeyword(highlighs, db.news, false, formatOther, function(x) {
                   return ["Prize", "Project"].includes(x.type) ? [getDate(x), getYear(x)] : [];
