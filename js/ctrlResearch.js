@@ -151,18 +151,18 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     painter:  function(db) {
                 let high_filter = function(x) {
                   return ["Prize", "Project"].includes(x.type) || x.highlight == true;
-                }
+                };
                 let highlighs = partitionDates(db.news, high_filter);
                 addByKeyword(highlighs, db.news, false, formatOther, function(x) {
                   return high_filter(x) ? [getDate(x), getYear(x)] : [];
                 });
                 let news_filter = function(x) {
                   return !high_filter(x) && !(["Lecture Notes", "Submitted Preprints"].includes(x.type));
-                }
+                };
                 let data = db.publications.concat(db.news);
                 let updates = partitionDates(data, news_filter);
                 addByKeyword(updates, data, false, formatAll, function(x) {
-                  return news_filter(x)) ? [getDate(x), getYear(x)] : [];
+                  return news_filter(x) ? [getDate(x), getYear(x)] : [];
                 });
                 return [
                   {
