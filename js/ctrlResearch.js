@@ -149,18 +149,20 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     title:    "Home",
     teaser:   true,
     painter:  function(db) {
-                let highlighs = partitionDates(db.news, function(x) {
+                let high_filter = function(x) {
                   return ["Prize", "Project"].includes(x.type) || x.highlight == true;
-                });
+                }
+                let highlighs = partitionDates(db.news, high_filter);
                 addByKeyword(highlighs, db.news, false, formatOther, function(x) {
-                  return ["Prize", "Project"].includes(x.type) || x.highlight == true ? [getDate(x), getYear(x)] : [];
+                  return high_filter(x) ? [getDate(x), getYear(x)] : [];
                 });
+                let news_filter = function(x) {
+                  return !high_filter(x) && !(["Lecture Notes", "Submitted Preprints"].includes(x.type));
+                }
                 let data = db.publications.concat(db.news);
-                let updates = partitionDates(data, function(x) {
-                  return !(["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type)) && x.highlight != true;
-                });
+                let updates = partitionDates(data, news_filter);
                 addByKeyword(updates, data, false, formatAll, function(x) {
-                  return ["Lecture Notes", "Submitted Preprints", "Prize", "Project"].includes(x.type) && x.highlight != true ? [] : [getDate(x), getYear(x)];
+                  return news_filter(x)) ? [getDate(x), getYear(x)] : [];
                 });
                 return [
                   {
