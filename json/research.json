@@ -695,6 +695,7 @@
       "subtitle": "eCAS workshop, ACSOS 2020, Washington DC, USA",
       "link":     "http://apice.unibo.it/xwiki/bin/view/ECAS2020/WebHome",
       "type":     "Event",
+      "highlight": true,
       "_date":    "20.08.21"
     },
     {
