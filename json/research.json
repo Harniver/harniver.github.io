@@ -691,18 +691,18 @@
       "_date":    "13.08.10"
     },
     {
+      "title":    "Chair",
+      "subtitle": "eCAS workshop, ACSOS 2020, Washington DC, USA",
+      "link":     "http://apice.unibo.it/xwiki/bin/view/ECAS2020/WebHome",
+      "type":     "Event",
+      "_date":    "20.08.21"
+    },
+    {
       "title":    "Program Committe member",
       "subtitle": "VORTEX workshop, ECOOP 2019, London, United Kingdom",
       "link":     "https://2019.ecoop.org/home/vortex-2019",
       "type":     "Event",
       "_date":    "19.07.15"
-    },
-    {
-      "title":    "Local Organization Co-Chair",
-      "subtitle": "iFM 2017, Torino",
-      "link":     "http://ifm2017.di.unito.it/",
-      "type":     "Event",
-      "_date":    "17.09.17"
     },
     {
       "title":    "Artifact Evaluation Committee member",
@@ -717,6 +717,13 @@
       "link":     "https://2017.splashcon.org/track/splash-2017-OOPSLA-Artifacts",
       "type":     "Event",
       "_date":    "17.10.25"
+    },
+    {
+      "title":    "Local Organization Co-Chair",
+      "subtitle": "iFM 2017, Torino",
+      "link":     "http://ifm2017.di.unito.it/",
+      "type":     "Event",
+      "_date":    "17.09.17"
     },
     {
       "title":    "Program Committe member",
