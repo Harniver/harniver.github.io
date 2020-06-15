@@ -6,7 +6,7 @@
     "Corso Svizzera 185,",
     "10149 Torino, Italy"
   ],
-  "bio": "I started programming in <i>Turbo Pascal</i> when I was 7 years old, and since then I have always been fond of informatics and mathematics. During high school, I competed in the <i>International Olympiads in Informatics</i> and in the Italian final selection for the <i>International Olympiads in Mathematics</i>. I then tried to combine these two interests in my bachelor and master studies, opting for a mathematical logic degree with computer science optional courses. After a PhD in mathematical logic (set theory), I finally switched to full-time computer science research.<br><br>As a post-doc in Pisa and Torino, I am working on languages for distributed computing, self-organising systems, games on graphs, speed-up of dynamic programming, compressed data structures and models of human sound perception. Meanwhile, I am teaching the <i>Object-Oriented Programming</i> course in Vercelli, and contributing to the organisation of the <i>Italian Olympiads in Informatics</i>.",
+  "bio": "I started programming in <i>Turbo Pascal</i> when I was 7 years old, and since then I have always been fond of informatics and mathematics. During high school, I competed in the <i>International Olympiads in Informatics</i> and in the Italian final selection for the <i>International Olympiads in Mathematics</i>. I then tried to combine these two interests in my bachelor and master studies, opting for a mathematical logic degree with computer science optional courses. After a PhD in mathematical logic (set theory), I finally switched to full-time computer science research.<br><br>As a post-doc in Pisa and Torino, I have been working on languages for distributed computing, self-organising systems, games on graphs, speed-up of dynamic programming, compressed data structures and models of human sound perception. I am the main developer of the <u><a href=\"https://fcpp.github.io\">FCPP</a></u> project (presented <u><a href=\"static/fcpp.pdf\">here</a></u>), a unified framework for execution and simulation of distributed systems following the <i>aggregate computing</i> paradigm. I have been teaching the <i>Object-Oriented Programming</i> course in Vercelli, and I am currently in the <i>olympic committee</i> of the <i>Italian Olympiads in Informatics</i> as representative of the Italian universities.",
   "topics": [
     {
       "title":    "Aggregate Computing",
@@ -153,6 +153,33 @@
       "abstract": [
         "Hereditarily finite sets (sets which are finite and have only hereditarily finite sets as members) are basic mathematical and computational objects, and also stand at the basis of some programming languages. We solve an open problem proposed by Kirby in 2008 concerning a recurrence relation for the cardinality  anan  of the $n$-th level of the adjunctive hierarchy of hereditarily finite sets; in this hierarchy, new sets are formed by the addition of a new single element drawn from the already existing sets to an already existing set. We also show that our results can be generalized to sets with atoms, or can be refined by rank, cardinality, or by the maximum level from where the new adjoined element is drawn.",
         "We also show that  a_n  satisfies the asymptotic formula $a_n= C^{2^n} + O(C^{2^{n−1}})$, for a constant  $C \\simeq 1.3399$, which is a too fast asymptotic growth for practical purposes. We thus propose a very natural variant of the adjunctive hierarchy, whose asymptotic behaviour we prove to be  $\\Theta(2^n)$."
+      ]
+    },
+    {
+      "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
+      "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
+      "journal":  "IFAC World Congress (to appear)",
+      "year":     2020,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Conference Proceedings",
+      "_date":    "20.07.15",
+      "abstract": [
+        "Leader election, one of the most fundamental coordination problems in distributed systems, has been addressed in many different ways suitable for different systems. Among these works, resilient leader election algorithms are of particular interest due to the ongoing emergence of open, complex distributed systems such as smart cities and the Internet of Things. However, previous algorithms with $O(diameter)$ stabilization time complexity either assume some prior knowledge of the network or that very large messages can be sent. In this paper, we present a resilient leader election algorithm with $O(diameter)$ stabilization time, small messages, and no prior knowledge of the network. This algorithm is based on aggregate computing, which provides a layered approach to algorithm development based on composition of resilient algorithmic \"building blocks\". With our algorithm, a key design parameter K defines important performance attributes: a larger K will delay the recovery from loss of current leader, while a small K may lead to multiple leaders, and the algorithm will stabilize with $O(diameter)$ time complexity when K ≥ 2."
+      ]
+    },
+    {
+      "title":    "Resilient Distributed Collection through Information Speed Thresholds",
+      "authors":  "G. Audrito, S. Bergamini, F. Damiani, M. Viroli",
+      "journal":  "International Conference on Coordination Languages and Models",
+      "year":     2020,
+      "link":     "10.1007/978-3-030-50029-0_14",
+      "topic":    "Aggregate Computing",
+      "type":     "Conference Proceedings",
+      "_date":    "20.06.15",
+      "abstract": [
+        "One of the key coordination problems in physically-deployed distributed systems, such as mobile robots, wireless sensor networks, and IoT systems in general, is to provide notions of \"distributed sensing\" achieved by the strict, continuous cooperation and interaction among individual devices. An  archetypal  operation of distributed sensing is data summarisation over a region of space, by which several higher-level problems can be addressed: counting items, measuring space, averaging environmental values, and so on. A typical coordination strategy to perform data summarisation in a peer-to-peer scenario, where devices can communicate only with a neighbourhood, is to progressively accumulate information towards one or more collector devices, though this typically exhibits problems of reactivity and fragility, especially in scenarios featuring high mobility.",
+        "In this paper, we propose coordination strategies for data summarisation involving both idempotent and arithmetic aggregation operators, with the idea of controlling the minimum information propagation speed, so as to improve the reactivity to input changes. Given suitable assumptions on the network model, and under the restriction of no data loss, these algorithms achieve optimal reactivity.  By empirical evaluation via simulation, accounting for various sources of volatility, and comparing to other existing implementations of data summarisation algorithms, we show that our algorithms are able to retain adequate accuracy even in high-variability scenarios where all other algorithms are significantly diverging from correct estimations."
       ]
     },
     {
@@ -428,6 +455,47 @@
       ]
     },
     {
+      "title":    "Improving Collection Dynamics by Monotonic Filtering",
+      "authors":  "H. Zainab, G. Audrito, S. Dasgupta, J. Beal",
+      "journal":  "Submitted to the eCAS Workshop on Engineering Collective Adaptive Systems",
+      "year":     2020,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "20.06.12",
+      "abstract": [
+        "A key coordination problem in distributed open systems is distributed sensing, as achieved by cooperation and interaction among individual devices. An archetypal operation of distributed sensing is data summarization over a region of space, by which many higher level problems can be addressed, including counting items, measuring space, averaging environmental values, etc. A typical coordination strategy to perform data summarization in a peer-to-peer scenario, where devices can communicate only with a neighborhood, is to progressively accumulate information towards one or more collector devices, though this typically exhibits problems of reactivity and fragility. In this paper, we present a monotonic filtering strategy for improving the dynamics of single path collection algorithms. The strategy consists of inhibiting communication across devices whose distance towards the collector device is not decreasing. We prove that single path collection in a line graph results in quadratic overestimates after a source change and that these overestimates disappear with the application of monotonic filtering. These preliminary results suggest that monotonic filtering is likely to improve the dynamics of single-path collection algorithms, by preventing excessive overestimates."
+      ]
+    },
+    {
+      "title":    "FScaFi: a Core Calculus for Collective Adaptive Systems Programming",
+      "authors":  "R. Casadei, M. Viroli, G. Audrito, F. Damiani",
+      "journal":  "Submitted to the International Symposium On Leveraging Applications of Formal Methods, Verification and Validation",
+      "year":     2020,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "20.06.02",
+      "abstract": [
+        "The rigorous engineering of collective adaptive systems builds upon the theory and practice of how collective adaptive behaviour is modelled, analysed, and enacted. Recent research in the field promotes aggregate computing, a paradigm that operationalises the idea of expressing collective adaptive behaviour by a global perspective as a functional composition of dynamic computational fields (i.e., structures mapping a collection of individual devices of a collective to computational values over time). Fields turn out as a bridging abstraction of the micro and the macro behaviour, and field calculi provide the formal grounding for analysis and semantics of field-backed behavioural programs.",
+        "ScaFi is a modern aggregate programming DSL that integrates the key mechanisms of field computations into the Scala language, enabling seamless exploitation of the Java ecosystem and (re-)use of advanced type- and code-level features. In this paper, we present FScaFi, a core language that captures the essence of the ScaFi implementation, based on a variant semantic model for field computations leveraging the novel notion of “computation against a neighbour”. Such construct models expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions and, crucially, enabling deep and straightforward integration in Scala. We cover syntax and informal semantics of FScaFi, provide examples of collective adaptive behaviour development, and delineate future work."
+      ]
+    },
+    {
+      "title":    "Aggregate Centrality Measures for IoT-based Coordination",
+      "authors":  "G. Audrito, D. Pianini, F. Damiani, M. Viroli",
+      "journal":  "Submitted to Science of Computer Programming",
+      "year":     2020,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "20.03.01",
+      "abstract": [
+        "Collecting statistics from graph-based data is an increasingly studied topic in the data mining community. We argue that they can have great value in the coordination of dynamic IoT systems as well, especially to support complex coordination strategies related to distributed situation recognition.",
+        "Thanks to a mapping to the field calculus, a distribution coordination model proposed for collective adaptive systems, we show that many existing “centrality measures” for graphs can be naturally turned into field computations that compute the centrality of nodes in a network. Not only this mapping gives evidence that the field coordination is well-suited to accommodate massively parallel computations over graphs: it provides a new basic “brick” of coordination which can be used in several contexts, there including improved leader election or network vulnerabilities detection. We validate our findings by simulation, first measuring the ability of the translated algorithm to self-adjust to network changes, then investigating an application of centrality measures for data summarisation."
+      ]
+    },
+    {
       "title":    "Engineering Collective Intelligence at the Edge with Aggregate Processes",
       "authors":  "R. Casadei, M. Viroli, G. Audrito, D. Pianini, F. Damiani",
       "journal":  "Submitted to Engineering Applications of Artificial Intelligence",
@@ -438,19 +506,6 @@
       "_date":    "20.01.15",
       "abstract": [
         "Edge computing promotes the execution of complex computational processes without the cloud, namely, on top of the heterogeneous, articulated, and possibly mobile systems composed of IoT and Edge devices. Such a pervasive smart fabric augments our bodies and environment with computing and networking capabilities, leading to a complex and dynamic ecosystem of devices that should not only exhibit individual intelligence but also <i>collective intelligence</i>. There, moreover, self-adaptation and self-organisation mechanisms are also typically required to ensure continuous and inherent toleration of changes of various kinds, to distribution of devices, energy available, computational load, as well as faults. To achieve this behaviour in a massively distributed setting like the edge computing demands, we seek for identifying proper abstractions (and engineering tools therefore) to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent collective computation whose execution and interactions are sustained by a dynamic team of devices, whose spatial region can opportunistically vary over time. We ground this notion by extending the Aggregate Computing toolchain (model, language, and platform) with a new primitive construct, <b>spawn</b>, used to instantiate aggregate processes and regulate key aspects of their lifecycle. By virtue of an open-source implementation in the <span style=\"font-variant:small-caps;\">ScaFi</span> framework, we show basic programming examples as well as case studies of edge computing in mobile ad-hoc networks, evaluated by simulation in realistic settings."
-      ]
-    },
-    {
-      "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
-      "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
-      "journal":  "Submitted to IFAC World Congress",
-      "year":     2019,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "19.11.18",
-      "abstract": [
-        "Leader election, one of the most fundamental coordination problems in distributed systems, has been addressed in many different ways suitable for different systems. Among these works, resilient leader election algorithms are of particular interest due to the ongoing emergence of open, complex distributed systems such as smart cities and the Internet of Things. However, previous algorithms with <i>O(diameter)</i> stabilization time complexity either assume some prior knowledge of the network or that very large messages can be sent. In this paper, we present a resilient leader election algorithm with <i>O(diameter)</i> stabilization time, small messages, and no prior knowledge of the network. This algorithm is based on aggregate computing, which provides a layered approach to algorithm development based on composition of resilient algorithmic <i>building blocks</i>. With our algorithm, a key design parameter $K$ defines important performance attributes: a larger $K$ will delay the recovery from loss of current leader, while a small $K$ may lead to multiple leaders, and the algorithm will stabilize with <i>O(diameter)</i> time complexity when $K \\geq 2$."
       ]
     },
     {
@@ -467,21 +522,6 @@
       ]
     },
     {
-      "title":    "Aggregate Programming in Scala with ScaFi",
-      "authors":  "R. Casadei, M. Viroli, G. Audrito, F. Damiani",
-      "journal":  "Submitted to ACM Transactions on Programming Languages and Systems",
-      "year":     2019,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "19.10.11",
-      "abstract": [
-        "Recent works propose Aggregate Computing as a new paradigm to design and implement Collective Adaptive Systems in scenarios like Internet of Things (IoT) and large-scale Cyber-Physical Systems (CPS). It is based on the idea of programming distributed systems by focussing on the overall behaviour of an “aggregate”, seen as a space-time computation carried on by a potentially vast and heterogeneous set of devices. The concept of “field computation” grounds the foundations of this computational model, the design of aggregate specifications and analysis of behavioural properties, targeting system engineering and development.",
-        "To support smooth adoption in the context of mainstream programming, in this paper we present theory and practice of <span style=\"font-variant:small-caps;\">ScaFi</span> (Scala Fields), a programming language and system for Aggregate Computing based on Scala. <span style=\"font-variant:small-caps;\">ScaFi</span> provides a Scala-internal Domain-Specific Language (DSL) that integrates the key mechanisms of field computations into the Scala language and type system to enable exploitation of the Java ecosystem, (re-)use of advanced typing and static features, and combination with the actors paradigm. Integration with Scala is deep with <span style=\"font-variant:small-caps;\">ScaFi</span> thanks to a semantic model for field computations based on a novel notion of “computation against a neighbour”, i.e., by expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions.",
-        "We present <span style=\"font-variant:small-caps;\">ScaFi</span> architecture, programming techniques, and formal foundation by means of a core calculus (<span style=\"font-variant:small-caps;\">FScaFi</span>), and showcase its development framework through a case study of decentralised edge computing."
-      ]
-    },
-    {
       "title":    "Field-based Coordination with the share Operator",
       "authors":  "G. Audrito, J. Beal, F. Damiani, D. Pianini, M. Viroli",
       "journal":  "Submitted to Logical Methods in Computer Science",
@@ -492,19 +532,6 @@
       "_date":    "19.10.08",
       "abstract": [
         "Field-based coordination has been proposed as a model for coordinating collective adaptive systems, promoting a view of distributed computations as functions manipulating data structures spread over space and evolving over time, called computational fields. The field calculus is a formal foundation for field computations, providing specific constructs for evolution (time) and neighbor interaction (space), which are handled by separate operators (called <b>rep</b> and <b>nbr</b>, respectively). This approach, however, intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. We show that for an important class of self-stabilising computations, <b>share</b> can replace all occurrences of <b>rep</b> and <b>nbr</b> constructs. In addition to conceptual economy, use of the <b>share</b> operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of frequently used network propagation and collection algorithms."
-      ]
-    },
-    {
-      "title":    "Iterated forcing, category forcings, generic ultrapowers, generic absoluteness",
-      "authors":  "M. Viale, G. Audrito, S. Steila, R. Carroy",
-      "journal":  "Submitted to Perspectives in Logic",
-      "year":     2017,
-      "link":     "",
-      "topic":    "Logic and Set Theory",
-      "type":     "Submitted Preprints",
-      "_date":    "17.09.30",
-      "abstract": [
-        "The driving motivation to embark in the researches presented in this book has been the following: give a satisfactory sound explanation rooted in mathematical logic for the success forcing axioms have met in settling so many problems formalizable in third order arithmetic. Most of these problems are otherwise undecidable on the basis of ZFC alone. Why forcing axioms have been so successful? We believe that the results of part VI provide a solid mathematical explanation: strong forcing axioms yield as a natural byproduct strong generic absoluteness results for third order arithmetic. This occurs much in the same way as large cardinal axioms do for second order number theory. Therefore large cardinals and forcing axioms transform forcing from a tool to prove independence results into a tool to prove theorems. Moreover the axiom of determinacy AD plays a crucial role in providing a new powerful tool to settle most of the questions on second order arithmetic which are independent from ZFC; likewise Martin’s maximum plays the same role for third order arithmetic as AD does for second order arithmetic. We do not want to dwelve further on this theme here; the motivated reader is referred to [53], the introductory parts of [3, 51, 52], and (for a more technical set of results) to the results of Chapter 8."
       ]
     },
     {
@@ -543,8 +570,15 @@
   ],
   "news": [
     {
+      "title":    "Research grant on “Seamless heterogeneous runtime software evolution and monitoring architecture and framework”",
+      "subtitle": "Università degli Studi di Torino, 07/05/2020-06/08/2020",
+      "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
+      "type":     "Position",
+      "_date":    "20.05.07"
+    },
+    {
       "title":    "Research assistant on “Aggregate Programming”, winner of the San Paolo internationalization grant",
-      "subtitle": "Università degli Studi di Torino, 01/04/2019-31/03/2020",
+      "subtitle": "Università degli Studi di Torino, 01/04/2019-30/04/2020",
       "link":     "https://www.unito.it/sites/default/files/esito_bando_sanpaolo2018_internazionalizzazione.pdf",
       "type":     "Position",
       "highlight": true,
@@ -607,6 +641,42 @@
       "_date":    "16.10.01"
     },
     {
+      "title":    "Co-supervisor for the PhD thesis of Hunza Zainab, Electrical Engineering major",
+      "subtitle": "University of Iowa, US, ongoing",
+      "type":     "Role",
+      "_date":    "19.12.01"
+    },
+    {
+      "title":    "Co-supervisor for the Master thesis of Mirko Guani, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, ongoing",
+      "type":     "Role",
+      "_date":    "20.03.01"
+    },
+    {
+      "title":    "Co-supervisor for the Master thesis of Lorenzo Testa, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, ongoing",
+      "type":     "Role",
+      "_date":    "19.11.01"
+    },
+    {
+      "title":    "Co-supervisor for the Master thesis of Sergio Bergamini, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, ongoing",
+      "type":     "Role",
+      "_date":    "19.09.01"
+    },
+    {
+      "title":    "Co-supervisor for the Bachelor thesis of Matteo Zattoni, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, ongoing",
+      "type":     "Role",
+      "_date":    "20.02.01"
+    },
+    {
+      "title":    "Co-supervisor for the Bachelor thesis of Matteo Miceli, Computer Science major",
+      "subtitle": "Università degli Studi di Torino, ongoing",
+      "type":     "Role",
+      "_date":    "19.12.01"
+    },
+    {
       "title":    "Co-supervisor for the Bachelor thesis of Sergio Bergamini, Computer Science major",
       "subtitle": "Università degli Studi di Torino, 13/07/2018",
       "type":     "Role",
@@ -617,6 +687,28 @@
       "subtitle": "Università degli Studi di Torino, 16/10/2017",
       "type":     "Role",
       "_date":    "17.10.16"
+    },
+    {
+      "title":    "Member of the EAPLS",
+      "subtitle": "European Association for Programming Languages and Systems, 2020",
+      "link":     "https://eapls.org",
+      "type":     "Role",
+      "_date":    "20.03.30"
+    },
+    {
+      "title":    "Member of the national group for scientific computing (GNCS)",
+      "subtitle": "Istituto Nazionale di Alta Matematica (INdAM), 2020",
+      "link":     "https://www.altamatematica.it/gncs/aderenti",
+      "type":     "Role",
+      "_date":    "20.03.15"
+    },
+    {
+      "title":    "Member of the Olympic Committee, as representative of the Italian university",
+      "subtitle": "Italian Olympiads in Informatics, 2020",
+      "link":     "https://www.olimpiadi-informatica.it/index.php/oii/organizzazione.html",
+      "type":     "Role",
+      "highlight": true,
+      "_date":    "20.04.15"
     },
     {
       "title":    "Team leader of the Italian team",
@@ -801,13 +893,16 @@
     {
       "title": "Olympiads in Informatics",
       "text": [
-        "<b>International Informatics Olympiads in Teams (IIOT).</b><br>Check out the <a href=\"https://iio.team\" target=\"_blank\">international</a> and <a href=\"https://sites.google.com/aldini.istruzioneer.it/olimpiadi-informatica-squadre\" target=\"_blank\">italian</a> websites.<br>Live announcements on upcoming events are available in <a href=\"http://codeforces.com/blog/harniver\" target=\"_blank\">my codeforces blog</a>.",
+        "<b>International Informatics Olympiads in Teams (IIOT).</b><br>Check out the <a href=\"https://iio.team\" target=\"_blank\">international</a> and <a href=\"https://sites.google.com/aldini.istruzioneer.it/olimpiadi-informatica-squadre\" target=\"_blank\">italian</a> institutional websites.<br>Live announcements on upcoming events are available in <a href=\"http://codeforces.com/blog/harniver\" target=\"_blank\">my codeforces blog</a>.<br>Statistics and results of competitions are available <a href=\"https://squadre.olinfo.it\" target=\"_blank\">here</a>.",
         "<b>Olimpiadi Italiane di Informatica (OII).</b><br>Check out the <a href=\"https://stats.olinfo.it\" target=\"_blank\">statistics</a>, <a href=\"https://training.olinfo.it\" target=\"_blank\">training</a> and <a href=\"https://www.olimpiadi-informatica.it\" target=\"_blank\">istitutional</a> websites."
       ]
     },
     {
       "title": "Thesis Proposals",
-      "text": ["<ul><li>Completed:<ul><li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Blocchi Resilienti per la Collezione di Dati Distribuiti.</i></a><br>Bachelor in Computer Science, Università di Torino, 13/07/2018.</li><li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li></ul></li><li>Ongoing:<ul><li>Sergio Bergamini. <i>Optimal Algorithms for Aggregate Computing.</i><br>Master in Computer Science, Università di Torino.</li></ul></li><li>Available:<ul><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li></li><li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li></ul></li></ul>"]
+      "text": [
+        "<ul><li>Completed:<ul>    <li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Blocchi Resilienti per la Collezione di Dati Distribuiti.</i></a><br>Bachelor in Computer Science, Università di Torino, 13/07/2018.</li>    <li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li>    </ul></li></ul>",
+        "<ul><li>Ongoing:<ul>    <li>Hunza Zainab. <i>PhD in Electrical Engineering</i>, University of Iowa.</li>    <li>Sergio Bergamini. <i>Master in Computer Science</i>, Università di Torino.</li>    <li>Lorenzo Testa. <i>Master in Computer Science</i>, Università di Torino.</li>    <li>Mirko Guani. <i>Master in Computer Science</i>, Università di Torino.</li>    <li>Matteo Miceli. <i>Bachelor in Computer Science</i>, Università di Torino.</li>    <li>Matteo Zattoni. <i>Bachelor in Computer Science</i>, Università di Torino.</li>    </ul></li></ul>",
+        "<ul><li>Available:<ul>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li>    </ul></li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               "]
     }
   ]
 }
