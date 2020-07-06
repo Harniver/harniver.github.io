@@ -156,6 +156,33 @@
       ]
     },
     {
+      "title":    "FCPP: an efficient and extensible Field Calculus framework",
+      "authors":  "G. Audrito",
+      "journal":  "IEEE International Conference on Autonomic Computing and Self-Organizing Systems (to appear)",
+      "year":     2020,
+      "link":     "static/fcpp.pdf",
+      "topic":    "Aggregate Computing",
+      "type":     "Conference Proceedings",
+      "_date":    "20.08.16",
+      "abstract": [
+        "The Field Calculus is a promising language for the self-organisation of distributed devices, allowing to express on a high level of abstraction complex distributed algorithms with robust behaviour guarantees. This language has been argued to be fruitfully applicable to many different contexts: wireless sensor networks, internet of things, self-organising edge, fog or cloud computing scenarios, and simulations of such. However, existing implementations of this language rely on the Java Virtual Machine and have an high performance overhead, impairing their usability in contexts where performance is critical (cloud) or computational resources are tightly bounded (WSN/IoT).",
+        "In this paper we present FCPP, a novel implementation of the Field Calculus as a C++ library. The library is built as a component-based system, in order to be easily extensible to fit different contexts. Furthermore, it leverages C++ template patterns to allow compile-time optimisation and minimal performance overhead, and enables fine-grained parallelism for scalability in self-organising cloud applications. A case study of an edge simulation shows the performance improvement compared to existing Field Calculus implementations, while preserving the same level of abstraction. This translates to a significant speed-up in the development process of distributed algorithms, paving the way towards application scenarios for which existing tools are unsuitable: microcontroller systems and self-organising cloud."
+      ]
+    },
+    {
+      "title":    "Improving Collection Dynamics by Monotonic Filtering",
+      "authors":  "H. Zainab, G. Audrito, S. Dasgupta, J. Beal",
+      "journal":  "eCAS Workshop on Engineering Collective Adaptive Systems (to appear)",
+      "year":     2020,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Conference Proceedings",
+      "_date":    "20.08.15",
+      "abstract": [
+        "A key coordination problem in distributed open systems is distributed sensing, as achieved by cooperation and interaction among individual devices. An archetypal operation of distributed sensing is data summarization over a region of space, by which many higher level problems can be addressed, including counting items, measuring space, averaging environmental values, etc. A typical coordination strategy to perform data summarization in a peer-to-peer scenario, where devices can communicate only with a neighborhood, is to progressively accumulate information towards one or more collector devices, though this typically exhibits problems of reactivity and fragility. In this paper, we present a monotonic filtering strategy for improving the dynamics of single path collection algorithms. The strategy consists of inhibiting communication across devices whose distance towards the collector device is not decreasing. We prove that single path collection in a line graph results in quadratic overestimates after a source change and that these overestimates disappear with the application of monotonic filtering. These preliminary results suggest that monotonic filtering is likely to improve the dynamics of single-path collection algorithms, by preventing excessive overestimates."
+      ]
+    },
+    {
       "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
       "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
       "journal":  "IFAC World Congress (to appear)",
@@ -242,7 +269,7 @@
       "authors":  "G. Audrito, S. Bergamini, F. Damiani, M. Viroli",
       "journal":  "International Conference on Autonomous Agents and Multiagent Systems",
       "year":     2019,
-      "link":     "https://dl.acm.org/citation.cfm?id=3331882",
+      "link":     "https://dl.acm.org/doi/10.5555/3306127.3331882",
       "topic":    "Aggregate Computing",
       "type":     "Conference Proceedings",
       "_date":    "19.05.17",
@@ -452,19 +479,6 @@
       "_date":    "10.01.01",
       "abstract": [
         "Questo libro è stato pensato come supporto per lo studente che intende prepararsi per le olimpiadi della matematica, e cerca una solida base di teoria prima di affrontare i problemi proposti. Resta comunque accertato il fatto che, per ottenere buoni risultati alle olimpiadi, sia assolutamente necessario allenarsi con molti esercizi, per creare un occhio attento a discernere le diverse tipologie e strategie risolutive. Gli argomenti teorici richiesti dalle olimpiadi della matematica sono, in buona parte, al di fuori dell’attuale programma ministeriale; eppure siamo convinti che possano essere di grande aiuto per lo sviluppo di una mentalità scientifica, deduttiva e creativa. Abbiamo quindi cercato di rivolgere questo libro ad un pubblico di studenti il più ampio possibile, conservando un’impostazione rigorosa ma rinunciando ad ogni inutile formalismo ed evidenziando in particolar modo gli aspetti applicativi. Per iniziare un allenamento di tipo pratico, abbiamo inserito alcuni esercizi alla fine di ogni capitolo, di cui una parte con soluzione proposta nella parte finale del fascicolo; molti altri se ne possono trovare in [2], [3] e [4], raccolte di problemi proposti effettivamente in sede olimpica. Abbiamo scelto, alla fine di ogni capitolo, di segnalare alcuni esercizi presi da queste fonti, citando semplicemente la gara e il numero di esercizio corrispondente (nei riferimenti a [4]), o il codice numerico (nei riferimenti a [2] o [3]). Inoltre, tra le novità della nuova edizione, ogni capitolo si introduce con un problema, in modo tale da far ambientare subito il lettore con l’argomento, e accontentare i più desiderosi di passare subito alla pratica. Infine abbiamo inserito, per chi fosse particolarmente interessato e volesse spingersi un po’ oltre quelle che possono essere le ambizioni di base, alcuni paragrafi di approfondimento, nei quali vengono introdotti e affrontati alcuni argomenti più impegnativi e meno comuni, ma che possono comunque risultare utili nella risoluzione di problemi olimpionici, in particolare nelle fasi più avanzate della gara. Buona lettura — e buone olimpiadi — a tutti!"
-      ]
-    },
-    {
-      "title":    "Improving Collection Dynamics by Monotonic Filtering",
-      "authors":  "H. Zainab, G. Audrito, S. Dasgupta, J. Beal",
-      "journal":  "Submitted to the eCAS Workshop on Engineering Collective Adaptive Systems",
-      "year":     2020,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "20.06.12",
-      "abstract": [
-        "A key coordination problem in distributed open systems is distributed sensing, as achieved by cooperation and interaction among individual devices. An archetypal operation of distributed sensing is data summarization over a region of space, by which many higher level problems can be addressed, including counting items, measuring space, averaging environmental values, etc. A typical coordination strategy to perform data summarization in a peer-to-peer scenario, where devices can communicate only with a neighborhood, is to progressively accumulate information towards one or more collector devices, though this typically exhibits problems of reactivity and fragility. In this paper, we present a monotonic filtering strategy for improving the dynamics of single path collection algorithms. The strategy consists of inhibiting communication across devices whose distance towards the collector device is not decreasing. We prove that single path collection in a line graph results in quadratic overestimates after a source change and that these overestimates disappear with the application of monotonic filtering. These preliminary results suggest that monotonic filtering is likely to improve the dynamics of single-path collection algorithms, by preventing excessive overestimates."
       ]
     },
     {

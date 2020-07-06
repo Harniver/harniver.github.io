@@ -33,7 +33,9 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
   };
   function toText(l) {
     if (l == "" || l == undefined) return "";
+    if (l.startsWith("https://dl.acm.org/doi/")) return l.replace("https://dl.acm.org/doi/", "");
     if (l.startsWith("http")) return "website";
+    if (l.startsWith("static/")) return "PDF";
     return l;
   };
   function toLink(l) {
@@ -41,6 +43,7 @@ app.controller('researchCtrl', function($scope, $rootScope, $routeParams, $locat
     if (l.startsWith("http")) return l;
     if (l.startsWith("ISBN:")) return "";
     if (l.startsWith("arXiv:")) return l.replace("arXiv:", "https://arxiv.org/abs/");
+    if (l.startsWith("static/")) return l;
     return "https://doi.org/" + l;
   };
   /*------------------------------
