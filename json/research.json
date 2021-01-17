@@ -1,12 +1,12 @@
 {
   "address": [
-    "Postdoc @ Ufficio 21,",
+    "Ricercatore @ Ufficio 7 (Piano 3)",
     "<a href=\"http://di.unito.it\">Dipartimento di Informatica</a>,",
     "<a href=\"https://www.unito.it\">Università di Torino</a>,",
     "Corso Svizzera 185,",
     "10149 Torino, Italy"
   ],
-  "bio": "I started programming in <i>Turbo Pascal</i> when I was 7 years old, and since then I have always been fond of informatics and mathematics. During high school, I competed in the <i>International Olympiads in Informatics</i> and in the Italian final selection for the <i>International Olympiads in Mathematics</i>. I then tried to combine these two interests in my bachelor and master studies, opting for a mathematical logic degree with computer science optional courses. After a PhD in mathematical logic (set theory), I finally switched to full-time computer science research.<br><br>As a post-doc in Pisa and Torino, I have been working on languages for distributed computing, self-organising systems, games on graphs, speed-up of dynamic programming, compressed data structures and models of human sound perception. I am the main developer of the <u><a href=\"https://fcpp.github.io\">FCPP</a></u> project (presented <u><a href=\"static/fcpp.pdf\">here</a></u>), a unified framework for execution and simulation of distributed systems following the <i>aggregate computing</i> paradigm. I have been teaching the <i>Object-Oriented Programming</i> course in Vercelli, and I am currently in the <i>olympic committee</i> of the <i>Italian Olympiads in Informatics</i> as representative of the Italian universities.",
+  "bio": "I started programming in <i>Turbo Pascal</i> when I was 7 years old, and since then I have always been fond of informatics and mathematics. During high school, I competed in the <i>International Olympiads in Informatics</i> and in the Italian final selection for the <i>International Olympiads in Mathematics</i>. I then tried to combine these two interests in my bachelor and master studies, opting for a mathematical logic degree with computer science optional courses. After a PhD in mathematical logic (set theory), I finally switched to full-time computer science research.<br><br>As a post-doc and researcher in Pisa and Torino, I have been working on languages for distributed computing, self-organising systems, games on graphs, speed-up of dynamic programming, compressed data structures and models of human sound perception. I am the main developer of the <u><a href=\"https://fcpp.github.io\">FCPP</a></u> project (presented <u><a href=\"static/fcpp.pdf\">here</a></u>), a unified framework for execution and simulation of distributed systems following the <i>aggregate computing</i> paradigm. I have been teaching the <i>Object-Oriented Programming</i> course in Vercelli, and I am currently in the <i>olympic committee</i> of the <i>Italian Olympiads in Informatics</i> as representative of the Italian universities.",
   "topics": [
     {
       "title":    "Aggregate Computing",
@@ -40,6 +40,59 @@
   ],
   "types": ["Journal Papers", "Conference Proceedings", "Workshop Proceedings", "Books", "Book Chapters", "Lecture Notes", "Submitted Preprints"],
   "publications": [
+    {
+      "title":    "Adaptive Distributed Monitors of Spatial Properties for Cyber-Physical Systems",
+      "authors":  "G. Audrito, R. Casadei, F. Damiani, V. Stolz, M. Viroli",
+      "journal":  "Journal of Systems and Software (to appear)",
+      "year":     2021,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_date":    "21.01.31",
+      "abstract": [
+        "Cyber-physical systems increasingly feature highly-distributed and mobile deployments of devices spread over large physical environments: in these contexts, it is generally very difficult to engineer trustworthy critical services, mostly because formal methods generally hardly scale with the number of involved devices, especially when faults, continuous changes, and dynamic topologies are the norm. To start addressing this problem, in this paper we devise a formally correct and self-adaptive implementation of distributed monitors for spatial properties. We start from the Spatial Logic of Closure Spaces, and provide a compositional translation that takes a formula and yields a distributed program that provides runtime verification of its validity. Crucially, such programs are expressed in terms of the field calculus, a recently emerged computational model that focusses on global-level outcomes instead of single-device behaviour, and expresses distributed computations by pure functions and the functional composition mechanism. By reusing previous results and tools of the field calculus, we prove correctness of the translation, self-stabilisation of the derived monitors, and empirically evaluate adaptivity of such monitors in a realistic smart city scenario of safe crowd monitoring and control."
+      ]
+    },
+    {
+      "title":    "Aggregate Centrality Measures for IoT-based Coordination",
+      "authors":  "G. Audrito, D. Pianini, F. Damiani, M. Viroli",
+      "journal":  "Science of Computer Programming",
+      "year":     2020,
+      "link":     "10.1016/j.scico.2020.102584",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_date":    "20.09.01",
+      "abstract": [
+        "Collecting statistics from graph-based data is an increasingly studied topic in the data mining community. We argue that they can have great value in the coordination of dynamic IoT systems as well, especially to support complex coordination strategies related to distributed situation recognition.",
+        "Thanks to a mapping to the field calculus, a distribution coordination model proposed for collective adaptive systems, we show that many existing “centrality measures” for graphs can be naturally turned into field computations that compute the centrality of nodes in a network. Not only this mapping gives evidence that the field coordination is well-suited to accommodate massively parallel computations over graphs: it provides a new basic “brick” of coordination which can be used in several contexts, there including improved leader election or network vulnerabilities detection. We validate our findings by simulation, first measuring the ability of the translated algorithm to self-adjust to network changes, then investigating an application of centrality measures for data summarisation."
+      ]
+    },
+    {
+      "title":    "Engineering Collective Intelligence at the Edge with Aggregate Processes",
+      "authors":  "R. Casadei, M. Viroli, G. Audrito, D. Pianini, F. Damiani",
+      "journal":  "Engineering Applications of Artificial Intelligence",
+      "year":     2020,
+      "link":     "10.1016/j.engappai.2020.104081",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_date":    "20.06.15",
+      "abstract": [
+        "Edge computing promotes the execution of complex computational processes without the cloud, namely, on top of the heterogeneous, articulated, and possibly mobile systems composed of IoT and Edge devices. Such a pervasive smart fabric augments our bodies and environment with computing and networking capabilities, leading to a complex and dynamic ecosystem of devices that should not only exhibit individual intelligence but also <i>collective intelligence</i>. There, moreover, self-adaptation and self-organisation mechanisms are also typically required to ensure continuous and inherent toleration of changes of various kinds, to distribution of devices, energy available, computational load, as well as faults. To achieve this behaviour in a massively distributed setting like the edge computing demands, we seek for identifying proper abstractions (and engineering tools therefore) to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent collective computation whose execution and interactions are sustained by a dynamic team of devices, whose spatial region can opportunistically vary over time. We ground this notion by extending the Aggregate Computing toolchain (model, language, and platform) with a new primitive construct, <b>spawn</b>, used to instantiate aggregate processes and regulate key aspects of their lifecycle. By virtue of an open-source implementation in the <span style=\"font-variant:small-caps;\">ScaFi</span> framework, we show basic programming examples as well as case studies of edge computing in mobile ad-hoc networks, evaluated by simulation in realistic settings."
+      ]
+    },
+    {
+      "title":    "Field-based Coordination with the share Operator",
+      "authors":  "G. Audrito, J. Beal, F. Damiani, D. Pianini, M. Viroli",
+      "journal":  "Logical Methods in Computer Science",
+      "year":     2020,
+      "link":     "10.23638/LMCS-16(4:1)2020",
+      "topic":    "Aggregate Computing",
+      "type":     "Journal Papers",
+      "_date":    "20.03.08",
+      "abstract": [
+        "Field-based coordination has been proposed as a model for coordinating collective adaptive systems, promoting a view of distributed computations as functions manipulating data structures spread over space and evolving over time, called computational fields. The field calculus is a formal foundation for field computations, providing specific constructs for evolution (time) and neighbor interaction (space), which are handled by separate operators (called <b>rep</b> and <b>nbr</b>, respectively). This approach, however, intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. We show that for an important class of self-stabilising computations, <b>share</b> can replace all occurrences of <b>rep</b> and <b>nbr</b> constructs. In addition to conceptual economy, use of the <b>share</b> operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of frequently used network propagation and collection algorithms."
+      ]
+    },
     {
       "title":    "From Distributed Coordination to Field Calculus and Aggregate Computing",
       "authors":  "M. Viroli, J. Beal, F. Damiani, G. Audrito, R. Casadei, D. Pianini",
@@ -156,11 +209,24 @@
       ]
     },
     {
-      "title":    "FCPP: an efficient and extensible Field Calculus framework",
-      "authors":  "G. Audrito",
-      "journal":  "IEEE International Conference on Autonomic Computing and Self-Organizing Systems (to appear)",
+      "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
+      "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
+      "journal":  "IFAC World Congress (to appear)",
       "year":     2020,
-      "link":     "static/fcpp.pdf",
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Conference Proceedings",
+      "_date":    "20.09.15",
+      "abstract": [
+        "Leader election, one of the most fundamental coordination problems in distributed systems, has been addressed in many different ways suitable for different systems. Among these works, resilient leader election algorithms are of particular interest due to the ongoing emergence of open, complex distributed systems such as smart cities and the Internet of Things. However, previous algorithms with $O(diameter)$ stabilization time complexity either assume some prior knowledge of the network or that very large messages can be sent. In this paper, we present a resilient leader election algorithm with $O(diameter)$ stabilization time, small messages, and no prior knowledge of the network. This algorithm is based on aggregate computing, which provides a layered approach to algorithm development based on composition of resilient algorithmic \"building blocks\". With our algorithm, a key design parameter K defines important performance attributes: a larger K will delay the recovery from loss of current leader, while a small K may lead to multiple leaders, and the algorithm will stabilize with $O(diameter)$ time complexity when K ≥ 2."
+      ]
+    },
+    {
+      "title":    "FCPP: an Efficient and Extensible Field Calculus Framework",
+      "authors":  "G. Audrito",
+      "journal":  "IEEE International Conference on Autonomic Computing and Self-Organizing Systems",
+      "year":     2020,
+      "link":     "10.1109/ACSOS49614.2020.00037",
       "topic":    "Aggregate Computing",
       "type":     "Conference Proceedings",
       "_date":    "20.08.16",
@@ -170,29 +236,17 @@
       ]
     },
     {
-      "title":    "Improving Collection Dynamics by Monotonic Filtering",
-      "authors":  "H. Zainab, G. Audrito, S. Dasgupta, J. Beal",
-      "journal":  "eCAS Workshop on Engineering Collective Adaptive Systems (to appear)",
+      "title":    "FScaFi: a Core Calculus for Collective Adaptive Systems Programming",
+      "authors":  "R. Casadei, M. Viroli, G. Audrito, F. Damiani",
+      "journal":  "International Symposium On Leveraging Applications of Formal Methods, Verification and Validation",
       "year":     2020,
-      "link":     "",
+      "link":     "10.1007/978-3-030-61470-6_21",
       "topic":    "Aggregate Computing",
       "type":     "Conference Proceedings",
-      "_date":    "20.08.15",
+      "_date":    "20.07.02",
       "abstract": [
-        "A key coordination problem in distributed open systems is distributed sensing, as achieved by cooperation and interaction among individual devices. An archetypal operation of distributed sensing is data summarization over a region of space, by which many higher level problems can be addressed, including counting items, measuring space, averaging environmental values, etc. A typical coordination strategy to perform data summarization in a peer-to-peer scenario, where devices can communicate only with a neighborhood, is to progressively accumulate information towards one or more collector devices, though this typically exhibits problems of reactivity and fragility. In this paper, we present a monotonic filtering strategy for improving the dynamics of single path collection algorithms. The strategy consists of inhibiting communication across devices whose distance towards the collector device is not decreasing. We prove that single path collection in a line graph results in quadratic overestimates after a source change and that these overestimates disappear with the application of monotonic filtering. These preliminary results suggest that monotonic filtering is likely to improve the dynamics of single-path collection algorithms, by preventing excessive overestimates."
-      ]
-    },
-    {
-      "title":    "A Resilient Leader Election Algorithm Using Aggregate Computing Blocks",
-      "authors":  "Y. Mo, G. Audrito, S. Dasgupta, J. Beal",
-      "journal":  "IFAC World Congress (to appear)",
-      "year":     2020,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Conference Proceedings",
-      "_date":    "20.07.15",
-      "abstract": [
-        "Leader election, one of the most fundamental coordination problems in distributed systems, has been addressed in many different ways suitable for different systems. Among these works, resilient leader election algorithms are of particular interest due to the ongoing emergence of open, complex distributed systems such as smart cities and the Internet of Things. However, previous algorithms with $O(diameter)$ stabilization time complexity either assume some prior knowledge of the network or that very large messages can be sent. In this paper, we present a resilient leader election algorithm with $O(diameter)$ stabilization time, small messages, and no prior knowledge of the network. This algorithm is based on aggregate computing, which provides a layered approach to algorithm development based on composition of resilient algorithmic \"building blocks\". With our algorithm, a key design parameter K defines important performance attributes: a larger K will delay the recovery from loss of current leader, while a small K may lead to multiple leaders, and the algorithm will stabilize with $O(diameter)$ time complexity when K ≥ 2."
+        "The rigorous engineering of collective adaptive systems builds upon the theory and practice of how collective adaptive behaviour is modelled, analysed, and enacted. Recent research in the field promotes aggregate computing, a paradigm that operationalises the idea of expressing collective adaptive behaviour by a global perspective as a functional composition of dynamic computational fields (i.e., structures mapping a collection of individual devices of a collective to computational values over time). Fields turn out as a bridging abstraction of the micro and the macro behaviour, and field calculi provide the formal grounding for analysis and semantics of field-backed behavioural programs.",
+        "ScaFi is a modern aggregate programming DSL that integrates the key mechanisms of field computations into the Scala language, enabling seamless exploitation of the Java ecosystem and (re-)use of advanced type- and code-level features. In this paper, we present FScaFi, a core language that captures the essence of the ScaFi implementation, based on a variant semantic model for field computations leveraging the novel notion of “computation against a neighbour”. Such construct models expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions and, crucially, enabling deep and straightforward integration in Scala. We cover syntax and informal semantics of FScaFi, provide examples of collective adaptive behaviour development, and delineate future work."
       ]
     },
     {
@@ -387,6 +441,19 @@
       ]
     },
     {
+      "title":    "Improving Collection Dynamics by Monotonic Filtering",
+      "authors":  "H. Zainab, G. Audrito, S. Dasgupta, J. Beal",
+      "journal":  "eCAS workshop, ACSOS conference",
+      "year":     2020,
+      "link":     "10.1109/ACSOS-C51401.2020.00043",
+      "topic":    "Aggregate Computing",
+      "type":     "Workshop Proceedings",
+      "_date":    "20.08.15",
+      "abstract": [
+        "A key coordination problem in distributed open systems is distributed sensing, as achieved by cooperation and interaction among individual devices. An archetypal operation of distributed sensing is data summarization over a region of space, by which many higher level problems can be addressed, including counting items, measuring space, averaging environmental values, etc. A typical coordination strategy to perform data summarization in a peer-to-peer scenario, where devices can communicate only with a neighborhood, is to progressively accumulate information towards one or more collector devices, though this typically exhibits problems of reactivity and fragility. In this paper, we present a monotonic filtering strategy for improving the dynamics of single path collection algorithms. The strategy consists of inhibiting communication across devices whose distance towards the collector device is not decreasing. We prove that single path collection in a line graph results in quadratic overestimates after a source change and that these overestimates disappear with the application of monotonic filtering. These preliminary results suggest that monotonic filtering is likely to improve the dynamics of single-path collection algorithms, by preventing excessive overestimates."
+      ]
+    },
+    {
       "title":    "On distributed runtime verification by aggregate computing",
       "authors":  "G. Audrito, F. Damiani, V. Stolz, M. Viroli",
       "journal":  "VORTEX workshop, ECOOP-ISSTA conference",
@@ -429,7 +496,7 @@
     {
       "title":    "Run-time Management of Computation Domains in Field Calculus",
       "authors":  "G. Audrito, F. Damiani, M. Viroli, R. Casadei",
-      "journal":  "IEEE International Workshops on Foundations and Applications of Self* Systems",
+      "journal":  "eCAS workshop, FAS* conference",
       "year":     2016,
       "link":     "10.1109/FAS-W.2016.50",
       "topic":    "Aggregate Computing",
@@ -482,70 +549,44 @@
       ]
     },
     {
-      "title":    "FScaFi: a Core Calculus for Collective Adaptive Systems Programming",
-      "authors":  "R. Casadei, M. Viroli, G. Audrito, F. Damiani",
-      "journal":  "Submitted to the International Symposium On Leveraging Applications of Formal Methods, Verification and Validation",
-      "year":     2020,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "20.06.02",
-      "abstract": [
-        "The rigorous engineering of collective adaptive systems builds upon the theory and practice of how collective adaptive behaviour is modelled, analysed, and enacted. Recent research in the field promotes aggregate computing, a paradigm that operationalises the idea of expressing collective adaptive behaviour by a global perspective as a functional composition of dynamic computational fields (i.e., structures mapping a collection of individual devices of a collective to computational values over time). Fields turn out as a bridging abstraction of the micro and the macro behaviour, and field calculi provide the formal grounding for analysis and semantics of field-backed behavioural programs.",
-        "ScaFi is a modern aggregate programming DSL that integrates the key mechanisms of field computations into the Scala language, enabling seamless exploitation of the Java ecosystem and (re-)use of advanced type- and code-level features. In this paper, we present FScaFi, a core language that captures the essence of the ScaFi implementation, based on a variant semantic model for field computations leveraging the novel notion of “computation against a neighbour”. Such construct models expressions whose evaluation depends on the same evaluation that occurred on a neighbour, thus abstracting communication actions and, crucially, enabling deep and straightforward integration in Scala. We cover syntax and informal semantics of FScaFi, provide examples of collective adaptive behaviour development, and delineate future work."
-      ]
-    },
-    {
-      "title":    "Aggregate Centrality Measures for IoT-based Coordination",
-      "authors":  "G. Audrito, D. Pianini, F. Damiani, M. Viroli",
-      "journal":  "Submitted to Science of Computer Programming",
-      "year":     2020,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "20.03.01",
-      "abstract": [
-        "Collecting statistics from graph-based data is an increasingly studied topic in the data mining community. We argue that they can have great value in the coordination of dynamic IoT systems as well, especially to support complex coordination strategies related to distributed situation recognition.",
-        "Thanks to a mapping to the field calculus, a distribution coordination model proposed for collective adaptive systems, we show that many existing “centrality measures” for graphs can be naturally turned into field computations that compute the centrality of nodes in a network. Not only this mapping gives evidence that the field coordination is well-suited to accommodate massively parallel computations over graphs: it provides a new basic “brick” of coordination which can be used in several contexts, there including improved leader election or network vulnerabilities detection. We validate our findings by simulation, first measuring the ability of the translated algorithm to self-adjust to network changes, then investigating an application of centrality measures for data summarisation."
-      ]
-    },
-    {
-      "title":    "Engineering Collective Intelligence at the Edge with Aggregate Processes",
-      "authors":  "R. Casadei, M. Viroli, G. Audrito, D. Pianini, F. Damiani",
-      "journal":  "Submitted to Engineering Applications of Artificial Intelligence",
-      "year":     2020,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "20.01.15",
-      "abstract": [
-        "Edge computing promotes the execution of complex computational processes without the cloud, namely, on top of the heterogeneous, articulated, and possibly mobile systems composed of IoT and Edge devices. Such a pervasive smart fabric augments our bodies and environment with computing and networking capabilities, leading to a complex and dynamic ecosystem of devices that should not only exhibit individual intelligence but also <i>collective intelligence</i>. There, moreover, self-adaptation and self-organisation mechanisms are also typically required to ensure continuous and inherent toleration of changes of various kinds, to distribution of devices, energy available, computational load, as well as faults. To achieve this behaviour in a massively distributed setting like the edge computing demands, we seek for identifying proper abstractions (and engineering tools therefore) to smoothly capture collective behaviour, adaptivity, and dynamic injection and execution of concurrent distributed activities. Accordingly, we introduce a notion of “aggregate process” as a concurrent collective computation whose execution and interactions are sustained by a dynamic team of devices, whose spatial region can opportunistically vary over time. We ground this notion by extending the Aggregate Computing toolchain (model, language, and platform) with a new primitive construct, <b>spawn</b>, used to instantiate aggregate processes and regulate key aspects of their lifecycle. By virtue of an open-source implementation in the <span style=\"font-variant:small-caps;\">ScaFi</span> framework, we show basic programming examples as well as case studies of edge computing in mobile ad-hoc networks, evaluated by simulation in realistic settings."
-      ]
-    },
-    {
-      "title":    "Adaptive distributed monitors of spatial properties for cyber-physical systems",
-      "authors":  "G. Audrito, R. Casadei, F. Damiani, V. Stolz, M. Viroli",
-      "journal":  "Submitted to Journal of Systems and Software",
-      "year":     2019,
-      "link":     "",
-      "topic":    "Aggregate Computing",
-      "type":     "Submitted Preprints",
-      "_date":    "19.10.31",
-      "abstract": [
-        "Cyber-physical systems increasingly feature highly-distributed and mobile deployments of devices spread over large physical environments: in these contexts, it is generally very difficult to engineer trustworthy critical services, mostly because formal methods generally hardly scale with the number of involved devices, especially when faults, continuous changes, and dynamic topologies are the norm. To start addressing this problem, in this paper we devise a formally correct and self-adaptive implementation of distributed monitors for spatial properties. We start from the Spatial Logic of Closure Spaces, and provide a compositional translation that takes a formula and yields a distributed program that provides runtime verification of its validity. Crucially, such programs are expressed in terms of the field calculus, a recently emerged computational model that focusses on global-level outcomes instead of single-device behaviour, and expresses distributed computations by pure functions and the functional composition mechanism. By reusing previous results and tools of the field calculus, we prove correctness of the translation, self-stabilisation of the derived monitors, and empirically evaluate adaptivity of such monitors in a realistic smart city scenario of safe crowd monitoring and control."
-      ]
-    },
-    {
-      "title":    "Field-based Coordination with the share Operator",
-      "authors":  "G. Audrito, J. Beal, F. Damiani, D. Pianini, M. Viroli",
+      "title":    "Computation Against a Neighbour",
+      "authors":  "G. Audrito, R. Casadei, F. Damiani, M. Viroli",
       "journal":  "Submitted to Logical Methods in Computer Science",
-      "year":     2019,
+      "year":     2021,
       "link":     "",
       "topic":    "Aggregate Computing",
       "type":     "Submitted Preprints",
-      "_date":    "19.10.08",
+      "_date":    "21.03.01",
       "abstract": [
-        "Field-based coordination has been proposed as a model for coordinating collective adaptive systems, promoting a view of distributed computations as functions manipulating data structures spread over space and evolving over time, called computational fields. The field calculus is a formal foundation for field computations, providing specific constructs for evolution (time) and neighbor interaction (space), which are handled by separate operators (called <b>rep</b> and <b>nbr</b>, respectively). This approach, however, intrinsically limits the speed of information propagation that can be achieved by their combined use. In this paper, we propose a new field-based coordination operator called <b>share</b>, which captures the space-time nature of field computations in a single operator that declaratively achieves: <i>(i)</i> observation of neighbors’ values; <i>(ii)</i> reduction to a single local value; and <i>(iii)</i> update and converse sharing to neighbors of a local variable. We show that for an important class of self-stabilising computations, <b>share</b> can replace all occurrences of <b>rep</b> and <b>nbr</b> constructs. In addition to conceptual economy, use of the <b>share</b> operator also allows many prior field calculus algorithms to be greatly accelerated, which we validate empirically with simulations of frequently used network propagation and collection algorithms."
+        "Recent works in contexts like the Internet of Things (IoT) and large-scale Cyber-Physical Systems (CPS) propose the idea of programming distributed systems by focussing on their global behaviour across space and time. In this view, a potentially vast and heterogeneous set of devices is considered as an “aggregate” to be programmed as a whole, while abstracting away the details of individual behaviour and exchange of messages, which are expressed declaratively. One such a paradigm, known as aggregate programming, builds on computational models inspired by field-based coordination. Existing models such as the field calculus capture interaction with neighbours by a so-called “neighbouring field” (a map from neighbours to values). This requires ad-hoc mechanisms to smoothly compose with standard values, thus complicating programming and introducing clutter in aggregate programs, libraries and domain-specific languages (DSLs).",
+        "To address this key issue we introduce the novel notion of “computation against a neighbour”, whereby the evaluation of certain subexpressions of the aggregate program are affected by recent corresponding evaluations in neighbours. We capture this notion in the <i>neighbours calculus</i> (NC), a new field calculus variant which is shown to smoothly support declarative specification of interaction with neighbours, and correspondingly facilitate the embedding of field computations as internal DSLs in common general-purpose programming languages—as exemplified by a Scala implementation, called ScaFi. This paper formalises NC, thoroughly compares it with respect to the classic field calculus, and shows its expressiveness by means of a case study in edge computing, developed in ScaFi."
+      ]
+    },
+    {
+      "title":    "Functional Programming for Distributed Self-Organisation with the Exchange Calculus",
+      "authors":  "G. Audrito, R. Casadei, F. Damiani, M. Viroli",
+      "journal":  "Submitted to European Conference on Object-Oriented Programming",
+      "year":     2021,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "21.03.01",
+      "abstract": [
+        "Inspired by natural systems, self-organisation is a key technique to program large-scale adaptive systems deployed over physical space—such as on the Internet of Things, wireless sensor networks, swarm robotics, and related scenarios. Self-organising systems robustly achieve global results of computation in spite of local failures and changes, by relying on the repetitive execution of simple tasks by all involved computational devices, comprising sensing of local context and spreading processed information to a (physical or logical) neighbourhood.",
+        "The goal of this paper is to define a foundational and practical programming framework for this kind of mechanisms, adopting functional programming as key paradigm to define specifications and compose them to achieve well-engineered complex behaviour. We introduce the <b>exchange</b> interaction primitive, expressing a declarative form of bi-directional interaction with neighbours on top of asynchronous networks, by the iterative consumption and production of <i>exchange-values</i>, which represent collections of messages to/from neighbour devices. Then, inspired by recent works in field-based coordination, we introduce the Exchange Calculus (EC), a minimal functional core calculus that formalises <b>exchange</b> and enacts the “everything is an exchange-value” philosophy. We define syntax and operational semantics, prove type soundness, discuss expressiveness of EC, and showcase examples of programming and simulation using a DSL implementation hosted in Scala."
+      ]
+    },
+    {
+      "title":    "Distributed Runtime Verification for Edge Computing by Past-CTL and the Field Calculus",
+      "authors":  "G. Audrito, F. Damiani, V. Stolz, G. Torta, M. Viroli",
+      "journal":  "Submitted to Journal of Systems and Software",
+      "year":     2021,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "21.03.01",
+      "abstract": [
+        "Recent trends in the engineering of software-intensive systems promote the adoption of edge computing: applications are executed directly in IoT devices deployed in the physical environment, where interactions are essentially based on physical proximity, and communication with the cloud is sporadic. The challenge of monitoring the execution of these system relying only on local interactions naturally arises. We address this challenge by proposing a rigorous approach to distributed runtime monitoring for space-based networks of devices. We consider past-CTL logic, a logic able to express a variety of properties concerning the knowable past of an event, and formally define a procedure to derive, from a past-CTL formula, monitors that can be distributed on each device, and whose collective behaviour verifies validity of the formula at runtime across space and time. This is achieved by relying on the field calculus, a core programming language used to specify the behaviour of a collection of devices by viewing them as an aggregate computing machine, carrying out altogether a distributed computational process. The field calculus is shown to be a convenient language for our goals, since its functional composition approach provides a natural way of translating in a syntax-directed way properties expressed in a given logic into monitors for such properties. We show that the monitor process executing in each single device runs using local memory, mes-sage size, and computation time that are all linear in the size of the formula (1 bit per temporal connective). This matches the efficiency of the best available previous results for (non-distributed) monitors derived from past-LTL formulas. Finally, we empirically evaluate the applicability of the approach to sample problems in distributed computing, through simulated experiments with monitors written through a C++ library implementing the field calculus programming constructs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             "
       ]
     },
     {
@@ -584,8 +625,15 @@
   ],
   "news": [
     {
-      "title":    "Research grant on “Seamless heterogeneous runtime software evolution and monitoring architecture and framework”",
-      "subtitle": "Università degli Studi di Torino, 07/05/2020-06/08/2020",
+      "title":    "Researcher (RTDA)",
+      "subtitle": "Università degli Studi di Torino, 01/09/2020-31/08/2023",
+      "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
+      "type":     "Position",
+      "_date":    "20.09.01"
+    },
+    {
+      "title":    "Research grant on “Aggregate Programming”",
+      "subtitle": "Università degli Studi di Torino, 07/05/2020-31/08/2020",
       "link":     "http://beta.di.unito.it/index.php/english/research/groups/system-modelling-verification-and-reuse/about",
       "type":     "Position",
       "_date":    "20.05.07"
@@ -634,7 +682,15 @@
       "_date":    "12.01.01"
     },
     {
-      "title":    "Instructor the “Aggregate Programming for the Internet of Things” course, Ph.D. in Electrical and Computer Engineering",
+      "title":    "Instructor of the “Aggregate Programming for the Internet of Things” course, Ph.D. in Computer Science",
+      "subtitle": "Università degli Studi di Torino, 01/02/2021-30/05/2020",
+      "link":     "https://dott-informatica.campusnet.unito.it/do/corsi.pl/Show?_id=ws7g",
+      "type":     "Position",
+      "highlight": true,
+      "_date":    "21.02.22"
+    },
+    {
+      "title":    "Instructor of the “Aggregate Programming for the Internet of Things” course, Ph.D. in Electrical and Computer Engineering",
       "subtitle": "University of Iowa, Iowa City, USA, 22/01/2020-30/03/2020",
       "link":     "https://myui.uiowa.edu/my-ui/courses/details.page?id=906087&ci=148347",
       "type":     "Position",
@@ -726,7 +782,7 @@
     },
     {
       "title":    "Team leader of the Italian team",
-      "subtitle": "International Olympiads in Informatics, 2013-2019",
+      "subtitle": "International Olympiads in Informatics, 2013-2020",
       "link":     "http://stats.ioinformatics.org/people/836",
       "type":     "Role",
       "highlight": true,
@@ -746,6 +802,13 @@
       "link":     "https://iio.team",
       "type":     "Event",
       "_date":    "17.05.19"
+    },
+    {
+      "title":    "Team leader of the Italian team",
+      "subtitle": "International Olympiads in Informatics, Singapore, 2020 (online)",
+      "link":     "http://stats.ioinformatics.org/delegations/ITA/2020",
+      "type":     "Event",
+      "_date":    "20.08.06"
     },
     {
       "title":    "Team leader of the Italian team",
@@ -795,6 +858,14 @@
       "link":     "http://stats.ioinformatics.org/delegations/ITA/2013",
       "type":     "Event",
       "_date":    "13.08.10"
+    },
+    {
+      "title":    "Tool Track Chair and Program Committee Member",
+      "subtitle": "COORDINATION conference, DisCoTec 2021, Valletta, MT",
+      "link":     "https://www.discotec.org/2021/coordination",
+      "type":     "Event",
+      "highlight": true,
+      "_date":    "21.06.16"
     },
     {
       "title":    "Chair",
@@ -861,6 +932,20 @@
       "_date":    "17.04.19"
     },
     {
+      "title":    "INdAM grant for young researchers",
+      "subtitle": "Reactive Aggregate Programming, 2020/21",
+      "link":     "https://www.altamatematica.it/gncs/attivita/finanziamento-giovani-ricercatori",
+      "type":     "Prize",
+      "_date":    "20.09.15"
+    },
+    {
+      "title":    "Seal of Excellence",
+      "subtitle": "“Model, Algorithms and Tools for the Internet of Things” project proposal, H2020-MSCA-IF-2019 call, 11/09/2019",
+      "link":     "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/seal-excellence_en",
+      "type":     "Prize",
+      "_date":    "19.09.11"
+    },
+    {
       "title":    "Best Paper of COORDINATION",
       "subtitle": "Optimally-Self-Healing Distributed Gradient Structures through Bounded Information Speed, 20/06/2017",
       "link":     "http://2017.discotec.org/program.html#joint-session-1",
@@ -900,7 +985,7 @@
     {
       "title": "Courses",
       "text": [
-        "<ul><li>2019/20. <a href=\"https://myui.uiowa.edu/my-ui/courses/details.page?id=906087&ci=148347\" target=\"_blank\"><i>Aggregate Programming for the Internet of Things.</i></a> Ph.D. in Electrical and Computer Engineering, University of Iowa, Iowa City, USA.</li><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatics</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
+        "<ul><li>2020/21. <a href=\"https://dott-informatica.campusnet.unito.it/do/corsi.pl/Show?_id=ws7g\" target=\"_blank\"><i>Aggregate Programming for the Internet of Things.</i></a> Ph.D. in Computer Science, Università di Torino.</li><li>2019/20. <a href=\"https://myui.uiowa.edu/my-ui/courses/details.page?id=906087&ci=148347\" target=\"_blank\"><i>Aggregate Programming for the Internet of Things.</i></a> Ph.D. in Electrical and Computer Engineering, University of Iowa, Iowa City, USA.</li><li>2018/19. <a href=\"http://of.uniupo.it/2018/1932/guida.html#87583\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2017/18. <a href=\"http://of.uniupo.it/2017/1932/guida.html#74957\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://of.uniupo.it/2016/1932/guida.html#73620\" target=\"_blank\"><i>Object Oriented Programming.</i></a> Bachelor in Computer Science, Università del Piemonte Orientale, Vercelli.</li><li>2016/17. <a href=\"http://matematicafinanza.campusnet.unito.it/do/storicocorsi.pl/Show?_id=buwb_1617\" target=\"_blank\"><i>Informatics</i></a> (teaching assistant). Bachelor in Mathematics for Finance and Insurance, Università di Torino.</li></ul>",
         "Further information available <a href=\"https://upobook.uniupo.it/personale/1486\" target=\"_blank\">here.</a>"
       ]
     },
@@ -916,7 +1001,7 @@
       "text": [
         "<ul><li>Completed:<ul>    <li>Sergio Bergamini. <a href=\"https://bitbucket.org/gaudrito/audrito-bergamini-summarising\" target=\"_blank\"><i>Blocchi Resilienti per la Collezione di Dati Distribuiti.</i></a><br>Bachelor in Computer Science, Università di Torino, 13/07/2018.</li>    <li>Luca Serena. <a href=\"https://github.com/luca-Serena/tesi-strutture-dati-compressione\" target=\"_blank\"><i>Strutture dati compresse: implementazione grafica di un Wavelet Tree in Java.</i></a><br>Bachelor in Computer Science, Università di Torino, 16/10/2017.</li>    </ul></li></ul>",
         "<ul><li>Ongoing:<ul>    <li>Hunza Zainab. <i>PhD in Electrical Engineering</i>, University of Iowa.</li>    <li>Sergio Bergamini. <i>Master in Computer Science</i>, Università di Torino.</li>    <li>Lorenzo Testa. <i>Master in Computer Science</i>, Università di Torino.</li>    <li>Mirko Guani. <i>Master in Computer Science</i>, Università di Torino.</li>    <li>Matteo Miceli. <i>Bachelor in Computer Science</i>, Università di Torino.</li>    <li>Matteo Zattoni. <i>Bachelor in Computer Science</i>, Università di Torino.</li>    </ul></li></ul>",
-        "<ul><li>Available:<ul>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li>    </ul></li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               "]
+        "<ul><li>Available:<ul>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeN3o4c2VTRmVvNDQ/view\" target=\"_blank\">Efficient simulation of aggregate computing algorithms.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeSmtucnJDX01ZeEU/view\" target=\"_blank\">Algorithmic problems for aggregate computing.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeNXNmWkpPQXVuTU0/view\" target=\"_blank\">Automatic measurement of sound qualities and dissonance.</a></li>    <li><a href=\"https://drive.google.com/file/d/0B8V0DWzHPCYeU0E2QVFPa1BoYkE/view\" target=\"_blank\">Optimizing compression of wavelet trees.</a></li>    </ul></li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          "]
     }
   ]
 }
