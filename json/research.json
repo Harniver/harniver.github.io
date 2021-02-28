@@ -43,9 +43,9 @@
     {
       "title":    "Adaptive Distributed Monitors of Spatial Properties for Cyber-Physical Systems",
       "authors":  "G. Audrito, R. Casadei, F. Damiani, V. Stolz, M. Viroli",
-      "journal":  "Journal of Systems and Software (to appear)",
+      "journal":  "Journal of Systems and Software",
       "year":     2021,
-      "link":     "",
+      "link":     "10.1016/j.jss.2021.110908",
       "topic":    "Aggregate Computing",
       "type":     "Journal Papers",
       "_date":    "21.01.31",
@@ -546,6 +546,47 @@
       "_date":    "10.01.01",
       "abstract": [
         "Questo libro è stato pensato come supporto per lo studente che intende prepararsi per le olimpiadi della matematica, e cerca una solida base di teoria prima di affrontare i problemi proposti. Resta comunque accertato il fatto che, per ottenere buoni risultati alle olimpiadi, sia assolutamente necessario allenarsi con molti esercizi, per creare un occhio attento a discernere le diverse tipologie e strategie risolutive. Gli argomenti teorici richiesti dalle olimpiadi della matematica sono, in buona parte, al di fuori dell’attuale programma ministeriale; eppure siamo convinti che possano essere di grande aiuto per lo sviluppo di una mentalità scientifica, deduttiva e creativa. Abbiamo quindi cercato di rivolgere questo libro ad un pubblico di studenti il più ampio possibile, conservando un’impostazione rigorosa ma rinunciando ad ogni inutile formalismo ed evidenziando in particolar modo gli aspetti applicativi. Per iniziare un allenamento di tipo pratico, abbiamo inserito alcuni esercizi alla fine di ogni capitolo, di cui una parte con soluzione proposta nella parte finale del fascicolo; molti altri se ne possono trovare in [2], [3] e [4], raccolte di problemi proposti effettivamente in sede olimpica. Abbiamo scelto, alla fine di ogni capitolo, di segnalare alcuni esercizi presi da queste fonti, citando semplicemente la gara e il numero di esercizio corrispondente (nei riferimenti a [4]), o il codice numerico (nei riferimenti a [2] o [3]). Inoltre, tra le novità della nuova edizione, ogni capitolo si introduce con un problema, in modo tale da far ambientare subito il lettore con l’argomento, e accontentare i più desiderosi di passare subito alla pratica. Infine abbiamo inserito, per chi fosse particolarmente interessato e volesse spingersi un po’ oltre quelle che possono essere le ambizioni di base, alcuni paragrafi di approfondimento, nei quali vengono introdotti e affrontati alcuni argomenti più impegnativi e meno comuni, ma che possono comunque risultare utili nella risoluzione di problemi olimpionici, in particolare nelle fasi più avanzate della gara. Buona lettura — e buone olimpiadi — a tutti!"
+      ]
+    },
+    {
+      "title":    "Towards Real-Time Aggregate Computing",
+      "authors":  "G. Audrito",
+      "journal":  "Submitted to Coordination Models and Languages",
+      "year":     2021,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "21.02.27",
+      "abstract": [
+        "As the number of interconnected devices continues to increase, large-scale cyber-physical systems are becoming an increasingly relevant option for safety-critical applications. However, coordinating such systems requires an extensive effort, interplaying distributed programming techniques with mathematical proving of real-time guarantees. This effort may be significantly reduced by convenient abstractions, allowing the system developer to rely on libraries of suitable algorithms. From such algorithms, distributed behaviour and real-time guarantees could be automatically inferred, effectively shifting the proving burden from the system designer to the algorithm developer.",
+        "Following recent work on real-time guarantees for aggregate computing algorithms, we argue that aggregate computing could provide a convenient framework towards this aim, and envision a specification through which such a library could be designed. We then conclude with a roadmap to a real-time aggregate computing library, which could enable easy development of safety-critical, large-scale cyber-physical systems."
+      ]
+    },
+    {
+      "title":    "Aggregate Programming for On-line Repair of Multi-Agent Plans",
+      "authors":  "G. Audrito, R. Casadei, G. Torta",
+      "journal":  "Submitted to Coordination Models and Languages",
+      "year":     2021,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "21.02.26",
+      "abstract": [
+        "In the present paper we consider a team of agents executing a cooperative, multi-agent plan expressed in MA-PDDL. When an error occurs in the plan execution (e.g., because an agent breaks), the multi-agent plan is repaired with a fully decentralized process defined as an Aggregate Programming (AP) function written in the Field Calculus language. The AP approach allows the plan to be repaired through local communication between agents, while ensuring robustness and convergence of the computation. As a proof-of-concept, we describe a simulator that implements agents as actors and enacts the repair process within the ScaFi framework, a Field Calculus embodiment for the Scala language."
+      ]
+    },
+    {
+      "title":    "Tuple-based Coordination in Large-Scale Situated Systems",
+      "authors":  "R. Casadei, M. Viroli, A. Ricci, G. Audrito",
+      "journal":  "Submitted to Coordination Models and Languages",
+      "year":     2021,
+      "link":     "",
+      "topic":    "Aggregate Computing",
+      "type":     "Submitted Preprints",
+      "_date":    "21.02.25",
+      "abstract": [
+        "Space and time, logical or physical, are often fundamental parts for many computer-based systems, and hence elevated to first-class abstraction in several research fields. In tuple-space coordination, Linda coordination primitives have been independently extended with space information (where tuples and queries could span a region of space) or with time information (mostly in the form of timeouts). However, recent works in collective adaptive systems and aggregate computing show that space and time can naturally be considered as two intertwined facets of a common coordination abstraction for situated distributed systems. Accordingly, we introduce the Spatiotemporal Tuples model, a natural adaptation of Linda model for physically deployed large-scale networks. Differently from ancestor works, spatiotemporal properties – expressing where and when a tuple should range and has to be deposited/retrieved – naturally turn into specifications of collective adaptive processes, to be carried on in cooperation by the devices filling the computational environment, and sustaining tuple operations in a resilient way, possibly even in mobile and faulty environments. Additionally, the model promotes decentralised implementations where tuples actually reside where they are issued, which is good for supporting peer-to-peer and mobile ad-hoc networks as well as privacy.",
+        "In this paper, we (i) present and formalise the Spatiotemporal Tuples model, based on the unifying notion of computational space-time structure, (ii) provide an API in the ScaFi aggregate computing framework, turning tuple operations and spatiotemporal properties into collective adaptive processes, and finally (iii) provide basic evaluation, a case study, and discuss consequences and implementation issues.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  "
       ]
     },
     {
